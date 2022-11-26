@@ -1,12 +1,11 @@
 
 # Proyecto Pet House 
 
-Este es el README del proyecto Pet House, aqui encontraras cosas relacionadas a la tematica del proyecto, paginas y otros proyectos que tomamos de inspiracion, informacion tecnica de instalacion y tecnologias usadas entre otras cosas, espero que les sea util.
 Este es el README del proyecto Pet House, aquí encontrarás cosas relacionadas a la temática del proyecto, páginas y otros proyectos que tomamos de inspiración, información técnica de instalación y tecnologías usadas entre otras cosas, espero que les sea útil.
  
 
 ### Tematica del proyecto
-La tematica y proposito de este proyecto es ser un e-commerce de productos para mascotas, donde puedas encontrar lo necesario para tus queridos amigos y mas que eso, **ser el hogar de tus mascotas.** 
+La tematica y proposito de este proyecto es ser un e-commerce de productos para mascotas, tales como alimento y accesorios, aquí podrás encontrar lo necesario para tus queridos amigos y mas que eso, **ser el hogar de tus mascotas.**
 Nuestra página web está pensada para un público familiar, personas entre los 15 y 60 años que sean responsables por una o varias mascotas, y que estén dispuestas a comprar los suministros necesarios para el día a día de su amigo de cuatro patas de manera virtual.
 Con el objetivo de adaptarnos a las necesidades de nuestros usuarios la página web, contará con una interfaz intuitiva y de fácil manejo y primarán las imágenes sobre los textos muy descriptivos. Todos los productos ofrecidos irán con su respectiva imágen.
 
