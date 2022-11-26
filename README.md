@@ -19,6 +19,11 @@ Mi nombre es Angela Ramírez, tengo 34 años, soy ingeniera de alimentos ,vivo e
 **Mariana Montoya Gómez** : 
 ¡Hola a todos! Soy Mariana Montoya Gómez, ingeniera biológica de profesión y amante de los animales desde siempre. Me gustan tanto los gatos como los perros y soy dueña de una Golden Retriver enrrazada en piraña llamada Brenda. Me gusta nadar y aprender cosas nuevas. Tengo 24 años y vivo en la ciudad de Medellín. Estoy muy feliz de poder trabajar en conjunto con mis compañeros para hacer de este E-commerce una experiencia placentera para tí. 
 
+**Juan Taborda** :
+
+**Martin Vidan** :
+
+**Miguel Quiroz** :
 
 ### Plataformas que nos inspiraron
 * La primera pagina se llama [Kanu](https://www.kanu.pet/) (kanu.pet) Este sitio es una inspiración para PetHouse,porque presenta todos los productos para mascotas de manera organizada, dando la opción de elegir entre perro y gato, ademas, los colores de la pagina y la interacción que maneja este sitio, son agradables a la vista y facil en su navegación.
