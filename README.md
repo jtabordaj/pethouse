@@ -13,10 +13,10 @@ Con el objetivo de adaptarnos a las necesidades de nuestros usuarios la página 
 
 Nuestro equipo está conformado por 5 personas amantes de los animales, diversas en sus conocimientos, edades y áreas de experticia:
 
-[Angela Ramírez] : 
+###Angela Ramírez : 
 Mi nombre es Angela Ramírez, tengo 34 años, soy ingeniera de alimentos ,vivo en la ciudad de Medellín y lo que mas me gusta en la vida son los animales, en especial los gatos, es por esto que me emociona realizar mi primer E-commerce de mascotas, de la mano de mis compañeros y profesores, para lograr excelentes resultados del sitio web durante la cursada.
 
-[Mariana Montoya Gómez] : 
+###Mariana Montoya Gómez : 
 ¡Hola a todos! Soy Mariana Montoya Gómez, ingeniera biológica de profesión y amante de los animales desde siempre. Me gustan tanto los gatos como los perros y soy dueña de una Golden Retriver enrrazada en piraña llamada Brenda. Me gusta nadar y aprender cosas nuevas. Tengo 24 años y vivo en la ciudad de Medellín. Estoy muy feliz de poder trabajar en conjunto con mis compañeros para hacer de este E-commerce una experiencia placentera para tí. 
 
 
