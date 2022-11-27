@@ -5,8 +5,10 @@ Este es el README del proyecto Pet House, aquí encontrarás cosas relacionadas 
  
 
 ### Tematica del proyecto
-La tematica y proposito de este proyecto es ser un e-commerce de productos para mascotas, tales como alimento y accesorios, aquí podrás encontrar lo necesario para tus queridos amigos y mas que eso, **ser el hogar de tus mascotas.**
-Nuestra página web está pensada para un público familiar, personas entre los 15 y 60 años que sean responsables por una o varias mascotas, y que estén dispuestas a comprar los suministros necesarios para el día a día de su amigo de cuatro patas de manera virtual.
+La tematica y proposito de este proyecto es ser un e-commerce de productos para mascotas, por el momento estamos enfocados en comenzar ofrececiendo productos alimenticios para todo tipo de mascotas, teniendo en cuenta que la alimentacion de tus queridos amigos es lo mas importante para ellos, posteriormente agregaremos mas categorias de productos pensando en el bienestar de tus queridos amigos y mas que eso, porque esperamos **ser el hogar de tus mascotas.**
+
+### Publico objetivo
+Nuestra página web está pensada para dos publicos objetivos que son: Publico de personas jovenes/adultas y parejas sin hijos junto con el público familiar tradicional, de estos dos publicos apuntamos a personas entre los 15 y 45-50 años que sean responsables por una o varias mascotas, y que estén dispuestas a comprar los suministros necesarios para el día a día de su amigo de cuatro patas de manera virtual.
 Con el objetivo de adaptarnos a las necesidades de nuestros usuarios la página web, contará con una interfaz intuitiva y de fácil manejo y primarán las imágenes sobre los textos muy descriptivos. Todos los productos ofrecidos irán con su respectiva imágen.
 
 ### Nuestro equipo
@@ -19,16 +21,16 @@ Mi nombre es Angela Ramírez, tengo 34 años, soy ingeniera de alimentos ,vivo e
 **Mariana Montoya Gómez** : 
 ¡Hola a todos! Soy Mariana Montoya Gómez, ingeniera biológica de profesión y amante de los animales desde siempre. Me gustan tanto los gatos como los perros y soy dueña de una Golden Retriver enrrazada en piraña llamada Brenda. Me gusta nadar y aprender cosas nuevas. Tengo 24 años y vivo en la ciudad de Medellín. Estoy muy feliz de poder trabajar en conjunto con mis compañeros para hacer de este E-commerce una experiencia placentera para tí. 
 
+**Miguel Quiroz** : Hola, mi nombre es Juan Miguel Quiroz, soy estudiante de desarrollo web full stack con experiencia aprendiendo tecnologias frontend y usando tecnologias de diseño como figma, amante del espacio y la astronomia junto a la naturaleza y las plantas, tengo una perrita criolla (mesclada) y en el futuro pienso adoptar a un felino, tengo 18 años y vivo actualmente en Medellin y espero crecer junto a mis compañeros con este proyecto.
+
 **Juan Taborda** :
 
 **Martin Vidan** :
 
-**Miguel Quiroz** :
-
 ### Plataformas que nos inspiraron
 * La primera pagina se llama [Kanu](https://www.kanu.pet/) (kanu.pet) Este sitio es una inspiración para PetHouse,porque presenta todos los productos para mascotas de manera organizada, dando la opción de elegir entre perro y gato, ademas, los colores de la pagina y la interacción que maneja este sitio, son agradables a la vista y facil en su navegación.
-* La segunda página se llama [Agrocampo] (https://www.agrocampo.com.co/) (agrocampo.com.co). Este sitio es una inspiración para PetHouse tanto en la parte visual como funcional. La iconografía es muy bella y hace pensar que quien diseñó la página le gustan los animales. La posición central de las fotos que promocionan los concentrados hace muy llamativa la pagina. En cuanto la parte funcional, la barra de herramientas principal está situada en la parte superior y es fácil entender su contenido. Presenta los botones de carrito, el logotipo y un buscador con sus clasificaciones, y cuando vas bajando dentro de la página, la barra de herramientas sigue estando anclada en la misma posición a lo largo del trayecto.
-* Tercera pagina va aqui
+* La segunda página se llama [Agrocampo](https://www.agrocampo.com.co/) (agrocampo.com.co). Este sitio es una inspiración para PetHouse tanto en la parte visual como funcional. La iconografía es muy bella y hace pensar que quien diseñó la página le gustan los animales. La posición central de las fotos que promocionan los concentrados hace muy llamativa la pagina. En cuanto la parte funcional, la barra de herramientas principal está situada en la parte superior y es fácil entender su contenido. Presenta los botones de carrito, el logotipo y un buscador con sus clasificaciones, y cuando vas bajando dentro de la página, la barra de herramientas sigue estando anclada en la misma posición a lo largo del trayecto.
+* La tercera pagina se llama [Laika mascotas](https://laika.com.co/city/bog/dog) (https://laika.com.co/city/bog/dog). Lo que llama la atencion del sitio no es solo la interfaz, sino la gran variedad e intuitividad del sitio para ofrecer gran variedad de productos para perros y gatos pero no solo eso, sino que tiene tambien la opcion para buscar por servicios como veterinaria, etc lo que lo vuelve muy intuitivo junto con una suscripcion que te da beneficios exclusivos y organiza bien los productos por tipo de mascota: [producto] cachorros raza mediana, [productos] adultos raza pequeña. 
 * Cuarta pagina va aqui
 * Quinta pagina va aqui
 
