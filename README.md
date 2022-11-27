@@ -5,11 +5,11 @@ Este es el README del proyecto Pet House, aquí encontrarás cosas relacionadas 
  
 
 ### Tematica del proyecto
-La tematica y proposito de este proyecto es ser un e-commerce de productos para mascotas, por el momento estamos enfocados en comenzar ofrececiendo productos alimenticios para todo tipo de mascotas, teniendo en cuenta que la alimentacion de tus queridos amigos es lo mas importante para ellos, posteriormente agregaremos mas categorias de productos pensando en el bienestar de tus queridos amigos y mas que eso, porque esperamos **ser el hogar de tus mascotas.**
+La tematica y proposito de este proyecto es ser un e-commerce de productos para mascotas, por el momento estamos enfocados en comenzar ofrececiendo productos alimenticios para todo tipo de mascotas, teniendo en cuenta que la alimentacion de tus queridos amigos es lo mas importante para ellos, con el objetivo de adaptarnos a las necesidades de nuestros usuarios la página web, contará con una interfaz intuitiva y de fácil manejo y primarán las imágenes sobre los textos muy descriptivos. Todos los productos ofrecidos irán con su respectiva imágen. posteriormente iremos agregando mas categorias de productos pensando en el bienestar de tus queridos amigos y mas que eso, porque esperamos **ser el hogar de tus mascotas.**
 
 ### Publico objetivo
-Nuestra página web está pensada para dos publicos objetivos que son: Publico de personas jovenes/adultas y parejas sin hijos junto con el público familiar tradicional, de estos dos publicos apuntamos a personas entre los 15 y 45-50 años que sean responsables por una o varias mascotas, y que estén dispuestas a comprar los suministros necesarios para el día a día de su amigo de cuatro patas de manera virtual.
-Con el objetivo de adaptarnos a las necesidades de nuestros usuarios la página web, contará con una interfaz intuitiva y de fácil manejo y primarán las imágenes sobre los textos muy descriptivos. Todos los productos ofrecidos irán con su respectiva imágen.
+Nuestra página web está pensada para dos publicos objetivos que son: Publico de personas jovenes/adultas solteras y parejas sin hijos junto familias responsables por una o varias mascotas conformadas por adultos no mayores a los 45 años (publico milenial) que estén dispuestas a comprar los suministros necesarios para el día a día de su amigo de cuatro patas de manera virtual, teniendo en cuenta que en este rango de edad son personas acostumbradas a las herramientas digitales.
+
 
 ### Nuestro equipo
 
