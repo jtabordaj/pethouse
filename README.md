@@ -25,7 +25,8 @@ Mi nombre es Angela Ramírez, tengo 34 años, soy ingeniera de alimentos ,vivo e
 
 **Juan Taborda** : Hola, me llamo Juan José, tengo 21 años, soy estudiante de ultimo año de Economía (proximo a graduar). Vivo en Barranquilla y si bien no tengo mascotas, me gustan mucho los gatos. No he tenido experiencia previa sobre desarrollo web, pero si en otros lenguajes de programación. Espero poder desarrollar un excelente sitio web con todo mi equipo :).
 
-**Martin Vidan** :
+**Martin Vidan** : Hola, me llamo Martin Vidan, soy estudiante de desarrollo web full stack, vivo en Medellin en este momento no tengo mascotas pero  me gustan mucho los gatos. No he tenido experiencia previa sobre desarrollo web, pero si en otros lenguajes de programación (c y python). Espero poder desarrollar este E-commerce junto a mis compañeros.
+![](https://drive.google.com/file/d/1EgdtYy92n85QDUHY1i5ECW8xVl7UMSOW/view?usp=sharing)
 
 ### Plataformas que nos inspiraron
 * La primera pagina se llama [Kanu](https://www.kanu.pet/) (kanu.pet) Este sitio es una inspiración para PetHouse,porque presenta todos los productos para mascotas de manera organizada, dando la opción de elegir entre perro y gato, ademas, los colores de la pagina y la interacción que maneja este sitio, son agradables a la vista y facil en su navegación.
