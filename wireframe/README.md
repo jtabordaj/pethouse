@@ -8,8 +8,7 @@ Este link te enviara al proyecto en figma donde estan todos los frames y bocetos
 
 ## Link vista prototipo figma
 
-Puedes al acceder al link de abajo dar click derecho -> inspeccionar -> modo responsivo -> resolucion de tu agrado... y cuando pongas tu pestaña en el modo de celular podras ver directamente desde tu navegador como se veria el proyecto en resolucion movil.
-Tambien si solo quieres verlo de forma predeterminada puedes solo esperar que cargue el link y asi figma te lo mostrara tambien con resolucion movil
+Puedes al acceder al link de abajo dar click derecho -> inspeccionar -> modo responsivo -> resolucion de tu agrado... y cuando pongas tu pestaña en el modo de celular podras ver directamente desde tu navegador como se veria el proyecto en resolucion movil. 
 
 https://www.figma.com/proto/AeznbR0YKMKBkA2s4eUJg4/Wireframe-Pet-House-proy-integrador-DH?node-id=28%3A123&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2
 
