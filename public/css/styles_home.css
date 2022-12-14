@@ -1,0 +1,47 @@
+.icono{
+    font-size: 24px;
+}
+
+.barra{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.logo{
+    width: 10%;
+}
+.buscador{
+    display: flex;
+    justify-content: center;
+}
+.buscador input{
+    width: 80%;
+}
+main section{
+    display: flex;
+   overflow-x: scroll;
+   scroll-snap-type: x mandatory;
+   
+}
+main section article{
+    width: 30%;
+    flex: 0 0 100%;
+    text-align: center;
+    scroll-snap-align: center;
+}
+main section article img{
+    width: 20%;
+}
+.categoria article img{
+    border: black 1px solid;
+    border-radius: 100%;
+}
+p{
+    font-size: 10px;
+}
+footer{
+    text-align: center;
+}
+footer .icono{ 
+    font-size: 60px;
+}
