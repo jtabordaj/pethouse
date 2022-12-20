@@ -67,3 +67,11 @@ footer{
 .btns button{
     width: 65%;
 }
+
+/* Estilos detalle del producto */
+
+.productImg {
+    width: 90 vw;
+    background-color: #ff8243;
+    
+}
