@@ -14,3 +14,7 @@ https://www.figma.com/proto/AeznbR0YKMKBkA2s4eUJg4/Wireframe-Pet-House-proy-inte
 
 Este link te enviara a la vista de como se veria el proyecto en un telefono android de pantalla grande, donde puedes simular como se veria desde el telefono y a la vez dar click a componentes como el icono de menu, icono de carrito de compras, articulos en seccion de recomendados, y otros links que llevan a sus respectivas secciones.
 
+## Link de la paleta de colores
+
+
+https://coolors.co/ffffff-c2c2c2-c1630b-267f8c-38220d
