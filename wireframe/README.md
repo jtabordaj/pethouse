@@ -16,5 +16,4 @@ Este link te enviara a la vista de como se veria el proyecto en un telefono andr
 
 ## Link de la paleta de colores
 
-
-https://coolors.co/ffffff-c2c2c2-c1630b-267f8c-38220d
+https://coolors.co/ffffff-d6d6d6-c1630b-267f8c-38220d
