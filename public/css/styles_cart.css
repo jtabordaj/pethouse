@@ -1,8 +1,14 @@
+*{
+	box-sizing: border-box;
+}
+
 main{
-	padding-bottom: 20px;
-	padding-top: 20px;
+	margin-bottom: 8vw;
+	margin-top: 2vw;
+	padding-bottom: 8vw;
+	padding-top: 2vw;
 	flex-wrap: wrap;
-	background: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
+	background: #ffffff;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
@@ -10,19 +16,27 @@ main{
 }
 
 header{
+	background-color: #e77c18;
 }
 
-.container{
+footer{
+	background-color: #ebebeb;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+.containerCart{
 	width: 70vw;
 	height: auto;
 	padding-bottom: 15px;
 	background-color: #ffffff;
     border-radius: 20px;
+	border: 1px solid #38220d;
     box-shadow: 0px 10px 20px #1687d933;
 }
 
 @media (max-width: 500px){
-	.container{
+	.containerCart{
 		width: 100vw;
 		height: auto;
 	}
@@ -33,7 +47,7 @@ header{
 	font-size: 22px;
 	font-family: 'Open Sans';
 	font-weight: 800;
-	color: #202020;
+	color: #38220d;
 }
 
 .header{
@@ -51,7 +65,7 @@ header{
 	font-size: 14px;
 	font-family: 'Open Sans';
 	font-weight: 600;
-	color: #2956ed;
+	color: #3CBACD;
 	cursor: pointer;
 	text-align: right;
 }
@@ -96,7 +110,7 @@ img{
 	margin-bottom: 1px;
 	font-size: 20px;
 	font-family: 'Open Sans';
-	color: #2F3841;
+	color: #38220d;
 }
 
 .itemSubtitle{
@@ -105,11 +119,11 @@ img{
 	font-size: 16px;
 	font-family: 'Open Sans';
 	font-weight: 600;
-	color: #909090;
+	color: gray;
 }
 
 .itemRating{
-	color: black;
+	color: #38220d;
 	font-family: 'Open Sans';
 	font-size: 14px;
 	font-weight: bold;
@@ -135,7 +149,7 @@ img{
 	font-size: 26px;
 	font-family: 'Open Sans';
 	font-weight: 800;
-	color: #202020;
+	color: #38220d;
 }
 
 .amountDiscount{
@@ -149,7 +163,7 @@ img{
 	font-size: 14px;
 	font-family: 'Open Sans';
 	font-weight: 600;
-	color: #1687d9;
+	color: #3CBACD;
 	cursor: pointer;
 }
 .remove{
@@ -157,7 +171,7 @@ img{
 	font-size: 14px;
 	font-family: 'Open Sans';
 	font-weight: 600;
-	color: #E44C4C;
+	color: #e77c18;
 	cursor: pointer;
 }
 
@@ -170,7 +184,7 @@ img{
 	float: right;
 	margin-right: 5%;
 	width: 60vw;
-	border-top: 1px solid black;
+	border-top: 1px solid #38220d;
 }
 .total{
 	width: 100%;
@@ -181,7 +195,7 @@ img{
 	font-size: 22px;
 	font-family: 'Open Sans';
 	font-weight: 700;
-	color: #202020;
+	color: #38220d;
 }
 .items{
 	font-size: 16px;
@@ -201,11 +215,18 @@ img{
 	width: 100%;
 	height: 40px;
 	border: none;
-	background: linear-gradient(to bottom right, #B8D7FF, #8EB7EB);
+	background: #3CBACD;
 	border-radius: 20px;
 	cursor: pointer;
 	font-size: 16px;
 	font-family: 'Open Sans';
-	font-weight: 600;
+	font-weight: bold;
 	color: #202020;
+}
+
+.button:hover{
+	transition-duration: 0.75ms;
+	transition: background-color 0.5s;
+	background-color: #267f8c;
+	border-color: #267f8c;
 }
