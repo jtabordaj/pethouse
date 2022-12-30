@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel= "stylesheet" type= "text/css" herf="https://fonts.googleapis.com/css2family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <!-- Title Page -->  
+    <title>Regiter</title>
+    
+</head>
+<body>
+    <main>
+
+    <div id="container">
+        <form action="/" method="post">
+            <!-- Username -->
+            <div>
+                <label for="nombre">Nombre y apellido</label>
+                <input class="inputNombre" type="Nombre" id="nombre" placeholder="Nombre y apellido" name="nombre"> 
+            </div>
+            <div>
+                <label for="usuario">Nombre de usuari@</label>
+                <input class="inputNombre" type="usuario" id="usuario" placeholder="Nombre de Usuari@" name="nombre"> 
+            </div>
+            <!-- Password -->
+            <div>
+                <label for="nacimiento">Fecha de nacimiento</label>
+                <input type="date" id="FechaNacimiento" placeholder="Fecha de nacimiento" name="fecha">
+            </div>
+            <!-- Dirección -->
+            <div>
+                <label for="Domicilio">Domicilio</label>
+                <input type="domicilio" id="domicilio" placeholder="Domicilio" name="domicilio">
+            </div>
+            <!-- Perfil de usuario -->
+            <div>
+                <label for="Perfil">Perfil del usuario</label>
+                <input type="radio" id="perfil" name="perfil-del-usuario" value="Comprador">
+                <input type="radio" id="perfil" name="perfil-del-usuario" value="Vendedor">
+            </div>
+
+            <!-- Categoría de interés -->
+            <div>
+                <label for="categoriaInteres">Categoría de interés</label>
+                <input type="checkbox" id="categoriaInteres" name="categoriaInteres" value="Electro">
+                <input type="checkbox" id="categoriaInteres" name="categoriaInteres" value="Moda">
+                <input type="checkbox" id="categoriaInteres" name="categoriaInteres" value="Hogar">
+                <input type="checkbox" id="categoriaInteres" name="categoriaInteres" value="Juguetería">
+                <input type="checkbox" id="categoriaInteres" name="categoriaInteres" value="Vida sana">
+            </div>
+
+            <!-- Foto de usuario -->
+            <div>
+                <label for="foto">Perfil del usuario</label>
+                <input type="file" id="foto" name="avatar" accept=".jpg">                
+            </div>
+
+            <!-- Contraseña -->
+            <div>
+                <label for="contrasenia">Contraseña</label>
+                <input type="password" id="contrasenia" placeholder="Contraseña" name="contrasenia">                
+            </div>
+            <div>
+                <label for="contrasenia">Confirmar contraseña</label>
+                <input type="password" id="contrasenia" placeholder="Contraseña" name="contrasenia">                
+            </div>
+
+            <!-- Botón de enviar -->
+            <div>
+                <label for="botonEnviar"><a hreft ="views/home.html">Enviar</a></label>
+                <input type="sentBotton" id="botonEnviar" placeholder="Enviar" name="botonEnviar">
+            </div>
+            
+            <!-- Botón de enliminar -->
+            <div>
+                <label for="botonBorrar">
+                    <a hreft ="views/home.html">Enviar</a>
+                </label>
+                <input type="deleteBotton" id="botonBorrar" placeholder="Borrar" name="botonBorrar">
+            </div>
+            
+        </form>       
+    </div>
+
+    </main>
+</body>
+</html>
