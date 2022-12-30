@@ -1,0 +1,113 @@
+h3{
+    text-align: center;
+}
+.btsd{
+    
+    font-size: 24px;
+}
+.btsd button{
+    border: none;
+    background-color: white;
+}
+
+.barra{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.logo{
+    width: 10%;
+}
+.buscador{
+    display: flex;
+    justify-content: center;
+}
+.buscador input{
+    width: 80%;
+}
+
+footer{
+    text-align: center;
+}
+.btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 70%;
+    align-items: flex-end;
+}
+.btns button{
+    width: 65%;
+}
+
+
+/*  estilos ProductDetail */
+
+.mainProducto{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    width: 100vw;
+    background-color: #1bbcb6;
+    
+}
+
+.sectionProducto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width:95%;
+    background-color: #f2f0ee;
+    padding: 10px;
+}
+
+
+.imagenProducto {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.infoProducto {
+    display:flex;
+    justify-content: space-between ;
+    padding: 10px;
+
+}
+.cuadroCant {
+    width: 30px;
+    height: 27px;
+    
+}
+
+.letraNaranja {
+    color:#FFB547;
+    font-weight: bold;
+}
+
+.botonesP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonP {
+    background-color: rgb(247, 128, 9);
+    width: 160px;
+    color: #ffff;
+    font-weight: bold ;
+    border-radius: 5px;
+    box-shadow: #1bbcb6;
+    margin-bottom: 5px;
+}
+
+.buttonP2 {
+    background-color: #ffff;
+    width: 160px;
+    color: rgb(247, 128, 9);
+    font-weight: bold ;
+    border-radius: 5px;
+    box-shadow: #1bbcb6;
+}
+
+
+
+
