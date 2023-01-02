@@ -1,71 +1,18 @@
-h3{
-    text-align: center;
-}
-.btsd{
-    
-    font-size: 24px;
-}
-.btsd button{
-    border: none;
-    background-color: white;
-}
-
 .barra{
     display: flex;
+    width: 100%;
+    flex-wrap: wrap;
     justify-content: space-between;
-    
 }
-.logo{
+.boton{
     width: 10%;
 }
-.buscador{
-    display: flex;
-    justify-content: center;
+.boton button{
+    border:none;
+    background-color: none;
 }
-.buscador input{
-    width: 80%;
-}
-main section{
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-   
-}
-main section article{
-    width: 30%;
-    flex: 0 0 100%;
-    text-align: center;
-    scroll-snap-align: center;
-}
-.animal{
-    display: flex;
-    justify-content:center;
-}
-.animal button{
-    margin-left: 10px;
-}
-main section article img{
-    width: 20%;
-}
-.categoria article img{
-    border: black 1px solid;
-    border-radius: 100%;
-}
-p{
-    font-size: 10px;
-}
-footer{
-    text-align: center;
-}
-.btns{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 70%;
-    align-items: flex-end;
-}
-.btns button{
-    width: 65%;
+.logo{
+    width: 18%;
 }
 
 /* Estilos detalle del producto */
