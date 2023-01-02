@@ -11,12 +11,14 @@
 </head>
 <body>
     <header>
-        <nav>
+        <section>
             <div class="barra">
                 <div class="boton">
                     <button><i class="fas fa-bars"></i></button>                  
                 </div>
-                    <img class="logo" src="/img/logo.png">
+                <picture class="logo">
+                    <img src="/img/logo.png">
+                </picture>
                 <div class="boton">
                     <a href="/productCart"><button><i class="fas fa-cart-plus"></i></button></a>  
                 </div>
@@ -25,19 +27,34 @@
                 <input type="text" placeholder="producto a buscar">
                 <button><i class="fas fa-search"></i></button>
             </div>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Tiendas Oficiales</a></li>
+                <li><a href="">Vender</a></li>
+                <li><a href="">Ayuda</a></li>
+            </ul>
+            <ul>
+                <li><a href="/register">Creá tu cuenta<i class="far fa-address-card"></i></a></li>
+                <li><a href="/login">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="">Mis compras<i class="fas fa-cart-plus"></i></a></li>
+            </ul>
         </nav>
         <section class="animal">
             <h3>Animales</h3>
-            <button>perro <i class="fa-solid fa-dog"></i></button>
-            <button>gato <i class="fa-solid fa-cat"></i></button>
+            <div>
+                <button>perro <i class="fa-solid fa-dog"></i></button>
+                <button>gato <i class="fa-solid fa-cat"></i></button>
+            </div>
         </section>
     </header>
-    <main>
+    <main class="home">
         <section>  
             <h3>Ofertas</h3>
             <div class="ofertas">
                 <div>
-                    <i class="fa-solid fa-chevron-right"></i>
+                    <i class="fa-solid fa-chevron-left"></i>
                 </div>
                 <article>
                     <img src="/img/img-alimento-mini.jpg" alt="">
@@ -61,19 +78,12 @@
                     </div>
                 </article>
                 <div>
-                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-right"></i>
                 </div>
             </div>
-            <article>
-                <img src="/img/pedigree-adulto.jpg" alt="">
-                <div>
-                    <p class="precio">$77.000</p>
-                    <p class="descuento">21%</p>
-                </div>
-            </article>
         </section>
-        <h3>Categorias</h3>
         <section class="categoria">
+            <h3>Categorias</h3>
             <article>
                 <img src="/img/categoria_alimento-min.png">
                 <p>Alimento</p>

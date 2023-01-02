@@ -6,7 +6,7 @@ app.listen(3000, ()=>{
     console.log("servidor activo en el puerto 3000");
 });
 app.get("/", (req, res)=>{
-    res.sendFile(__dirname + "/views/home.html");
+    res.sendFile(__dirname + "/views/index.html");
 });
 app.get("/productCart", (req, res)=>{
     res.sendFile(__dirname + "/views/productCart.html");

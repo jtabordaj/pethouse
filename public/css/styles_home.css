@@ -1,4 +1,86 @@
-.barra{
+
+body{
+    width: 100%;
+    margin: 0px;
+}
+/*header*/
+header{
+    background-color: #FFB547;
+}
+header section .barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header section .barra .boton button{
+    background-color: #FFB547;
+    border: none;
+}
+header section .barra .logo{
+    width: 20%;
+}
+header section .barra .logo img{
+    width: 100%;
+    color: #1bbcb6;
+}
+header section .buscador{
+    display: flex;
+    justify-content: center;
+}
+header section .buscador input{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+}
+header section .buscador button{
+    position: relative;
+    left: 70px;
+    border: none;
+    background-color: white;
+}
+header nav{
+    display: none;
+}
+header .animal h3{
+    text-align: center;
+}
+header .animal div{
+    display: flex;
+    justify-content: center;
+}
+header .animal div button{
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-bottom: 6px;
+}
+header .animal div button i{
+    color: #1bbcb6;
+}
+
+/* estilos del main del home */
+.home section h3{
+    text-align: center;
+}
+.home section .ofertas{
+    display: flex;
+}
+.home section .ofertas article{
+
+}
+.home section .ofertas article img{
+    width: 30%;
+
+}
+
+
+
+
+
+
+
+/* .barra{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -14,4 +96,4 @@
 .logo{
     width: 18%;
 }
-
+ */
