@@ -3,6 +3,7 @@ body{
     width: 100%;
     margin: 0px;
 }
+
 /*header*/
 header{
     background-color: #FFB547;
@@ -16,7 +17,7 @@ header section .barra .boton button{
     background-color: #FFB547;
     border: none;
 }
-header section .barra .logo{
+header section .barra .logo, .logo{
     width: 20%;
 }
 header section .barra .logo img{
@@ -63,37 +64,45 @@ header .animal div button i{
 .home section h3{
     text-align: center;
 }
+
+/* ofertas */
 .home section .ofertas{
     display: flex;
-}
-.home section .ofertas article{
-
-}
-.home section .ofertas article img{
-    width: 30%;
-
-}
-
-
-
-
-
-
-
-/* .barra{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
-.boton{
-    width: 10%;
+.home section .ofertas article{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.boton button{
-    border:none;
-    background-color: none;
+.home section .ofertas article img{
+    width: 100%;
 }
-.logo{
-    width: 18%;
+.home section .flecha{
+    display: flex;
+    align-items: center;
 }
- */
+
+/* categotias */
+
+.home section .categoria{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f0ee;
+}
+footer .btns{
+    display: flex;
+    flex-direction: column;
+}
+footer .btns button{
+    border-radius: 6px;
+}
