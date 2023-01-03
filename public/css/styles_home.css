@@ -1,5 +1,6 @@
 
 body{
+    font-family: 'Open Sans';
     width: 100%;
     margin: 0px;
 }
@@ -105,4 +106,35 @@ footer .btns{
 }
 footer .btns button{
     border-radius: 6px;
+}
+@media (min-width: 500px){
+    header section .barra{
+        justify-content: flex-start;
+    }
+    header section .barra .boton button{
+        display: none;
+        position: absolute;
+    }
+    header section .buscador{
+        position: relative;
+        top: -70px;
+    }
+    header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav ul{
+        display: flex;
+        list-style: none;
+    }
+    header nav ul li{
+        padding: 5px;
+    }
+    header nav ul li a{
+        text-decoration: none;
+        color: black;   
+    }
+    header nav ul li a i{
+        margin-left: 3px;
+    }
 }
