@@ -1,43 +1,108 @@
-h3{
-    text-align: center;
-}
-.btsd{
-    
-    font-size: 24px;
-}
-.btsd button{
-    border: none;
-    background-color: white;
+/* header */
+
+header{
+    background-color: #FFB547;
 }
 
-.barra{
+header section .barra{
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
 }
-.logo{
-    width: 10%;
+header section .barra .boton button{
+    background-color: #FFB547;
+    border: none;
 }
-.buscador{
+header section .barra .logo, .logo{
+    width: 20%;
+    margin-top: 10px;
+}
+header section .barra .logo img{
+    width: 100%;
+    color: #1bbcb6;
+    margin-top: 10px;
+}
+header section .buscador{
     display: flex;
     justify-content: center;
 }
-.buscador input{
-    width: 80%;
+header section .buscador input{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
 }
-
-footer{
+header section .buscador button{
+    position: relative;
+    left: 70px;
+    border: none;
+    background-color: white;
+}
+header nav{
+    display: none;
+}
+header .animal h3{
     text-align: center;
 }
-.btns{
+header .animal div{
+    display: flex;
+    justify-content: center;
+}
+header .animal div button{
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-bottom: 6px;
+}
+header .animal div button i{
+    color: #1bbcb6;
+}
+
+/* footer */
+footer{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 70%;
-    align-items: flex-end;
+    align-items: center;
+    background-color: #FFB547;
 }
-.btns button{
-    width: 65%;
+footer .btns{
+    display: flex;
+    flex-direction: column;
+}
+footer .btns button{
+    border-radius: 6px;
+    margin-top: 5px; /*Angela:modifique margen por estetica */
+}
+@media (min-width: 500px){
+    header section .barra{
+        justify-content: flex-start;
+    }
+    header section .barra .boton button{
+        display: none;
+        position: absolute;
+    }
+    header section .buscador{
+        position: relative;
+        top: -70px;
+    }
+    header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav ul{
+        display: flex;
+        list-style: none;
+    }
+    header nav ul li{
+        padding: 5px;
+    }
+    header nav ul li a{
+        text-decoration: none;
+        color: black;   
+    }
+    header nav ul li a i{
+        margin-left: 3px;
+    }
 }
 
 
@@ -46,8 +111,8 @@ footer{
 .mainProducto{
     font-family:Arial, Helvetica, sans-serif;
     font-size: 15px;
-    width: 100vw;
-    background-color: #1bbcb6;
+    width: 100%;
+    background-color: #f2f0ee;
     
 }
 
@@ -55,9 +120,8 @@ footer{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width:95%;
     background-color: #f2f0ee;
-    padding: 10px;
+    padding: 20px;
 }
 
 
@@ -69,7 +133,6 @@ footer{
 .infoProducto {
     display:flex;
     justify-content: space-between ;
-    padding: 10px;
 
 }
 .cuadroCant {

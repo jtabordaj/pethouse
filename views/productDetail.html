@@ -11,28 +11,49 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="barra">
-                <div class="btsd">
-                    <button><i class="fas fa-bars"></i></button>                  
+        <section>
+                <div class="barra">
+                    <div class="boton">
+                        <button><i class="fas fa-bars"></i></button>                  
+                    </div>
+                    <picture class="logo">
+                        <img src="/img/logo.png">
+                    </picture>
+                    <div class="boton">
+                        <a href="/productCart"><button><i class="fas fa-cart-plus"></i></button></a>  
+                    </div>
                 </div>
-                    <img class="logo" src="/img/logo.png">
-                <div class="btsd">
-                    <a href="/productCart"><button><i class="fas fa-cart-plus"></i></button></a>  
-                </div>                
-            </div>
-            <div class="buscador">
-                <input type="text" placeholder="producto a buscar">
-                <button><i class="fas fa-search"></i></button>
-            </div>
-        </nav>
+                <div class="buscador">
+                    <input type="text" placeholder="producto a buscar">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </section>
+            <nav>
+                <ul>
+                    <li><a href="">Ofertas</a></li>
+                    <li><a href="">Tiendas Oficiales</a></li>
+                    <li><a href="">Ayuda</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/register">Creá tu cuenta<i class="far fa-address-card"></i></a></li>
+                    <li><a href="/login">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
+                    <li><a href="/productCart">Mis compras<i class="fas fa-cart-plus"></i></a></li>
+                </ul>
+            </nav>
+            <section class="animal">
+                <h3>Animales</h3>
+                <div>
+                    <button>perro <i class="fa-solid fa-dog"></i></button>
+                    <button>gato <i class="fa-solid fa-cat"></i></button>
+                </div>
+            </section>
     </header>
     <main class="mainProducto">
         <h2>Tu producto selecionado:</h2>
         <section class="sectionProducto">
-            <h3>Purina Pro Plan-Gatitos Con Optistart-1.5 Kg</h3>
+            <h3>Purina Pro Plan-Gatos esterilizados-Urinary-1.5 Kg</h3>
             <div>
-                <img class="imagenProducto" src="/img/purina-proplan-product.jpg">
+                <img class="imagenProducto" src="/img/proplan-esterilizado.png">
             </div>
             <div class="infoProducto">
                 <p>$130.000</p>
@@ -62,11 +83,11 @@
             </div>
             <div class="infoProducto">
                 <p>Calificacion del producto</p>
-                <p>4.7/5⭐</p> <!-- !consultar estrella/-->
+                <p>4.7/5⭐</p> 
             </div>
             <div class="infoProducto">
                 <p>Calificacion del vendedor</p>
-                <p>4.7/5⭐</p> <!-- !consultar estrella/-->
+                <p>4.7/5⭐</p> 
             </div>
             <div class="botonesP">
                 <button class="buttonP" type="submit">Comprar</button>
@@ -79,11 +100,11 @@
             </div>
             <div>
                 <h3>Métodos de pago</h3>
-                <p>Tarjeta de crédito y débito<i></i></p> <!--poner icono-->
+                <p>Tarjeta de crédito y débito <i class="fa fa-credit-card"></i></p>
                 <p>Ver opciones disponibles</p>
                 <p>Ver tarjetas agregadas</p>
                 <p>Agregar tarjetas de crédito o débito</p>
-                <p>Efectivo</p> <!--poner icono-->
+                <p>Efectivo <i class="fa fa-money"></i></p>
                 <p>Ver opciones disponibles</p>
                 
             </div>
@@ -102,9 +123,9 @@
             </div>
         </article>
         <article class="btns">
-            <button>Sobre nosotros</button>
-            <button>Preguntas frecuentes</button>
-            <button>Informacion de contacto</button>
+            <button>Sobre nosotros <i class="fa-solid fa-chevron-right"></i></button>
+            <button>Preguntas frecuentes <i class="fa-solid fa-chevron-right"></i></button>
+            <button>Informacion de contacto <i class="fa-solid fa-chevron-right"></i></button>
         </article>
         <article>
             <p>Todos los derechos reservados - ® Pet House 2022</p>
