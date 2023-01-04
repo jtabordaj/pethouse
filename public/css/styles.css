@@ -1,0 +1,286 @@
+
+body{
+    font-family: 'Open Sans';
+    
+}
+
+/*header*/
+header{
+    background-color: #FFB547;
+}
+header section .barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header section .barra .boton button{
+    background-color: #FFB547;
+    border: none;
+}
+header section .barra .logo, .logo{
+    width: 20%;
+}
+header section .barra .logo img{
+    width: 100%;
+    color: #1bbcb6;
+}
+header section .buscador{
+    display: flex;
+    justify-content: center;
+}
+header section .buscador input{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+}
+header section .buscador button{
+    position: relative;
+    left: 70px;
+    border: none;
+    background-color: white;
+}
+header nav{
+    display: none;
+}
+header .animal h3{
+    text-align: center;
+}
+header .animal div{
+    display: flex;
+    justify-content: center;
+}
+header .animal div button{
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-bottom: 6px;
+}
+header .animal div button i{
+    color: #1bbcb6;
+}
+
+/* estilos del main del home */
+.home section h3{
+    text-align: center;
+}
+
+/* ofertas */
+.home section .ofertas{
+    display: flex;
+    justify-content: space-between;
+}
+.home section .ofertas article{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home section .ofertas article img{
+    width: 100%;
+}
+.home section .flecha{
+    display: flex;
+    align-items: center;
+}
+
+/* categotias */
+
+.home section .categoria{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.mainProducto{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    width: 100%;
+    background-color: #f2f0ee;
+    
+}
+
+.iWhatsapp {
+    display: flex;
+    position: fixed;
+    right: 21px;
+    bottom: 22px;
+    border-radius: 100%;
+    background-color: #1bbcb6;
+    opacity: 0.6;
+    color: white;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.iWhatsapp:hover {
+    background-color: #FFB547;
+    color:black;
+    opacity: 0,6;
+
+}
+.mainProducto .sectionProducto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f2f0ee;
+    padding: 20px;
+}
+
+
+.mainProducto .imagenProducto {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.mainProducto .infoProducto {
+    display:flex;
+    justify-content: space-between ;
+
+}
+.mainProducto .cuadroCant {
+    width: 30px;
+    height: 27px;
+    
+}
+
+.mainProducto .letraNaranja {
+    color:#FFB547;
+    font-weight: bold;
+}
+
+.mainProducto .botonesP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainProducto .buttonP {
+    background-color: rgb(247, 128, 9);
+    width: 160px;
+    color: #ffff;
+    font-weight: bold ;
+    border-radius: 5px;
+    box-shadow: #1bbcb6;
+    margin-bottom: 5px;
+}
+
+.mainProducto .buttonP2 {
+    background-color: #ffff;
+    width: 160px;
+    color: rgb(247, 128, 9);
+    font-weight: bold ;
+    border-radius: 5px;
+    box-shadow: #1bbcb6;
+}
+
+
+
+
+
+
+
+/* footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1bbcb6;
+}
+footer .logo{
+    margin-top: 10px;
+}
+footer .btns{
+    display: flex;
+    flex-direction: column;
+}
+footer .btns button{
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+@media (min-width: 500px){
+    header section .barra .logo{
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+    header section .barra{
+        justify-content: flex-start;
+    }
+    header section .barra .boton button{
+        display: none;
+        position: absolute;
+    }
+    header section .buscador{
+        position: relative;
+        top: -70px;
+    }
+    header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav ul{
+        display: flex;
+        list-style: none;
+    }
+    header nav ul li{
+        padding: 5px;
+    }
+    header nav ul li a{
+        text-decoration: none;
+        color: black;   
+    }
+    header nav ul li a i{
+        margin-left: 3px;
+    }
+    header .animal{
+        display: none;
+    }
+
+    /* pruduct detail main*/
+    .mainProducto picture {
+        text-align: center;
+    }
+    .mainProducto .imagenProducto{
+        width: 300px;
+    }
+}
+@media (min-width: 800px){
+    
+    
+    
+    
+    footer .logo{
+        width: 15%;
+    }
+    footer article p{
+        font-size: 24px;
+    }
+    footer article .icono i{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    footer .btns{
+        flex-direction: row;
+    }
+    footer .btns button {
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+        height: 30px;
+        align-items: center;
+        font-size: 21px;
+        background-color: orange;
+    }
+}
+
+
+git comit -m "organizamos media query unificamos las hojas de estilo de home y product detail "
