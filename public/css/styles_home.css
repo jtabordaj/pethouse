@@ -1,0 +1,140 @@
+
+body{
+    font-family: 'Open Sans';
+    width: 100%;
+    margin: 0px;
+}
+
+/*header*/
+header{
+    background-color: #FFB547;
+}
+.btsd button{
+    border: none;
+    background-color: white;
+}
+
+.barra{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.logo{
+    width: 10%;
+}
+header section .buscador{
+    display: flex;
+    
+}
+header section .buscador input{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+}
+header section .buscador button{
+    position: relative;
+    left: 70px;
+    border: none;
+    background-color: white;
+}
+header nav{
+    display: none;
+}
+header .animal h3{
+    text-align: center;
+}
+header .animal div{
+    display: flex;
+    justify-content: center;
+}
+header .animal div button{
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-bottom: 6px;
+}
+header .animal div button i{
+    color: #1bbcb6;
+}
+
+/* estilos del main del home */
+.home section h3{
+    text-align: center;
+}
+
+/* ofertas */
+.home section .ofertas{
+    display: flex;
+    justify-content: space-between;
+}
+.animal button{
+    margin-left: 10px;
+}
+main section article img{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home section .ofertas article img{
+    width: 100%;
+}
+.home section .flecha{
+    display: flex;
+    align-items: center;
+}
+
+/* categotias */
+
+.home section .categoria{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f0ee;
+}
+footer .btns{
+    display: flex;
+    flex-direction: column;
+}
+footer .btns button{
+    border-radius: 6px;
+}
+@media (min-width: 500px){
+    header section .barra{
+        justify-content: flex-start;
+    }
+    header section .barra .boton button{
+        display: none;
+        position: absolute;
+    }
+    header section .buscador{
+        position: relative;
+        top: -70px;
+    }
+    header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav ul{
+        display: flex;
+        list-style: none;
+    }
+    header nav ul li{
+        padding: 5px;
+    }
+    header nav ul li a{
+        text-decoration: none;
+        color: black;   
+    }
+    header nav ul li a i{
+        margin-left: 3px;
+    }
+}

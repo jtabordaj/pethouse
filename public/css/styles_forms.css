@@ -3,37 +3,45 @@ h3{
 }
 
 header{
-    border: 4px;
-    border: #D6D6D6;
-}
-.barra nav{
-    flex-wrap: wrap;
-	background: #ffffff;
-	display: flex;
-	justify-content: center;
+    background-color: #FFB547;
+    display: flex;
+    justify-content: center;
 	align-items: center;
-    
-
+    padding: 3%;
 }
+
 .logo {    
     width: 20vw;
-    text-align: center;
+    margin: none;
+    background-color: none;
+    padding: none;
+    border: none;
+    align-items: center;
+}
+header button{
+    color: none;
+    border: none;
+    background-color:  #FFB547;
+    align-items: center;
 }
 
 main{	
 	flex-wrap: wrap;
 	background: #ffffff;
 	display: flex;
+    flex-direction: column;
 	justify-content: center;
 	align-items: center;
+    padding: 3%
 }
 
 .formulario section{
     display: flex;
-    flex-direction: row; 
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+
+
 
 div article{
     padding: 0 0 4% 0;
@@ -48,11 +56,12 @@ label{
 
 footer{
     display: flex;
-    flex-direction: row; 
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-	background: #ffffff;
+	background-color: #1bbcb6;
+    padding: 3%;
 	
 
 }
@@ -61,5 +70,11 @@ footer div  {
     padding: 3%;
     margin: 1%;
     text-align: center;
-
-    
+        
+}
+footer button{
+    color: none;
+    border: none;
+    background-color:  #1bbcb6;
+    align-items: center;
+}
