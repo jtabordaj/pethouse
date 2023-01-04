@@ -13,11 +13,34 @@ main{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	box-sizing: border-box;
 }
 
+/* header */
+
 header{
-	background-color: #e77c18;
+    background-color: #FFB547;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+    padding: 3%;
 }
+
+.logo {    
+    width: 20vw;
+    margin: none;
+    background-color: none;
+    padding: none;
+    border: none;
+    align-items: center;
+}
+header button{
+    color: none;
+    border: none;
+    background-color:  #FFB547;
+    align-items: center;
+}
+
 
 footer{
 	background-color: #ebebeb;
@@ -229,4 +252,30 @@ img{
 	transition: background-color 0.5s;
 	background-color: #267f8c;
 	border-color: #267f8c;
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+	background-color: #1bbcb6;
+    padding: 3%;
+	
+}
+
+footer div  {
+    padding: 3%;
+    margin: 1%;
+    text-align: center;
+        
+}
+footer button{
+    color: none;
+    border: none;
+    background-color:  #1bbcb6;
+    align-items: center;
 }
