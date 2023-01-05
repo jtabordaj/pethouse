@@ -6,20 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/29d377923f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/styles_forms.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Register</title>
     
 </head>
 <body>
     <header>
+        <section>
+            <div class="barra">
+                <div class="boton">
+                    <button><i class="fas fa-bars"></i></button>                  
+                </div>
+                <picture class="logo">
+                    <img src="/img/logo.png">
+                </picture>
+                <div class="boton">
+                    <a href="/productCart"><button><i class="fas fa-cart-plus"></i></button></a>  
+                </div>
+            </div>
+            <div class="buscador">
+                <input type="text" placeholder="producto a buscar">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </section>
         <nav>
-            <div class="barra">                
-                <a href="/"><button ><img class="logo" src="/img/logo.png"></button></a>                
-                                    
-            </div>          
+            <ul>
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Tiendas Oficiales</a></li>
+                <li><a href="">Ayuda</a></li>
+            </ul>
+            <ul>
+                <li><a href="/register">Creá tu cuenta<i class="far fa-address-card"></i></a></li>
+                <li><a href="/login">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="/productCart">Mis compras<i class="fas fa-cart-plus"></i></a></li>
+            </ul>
         </nav>
+        <section class="animal">
+            <h3>Animales</h3>
+            <div>
+                <button>perro <i class="fa-solid fa-dog"></i></button>
+                <button>gato <i class="fa-solid fa-cat"></i></button>
+            </div>
+        </section>
     </header>
-    <main>
+    <main class="register">
         <h3>Regístrate</h3>
 
         <section class="formulario">
@@ -86,7 +116,7 @@
 
     </main>
     <footer>
-        <a href="/"><button ><img class="logo" src="/img/logo.png"></button></a>
+        <img class="logo" src="/img/logo.png">
         <article>
             <p>Nuestras redes</p>
             <div class="icono">
@@ -95,6 +125,14 @@
                 <i class="fa-brands fa-youtube"></i>
                 <i class="fa-brands fa-twitter"></i>
             </div>
+        </article>
+        <article class="btns">
+            <button>Sobre nosotros <i class="fa-solid fa-chevron-right"></i></button>
+            <button>Preguntas frecuentes <i class="fa-solid fa-chevron-right"></i></button>
+            <button>Informacion de contacto <i class="fa-solid fa-chevron-right"></i></button>
+        </article>
+        <article>
+            <p>Todos los derechos reservados - ® Pet House 2022</p>
         </article>
 
     </footer>

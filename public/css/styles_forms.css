@@ -2,7 +2,8 @@ h3{
     text-align: center;
 }
 
-header{
+
+.resgiter header{
     background-color: #FFB547;
     display: flex;
     justify-content: center;
@@ -10,7 +11,7 @@ header{
     padding: 3%;
 }
 
-.logo {    
+.register .logo {    
     width: 20vw;
     margin: none;
     background-color: none;
@@ -18,14 +19,14 @@ header{
     border: none;
     align-items: center;
 }
-header button{
+.register header button{
     color: none;
     border: none;
     background-color:  #FFB547;
     align-items: center;
 }
 
-main{	
+.register {	
 	flex-wrap: wrap;
 	background: #ffffff;
 	display: flex;
@@ -35,7 +36,7 @@ main{
     padding: 3%
 }
 
-.formulario section{
+.register .formulario section{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -43,38 +44,9 @@ main{
 
 
 
-div article{
+.register div article{
     padding: 0 0 4% 0;
     margin: 5%;
     text-align: center;
 }
 
-label{
-    padding:5%;
-    text-align: center;
-}
-
-footer{
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-	background-color: #1bbcb6;
-    padding: 3%;
-	
-
-}
-
-footer div  {
-    padding: 3%;
-    margin: 1%;
-    text-align: center;
-        
-}
-footer button{
-    color: none;
-    border: none;
-    background-color:  #1bbcb6;
-    align-items: center;
-}
