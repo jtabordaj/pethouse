@@ -9,12 +9,42 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
 </head>
 <header>
+    <section>
+        <div class="barra">
+            <div class="boton">
+                <button><i class="fas fa-bars"></i></button>                  
+            </div>
+            <picture class="logo">
+                <img src="/img/logo.png">
+            </picture>
+            <div class="boton">
+                <a href="/productCart"><button><i class="fas fa-cart-plus"></i></button></a>  
+            </div>
+        </div>
+        <div class="buscador">
+            <input type="text" placeholder="producto a buscar">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </section>
     <nav>
-        <div class="barra">                
-            <a href="/"><button ><img class="logo" src="/img/logo.png"></button></a>                
-                                
-        </div>          
+        <ul>
+            <li><a href="">Ofertas</a></li>
+            <li><a href="">Tiendas Oficiales</a></li>
+            <li><a href="">Ayuda</a></li>
+        </ul>
+        <ul>
+            <li><a href="/register">Creá tu cuenta<i class="far fa-address-card"></i></a></li>
+            <li><a href="/login">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
+            <li><a href="/productCart">Mis compras<i class="fas fa-cart-plus"></i></a></li>
+        </ul>
     </nav>
+    <section class="animal">
+        <h3>Animales</h3>
+        <div>
+            <button>perro <i class="fa-solid fa-dog"></i></button>
+            <button>gato <i class="fa-solid fa-cat"></i></button>
+        </div>
+    </section>
 </header>
 <main>
    <div class="containerCart">

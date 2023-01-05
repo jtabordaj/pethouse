@@ -20,33 +20,158 @@ main{
 
 header{
     background-color: #FFB547;
+}
+header section .barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header section .barra .boton button{
+    background-color: #FFB547;
+    border: none;
+}
+header section .barra .logo, .logo{
+    width: 20%;
+}
+header section .barra .logo img{
+    width: 100%;
+    color: #1bbcb6;
+}
+header section .buscador{
     display: flex;
     justify-content: center;
-	align-items: center;
-    padding: 3%;
+}
+header section .buscador input{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    width: 40%;
+    position: absolute;
+}
+header section .buscador button{
+    position: relative;
+    left: 18%;
+    border: none;
+    background:none;
+}
+header nav{
+    display: none;
+}
+header .animal h3{
+    text-align: center;
+}
+header .animal div{
+    display: flex;
+    justify-content: center;
+}
+header .animal div button{
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-bottom: 6px;
+}
+header .animal div button i{
+    color: #1bbcb6;
 }
 
-.logo {    
-    width: 20vw;
-    margin: none;
-    background-color: none;
-    padding: none;
-    border: none;
-    align-items: center;
-}
-header button{
-    color: none;
-    border: none;
-    background-color:  #FFB547;
-    align-items: center;
+@media (min-width: 500px){
+    header section .barra .logo{
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+    header section .barra{
+        justify-content: flex-start;
+    }
+    header section .barra .boton button{
+        display: none;
+        position: absolute;
+    }
+    header section .buscador{
+        position: relative;
+        top: -15vh;
+    }
+    header section .buscador input{
+        width: 39%;
+        height: 25px;
+    }
+    header section .buscador button {
+        padding: 5px;
+    }
+    header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav ul{
+        display: flex;
+        list-style: none;
+    }
+    header nav ul li{
+        padding: 5px;
+    }
+    header nav ul li a{
+        text-decoration: none;
+        color: black;   
+    }
+    header nav ul li a i{
+        margin-left: 3px;
+    }
+    header .animal{
+        display: none;
+    }
 }
 
+/* footer */
 
 footer{
-	background-color: #ebebeb;
-	padding-bottom: 20px;
-	padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1bbcb6;
 }
+footer .logo{
+    margin-top: 10px;
+}
+footer .btns{
+    display: flex;
+    flex-direction: column;
+}
+footer .btns button{
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+@media (min-width: 800px){
+    
+    footer .logo{
+        width: 15%;
+    }
+    footer article p{
+        font-size: 24px;
+    }
+    footer article .icono i{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    footer .btns{
+        flex-direction: row;
+    }
+    footer .btns button {
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+        height: 30px;
+        align-items: center;
+        font-size: 21px;
+        background-color: orange;
+    }
+}
+
+
+/* cart */
+
 
 .containerCart{
 	width: 70vw;
