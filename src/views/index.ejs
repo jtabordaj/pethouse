@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/29d377923f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Pet House</title>
+</head>
+<body>
+    <%- include('./partial/header')%>
+    <main class="home">
+        <div class="iWhatsapp">
+            <i class="fa fa-whatsapp  fa-2x"></i>
+        </div>
+        <section>  
+            <h3>Ofertas</h3>
+            <div class="ofertas">
+                <div class="flecha">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <% for(let i = 0; i < product.length; i++){%>
+                    <% if(product[i].descuento > 0) {%>
+                        <article>
+                            <img src=<%=product[i].img%> alt="">
+                            <div>
+                                <p><%= product[i].marca %></p>
+                                <p> Para <%= product[i].edad %></p>
+                                <p> Precio $ <%= product[i].precio %></p>
+                                <p> Descuento <%= product[i].descuento %>%</p>
+                            </div>
+                        </article>
+                    <%}%>
+                <%}%>
+                <div class="flecha">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>Categorias</h3>
+            <div class="categoria">
+                <div class="flecha">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <%for (let i = 0; i < category.length; i++){%>
+                    <article>
+                        <img src=<%=category[i].img%> alt="">
+                        <p> <%=category[i].titulo%></p>
+                    </article>
+                <%}%>
+                <div class="flecha">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+    <%- include('./partial/footer')%>
+    
+</body>
+</html>
