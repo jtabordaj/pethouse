@@ -8,6 +8,7 @@ body{
 /*header*/
 header{
     background-color: #FFB547;
+    position: relative;
 }
 header section .barra{
     display: flex;
@@ -22,7 +23,7 @@ header section .barra .logo, .logo{
     width: 20%;
 }
 header section .barra .logo img{
-    width: 100%;
+    width: 60%;
     color: #1bbcb6;
 }
 header section .buscador{
@@ -38,7 +39,7 @@ header section .buscador input{
 }
 header section .buscador button{
     position: relative;
-    left: 18%;
+    left: 16vw;
     border: none;
     background:none;
 }
@@ -213,18 +214,20 @@ footer .btns button{
     }
     header section .barra .boton button{
         display: none;
-        position: absolute;
     }
     header section .buscador{
-        position: relative;
-        top: -15vh;
+        position: absolute;
+        top: 7.5vh;
+        right: 41vw;
+        width: 10%;
     }
     header section .buscador input{
-        width: 39%;
+        width: 41vw;
         height: 25px;
     }
     header section .buscador button {
         padding: 5px;
+        left: 19vw;
     }
     header nav{
         display: flex;
