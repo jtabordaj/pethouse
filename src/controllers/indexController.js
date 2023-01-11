@@ -19,5 +19,28 @@ const indexController = {
     productDetail: (req, res) =>{
         res.render("./products/productDetail");
     },
+    createProduct: (req, res) =>{
+        res.render("./products/createProduct");
+    },
+    editProduct: (req, res) =>{
+        const idProduct = req.params.idProduct;
+        const producto = product.find( p => p.id == idProduct)
+        
+        if(producto){
+            res.render("./products/editProduct", {pro:producto});
+        }else{
+            res.send("Producto no encontrado")
+        }
+    },
+    modifyProduct: (req, res) =>{
+        const idProduct = req.params.idProduct;
+        const modify = product.find(m => m.id == idProduct);
+
+        modify.nombre_producto = req.body.name_product;
+        modify.tipo_mascota = req.body.mascota;
+    
+        res.send(modify);
+        
+    }
 };
 module.exports = indexController;

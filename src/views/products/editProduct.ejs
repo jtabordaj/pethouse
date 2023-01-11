@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partial/head")%>
+<body>
+    <%- include("../partial/header")%>
+
+    <form action="/editProduct/<%=pro.id%>?_method=PUT" method="post">
+        <section>
+            <label for="nombreProducto">Nombre del producto</label>
+            <input type="text" name="name_product" id="nombreProducto"  value="<%=pro.nombre_producto%>">
+            
+            <label for="marca">Marca</label>
+            <input type="text" name="marca" id="marca" value="<%=pro.marca%>">
+
+            <label for="descripcion">Descripción sobre el producto</label>
+            <input type="text" name="descripcion" id="descripcion">
+
+            <label for="imagenProducto">Seleccione una imagen del producto</label>
+            <input type="file" name="imagenProducto" id="imagenProducto">
+
+            <label for="precio">Precio</label>
+            <input type="text" name="precio" id="precio" value="<%=pro.precio%>">
+
+            <div>
+                <h3>categoria</h3>
+                <label for="alimento">Perro</label>
+                <input type="checkbox" name="articulo" id="alimento">
+                
+                <label for="snack">Gato</label>
+                <input type="checkbox" name="articulo" id="snack">
+            </div>
+            
+            <div>
+                <h3>seleccione la mascota</h3>
+                <label for="perro">Perro</label>
+                <input type="checkbox" name="mascota" id="perro">
+                
+                <label for="gato">Gato</label>
+                <input type="checkbox" name="mascota" id="gato">
+            </div>
+            <button type="submit">Crear</button>
+            <button type="reset">Borrar</button>
+        </section>
+
+    <%- include("../partial/footer")%>
+    
+</body>
+</html>

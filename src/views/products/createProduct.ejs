@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partial/head")%>
+<body>
+    <%- include("../partial/header")%>
+
+    
+    
+    <main>
+        <form action="/createProduct" method="post">
+            <section>
+                <label for="nombreProducto">Nombre del producto</label>
+                <input type="text" name="nombreProducto" id="nombreProducto">
+                
+                <label for="marca">Marca</label>
+                <input type="text" name="marca" id="marca">
+
+                <label for="descripcion">Descripción sobre el producto</label>
+                <input type="text" name="descripcion" id="descripcion">
+
+                <label for="imagenProducto">Seleccione una imagen del producto</label>
+                <input type="file" name="imagenProducto" id="imagenProducto">
+
+                <label for="precio">Precio</label>
+                <input type="text" name="precio" id="precio">
+
+                <div>
+                    <h3>seleccione la mascota</h3>
+                    <label for="mascota">Perro</label>
+                    <input type="radio" name="seleccionMascota" id="mascota" value="perro">
+                    
+                    <label for="mascota">Gato</label>
+                    <input type="radio" name="seleccionMascota" id="mascota" value="gato">
+                </div>
+                <button type="submit">Crear</button>
+                <button type="reset">Borrar</button>
+            </section>
+        </form>
+
+
+
+
+    </main>
+    
+    
+    
+    
+    
+    
+    <%- include("../partial/footer")%>
+</body>
+</html>

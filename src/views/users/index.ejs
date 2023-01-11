@@ -14,17 +14,14 @@
                     <i class="fa-solid fa-chevron-left"></i>
                 </div>
                 <% for(let i = 0; i < product.length; i++){%>
-                    <% if(product[i].descuento > 0) {%>
-                        <article>
-                            <img src=<%=product[i].img%> alt="">
-                            <div>
-                                <p><%= product[i].marca %></p>
-                                <p> Para <%= product[i].edad %></p>
-                                <p> Precio $ <%= product[i].precio %></p>
-                                <p> Descuento <%= product[i].descuento %>%</p>
-                            </div>
-                        </article>
-                    <%}%>
+                    <article>
+                        <img src=<%=product[i].img%> alt="">
+                        <div>
+                            <p><%= product[i].marca %></p>
+                            <p> Precio $ <%= product[i].precio %></p>
+                                
+                        </div>
+                    </article>
                 <%}%>
                 <div class="flecha">
                     <i class="fa-solid fa-chevron-right"></i>
