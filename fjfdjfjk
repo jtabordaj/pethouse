@@ -1,0 +1,389 @@
+[33mcommit d9d139685a4b66e8a40316babef7582c47deb9b9[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: bc62774 c775e32
+Author: angela1719 <angelarm783@gmail.com>
+Date:   Tue Jan 10 21:41:43 2023 -0500
+
+    Merge branch 'main' of https://github.com/JuDroid/Grupo-7-PetHouse
+
+[33mcommit bc627747d870420d0d2d9e2413b020c89397f2ad[m
+Author: angela1719 <angelarm783@gmail.com>
+Date:   Tue Jan 10 21:40:11 2023 -0500
+
+    organizamos vistas en carpetas users y products
+
+[33mcommit c775e32fff152270566a64a50124f1f57eb52d67[m
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Tue Jan 10 20:42:38 2023 -0500
+
+    modificacion del head en home
+
+[33mcommit 78e65d85256c8af3a8f34492fbdec955e70d34a5[m
+Author: angela1719 <angelarm783@gmail.com>
+Date:   Tue Jan 10 18:24:57 2023 -0500
+
+    1.cree el head.js en la carpeta partials 2.agregue todos los componentes repetidos de la carpeta partial(head,header y footer) en productDetail.ejs
+
+[33mcommit 4fab3cac935dba500fa90d1ffab83488e00c4695[m
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Sat Jan 7 06:38:05 2023 -0500
+
+    cree una base de dato de prueba (es un array normal echo en js)
+
+[33mcommit 120203f0cb8022d1cce1a44880f7fdaf53146acd[m
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Fri Jan 6 20:49:08 2023 -0500
+
+    se aplico el modelo mvc y el view engine ejs
+
+[33mcommit 472271a41638b07c8d50e49a7f12d2a1637bd0b3[m
+Author: M21ariana <m.montoya2107@gmail.com>
+Date:   Thu Jan 5 08:27:29 2023 -0500
+
+    Unificación de los archivos de estilo
+    
+    Se unificaron los estilos de los forms y el cart. Se eliminaron los archivos styles_cart.css y styles_forms.css. Se incluyó el link que nos envíe a la página principal cuando hagamos click en el logo.
+
+[33mcommit e7fc0ca7b3956c031f96acbc27fce75ccfa5f974[m
+Author: M21ariana <m.montoya2107@gmail.com>
+Date:   Thu Jan 5 07:30:02 2023 -0500
+
+    Cambios en Headers y footers
+    
+    Se unificaron los headers y footers de login y register
+
+[33mcommit b327e49cc579d26e8bdcc1c93a76cc9dc23eb24a[m
+Author: jtabordaj <jtabordaj@uninorte.edu.co>
+Date:   Wed Jan 4 22:51:20 2023 -0500
+
+    ajustes al header/footer del carrito + mediaqueries
+
+[33mcommit c2ad65c80932d0e3a7a6c9158a561a494fb818bf[m
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Wed Jan 4 20:47:13 2023 -0500
+
+    modificacion de la barra de busqueda
+
+[33mcommit 36446209b18a3c2871e7f66bbec1f986f33f63fb[m
+Author: jtabordaj <jtabordaj@uninorte.edu.co>
+Date:   Wed Jan 4 20:01:51 2023 -0500
+
+    quite el home.html
+
+[33mcommit 589d2708d3bd74dfc896cc421d795037fbb36917[m
+Author: jtabordaj <jtabordaj@uninorte.edu.co>
+Date:   Wed Jan 4 19:37:50 2023 -0500
+
+    arregle la ruta de una foto en el index y el carrito
+
+[33mcommit 471fdedb46fe145bc0a5efd2b9de4ce0f5aaefc9[m
+Author: jtabordaj <jtabordaj@uninorte.edu.co>
+Date:   Wed Jan 4 19:25:40 2023 -0500
+
+    cambie una linea de los estilos del main
+
+[33mcommit 634849988cbb671f29a855cb1b635a74c0eaa998[m
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Wed Jan 4 18:01:01 2023 -0500
+
+    se elimino el archivo styles_home
+
+[33mcommit 2af4b29251c5d412649ce0066ac31eaa28de1a56[m
+Merge: ac71580 19c49e7
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Wed Jan 4 17:59:16 2023 -0500
+
+    organizamos media query unificamos las hojas de estilo de home y product detail y agregamos botn de whatsapp en el home con Angela Ramirez
+
+[33mcommit ac71580ada4e4d7485a7d0be2f5052bd4c509127[m
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Wed Jan 4 17:58:05 2023 -0500
+
+    organizamos media query unificamos las hojas de estilo de home y product detail y agregamos botn de whatsapp en el home con Angela Ramirez
+
+[33mcommit 19c49e79c30dc229d6987e8904c23a09c72b48ba[m
+Merge: 5edadf0 5a52b90
+Author: M21ariana <m.montoya2107@gmail.com>
+Date:   Wed Jan 4 17:48:52 2023 -0500
+
+    Merge branch 'main' of https://github.com/JuDroid/Grupo-7-PetHouse
+
+[33mcommit 5a52b9061b186c0ff69aad27eb3341120bdf0761[m
+Author: angela1719 <angelarm783@gmail.com>
+Date:   Wed Jan 4 16:42:59 2023 -0500
+
+    agregue boton fixed whatsapp
+
+[33mcommit f63524dfa4036c76b5e4df83e3db9ed72a6ee5f3[m
+Author: angela1719 <angelarm783@gmail.com>
+Date:   Wed Jan 4 13:15:55 2023 -0500
+
+    subo archivo retro.md, falta item:Hacer menos
+
+[33mcommit 5edadf0a6056c2493ef329bcfa4d773089c39aaf[m
+Author: M21ariana <m.montoya2107@gmail.com>
+Date:   Tue Jan 3 19:08:26 2023 -0500
+
+    Organización carrito
+    
+    Terminar de agregar el header y el footer, adecuar los colores de la página.
+
+[33mcommit c59e0c5d1f9a7ce9d3ff209d47d15b34ad30a2f6[m
+Author: M21ariana <m.montoya2107@gmail.com>
+Date:   Tue Jan 3 18:38:46 2023 -0500
+
+    Padding en formularios
+
+[33mcommit 9e5ccf4a424f72e54737746db47a3080f2e711c8[m
+Author: M21ariana <m.montoya2107@gmail.com>
+Date:   Tue Jan 3 18:33:34 2023 -0500
+
+    Detalles CSS Formularios
+    
+    Se agregó color al header y footer en so formularios y se mejoró la orgnización
+
+[33mcommit 196d396328c0df711bfd3133ec10a8af7c0762e5[m
+Merge: dbfa002 4cce6f8
+Author: M21ariana <m.montoya2107@gmail.com>
+Date:   Tue Jan 3 17:49:43 2023 -0500
+
+    Merge branch 'main' of https://github.com/JuDroid/Grupo-7-PetHouse
+
+[33mcommit 4cce6f8b7bea6be5d0ee8f98b269c97a73b3fa73[m
+Author: angela1719 <angelarm783@gmail.com>
+Date:   Tue Jan 3 14:44:13 2023 -0500
+
+    1.modifique color del footer 2.agregué margen de botones del footer 3.agregue iconos de tarjeta y pago en efectivo del detalle del producto 4.le di margin top al logo del header y footer
+
+[33mcommit 35975858a18e6bd52d7512ee6168e773e4d5cae5[m
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Tue Jan 3 00:59:02 2023 -0500
+
+    modificacion del home para tablet y escritorio
+
+[33mcommit aa31fdb19eac01ed241f40197b33fef4bbcdff97[m
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Tue Jan 3 00:03:33 2023 -0500
+
+    modificacion del main y footer del home
+
+[33mcommit c1efdec2641662a125a47bea46c16cc3d08f0023[m
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Mon Jan 2 11:14:30 2023 -0500
+
+    arreglo del header
+
+[33mcommit 92af061c1d9201e8bf01fe0a2b5afe5df795d22b[m
+Merge: 246f48e 0c43483
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Mon Jan 2 09:30:20 2023 -0500
+
+    Merge branch 'main' of https://github.com/JuDroid/Grupo-7-PetHouse
+
+[33mcommit 246f48e6ea2a11dc5f4c47c1c98524b9a61c7e57[m
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Mon Jan 2 09:29:02 2023 -0500
+
+    modificacion home
+
+[33mcommit dbfa002691fe455680c2735c2884b371b2b7c176[m
+Author: M21ariana <m.montoya2107@gmail.com>
+Date:   Fri Dec 30 13:21:06 2022 -0500
+
+    Base Login y register
+    
+    Escribí el código par el login y la página de registro en html. Aún no cuadro bien la parte de CSS.
+
+[33mcommit 0c43483bd43a9a2cd7a46d836bc9f1510b967620[m
+Merge: 0b2ba3e bd0382f
+Author: M21ariana <m.montoya2107@gmail.com>
+Date:   Fri Dec 30 08:41:43 2022 -0500
+
+    Merge branch 'main' of https://github.com/JuDroid/Grupo-7-PetHouse
+
+[33mcommit 0b2ba3e78320171a5d79fab9ddc33a3c98b035c5[m
+Author: M21ariana <m.montoya2107@gmail.com>
+Date:   Fri Dec 30 08:41:32 2022 -0500
+
+    Login y register
+    
+    Se empieza a desarrollar el Login y el register.
+
+[33mcommit bd0382f14f0eb27ef9099916c31889cd56bc5716[m
+Author: angela1719 <angelarm783@gmail.com>
+Date:   Fri Dec 23 16:50:54 2022 -0500
+
+    subo estilos de productDetail, queda faltando algunos iconos y dar colores elegidos
+
+[33mcommit bdb153799651d182213949ed8c17eb44c7ce835a[m
+Author: angela1719 <angelarm783@gmail.com>
+Date:   Thu Dec 22 16:53:06 2022 -0500
+
+    Subo maquetado productDetail
+
+[33mcommit 130d9a6e05e89b07fee51a39321260e69abfff38[m
+Author: jtabordaj <jtabordaj@uninorte.edu.co>
+Date:   Tue Dec 20 21:10:21 2022 -0500
+
+    agregar carrito con paleta de colores aplicada
+
+[33mcommit 74ea3ccb089f4cda54e82b42d54b1d98384899c5[m
+Author: jtabordaj <jtabordaj@uninorte.edu.co>
+Date:   Tue Dec 20 21:09:55 2022 -0500
+
+    cambio al color palette
+
+[33mcommit 4bc938f6fa8a3256de9fa89aee588a0e29895702[m
+Author: jtabordaj <jtabordaj@uninorte.edu.co>
+Date:   Tue Dec 20 20:31:39 2022 -0500
+
+    agregar color palette
+
+[33mcommit 70cb123007ad3a3f9feff409cd397d95d0c5171b[m
+Author: angela1719 <angelarm783@gmail.com>
+Date:   Tue Dec 20 11:26:05 2022 -0500
+
+    subo inicio productDetail.html
+
+[33mcommit 06215a8e1ea3bb502565a665ba6ca8d30c958f62[m
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Thu Dec 15 19:23:32 2022 -0500
+
+    modificacion de home
+
+[33mcommit f74673223b7ab70e3736f5f0ecef0bbbb9971b95[m
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Wed Dec 14 03:36:53 2022 -0500
+
+    home v0.0.1
+
+[33mcommit 84af73faf1226187b23d36694c9f01423630bb7a[m
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Tue Dec 13 23:39:25 2022 -0500
+
+    inicializacion del servidor
+
+[33mcommit 163323df653c1965ae5c5e06fd3a55972b700c5a[m
+Author: jtabordaj <jtabordaj@uninorte.edu.co>
+Date:   Tue Dec 13 20:54:30 2022 -0500
+
+    cambie una linea de codigo en el carrito
+
+[33mcommit 55f36b1f43a3253f5365e7f728eb75878f3618c8[m
+Author: jtabordaj <jtabordaj@uninorte.edu.co>
+Date:   Mon Dec 12 21:26:24 2022 -0500
+
+    agregar carrito.html y su respectivo css
+
+[33mcommit 4e5036d25fc28013a16f73f5908d95793be2da92[m
+Author: Miguel Quiroz <juanmiguelquiroz4@gmail.com>
+Date:   Tue Dec 6 19:01:42 2022 -0500
+
+    ultimo commit
+
+[33mcommit 79a5a82fa51d70d7bc58ac5b7c1f6477dad7123a[m
+Author: Miguel Quiroz <juanmiguelquiroz4@gmail.com>
+Date:   Tue Dec 6 18:59:35 2022 -0500
+
+    ultimos detalles en readme de carpeta wireframes
+
+[33mcommit a36532b18fcbc6352fa8346b79e91a811fbdcd47[m
+Author: Miguel Quiroz <juanmiguelquiroz4@gmail.com>
+Date:   Tue Dec 6 18:49:53 2022 -0500
+
+    agregando la carpeta wireframes con el wireframe en pdf junto con un readme donde da las indicaciones necesarias, agregando quinta pagina de inspiracion
+
+[33mcommit a22e2731da17a5e8b0d3101e31a8281c465d665b[m
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Tue Nov 29 20:46:57 2022 -0500
+
+    eliminando un link de prueba
+
+[33mcommit 225a720c8e317dfcaf1810fa54bfe882f82f6903[m
+Author: Hidan12 <marcarfe12@gmail.com>
+Date:   Tue Nov 29 20:41:21 2022 -0500
+
+    descripcion de Martin Vidan
+
+[33mcommit debdb39ee62ae71c573d5c3609c09063056680c7[m
+Author: jtabordaj <jtabordaj@uninorte.edu.co>
+Date:   Mon Nov 28 20:21:25 2022 -0500
+
+    agregar descripcion Juan Taborda + pagina investigada en el README.md
+
+[33mcommit d4b3386e207381e1379de6688bfcb54a62a518d7[m
+Author: Miguel Quiroz <juanmiguelquiroz4@gmail.com>
+Date:   Sun Nov 27 15:50:10 2022 -0500
+
+    cambio a seccion de publico objetivo
+
+[33mcommit 5a520d5edfe05a69e7b3275ef536b505076440c9[m
+Author: Miguel Quiroz <juanmiguelquiroz4@gmail.com>
+Date:   Sun Nov 27 15:43:00 2022 -0500
+
+    agregando ligeras modificaciones al ultimo cambio
+
+[33mcommit bf6a57c1fe92a02a0d11558f10c741788fa43dc1[m
+Author: Miguel Quiroz <juanmiguelquiroz4@gmail.com>
+Date:   Sun Nov 27 15:40:44 2022 -0500
+
+    Añadiendo mi info personal (Juan Miguel) y la pagina de la que me inspiraria personalmente, ademas de actualizar las secciones del publico objetivo y la tematica del sitio
+
+[33mcommit b13798694ae33961d4c2b8071c684e911e0d72f8[m
+Author: M21ariana <m.montoya2107@gmail.com>
+Date:   Sat Nov 26 15:49:28 2022 -0500
+
+    Update README.md
+
+[33mcommit 6307494e911d850693b272f793a3646a9ce3c444[m
+Author: M21ariana <m.montoya2107@gmail.com>
+Date:   Sat Nov 26 15:44:32 2022 -0500
+
+    Update README.md
+
+[33mcommit fe4f4dcecae9691b89e7abacc25462a06d6471fb[m
+Author: M21ariana <m.montoya2107@gmail.com>
+Date:   Sat Nov 26 15:43:42 2022 -0500
+
+    Update README.md
+
+[33mcommit 8ff22dc6681690c7f2e6fa11d88ca58402189d46[m
+Author: M21ariana <m.montoya2107@gmail.com>
+Date:   Sat Nov 26 15:40:03 2022 -0500
+
+    Update README.md
+
+[33mcommit e9f93083a063857c0bf15bf83697a37d4da115ec[m
+Author: M21ariana <m.montoya2107@gmail.com>
+Date:   Sat Nov 26 15:39:53 2022 -0500
+
+    Update README.md
+
+[33mcommit 36a57d5ff9327f212a92cb83d11d8aa09c6cb207[m
+Author: M21ariana <m.montoya2107@gmail.com>
+Date:   Sat Nov 26 15:13:35 2022 -0500
+
+    Update README.md
+
+[33mcommit 73574e40ad4796318763e191e3ffbf873b7e5a73[m
+Author: Miguel Quiroz <juanmiguelquiroz4@gmail.com>
+Date:   Sat Nov 26 00:10:48 2022 -0500
+
+    Optimizando esteticamente el archivo de README + añadiendo tematica del proyecto y breve descripcion
+
+[33mcommit a8b0f47733b71f1746dc1300d87802fce72162b1[m
+Author: angela1719 <angelarm783@gmail.com>
+Date:   Thu Nov 24 14:23:20 2022 -0500
+
+    primer sitio de referencia, para PetHouse
+
+[33mcommit 30a38765ff0ac8269bc928a2fbf34cf45fcbcdc9[m
+Author: jtabordaj <jtabordaj@uninorte.edu.co>
+Date:   Wed Nov 23 19:50:17 2022 -0500
+
+    first commit
+
+[33mcommit 033ba2b8e5bbc3d7ebab838a203aa8b9cd5d6337[m
+Author: JuDroid <52843549+JuDroid@users.noreply.github.com>
+Date:   Wed Nov 23 18:45:16 2022 -0600
+
+    Initial commit

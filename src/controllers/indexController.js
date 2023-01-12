@@ -38,6 +38,11 @@ const indexController = {
 
         modify.nombre_producto = req.body.name_product;
         modify.tipo_mascota = req.body.mascota;
+        modify.marca = req.body.marca;
+        modify.descripcion = req.body.descripcion;
+        modify.categoria = req.body.articulo;
+        modify.precio = req.body.precio;
+        modify.img = req.body.imagenProducto
     
         res.send(modify);
         
