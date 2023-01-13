@@ -566,3 +566,34 @@ footer .btns button{
 	border-color: #267f8c;
 }
 
+/* estilos createProduct */
+
+.mainCreateProduct {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100vw;
+}
+
+.mainCreateProduct .sectionCreateProduct {
+    display: flex;
+    flex-direction: column;
+    align-self:center;
+    flex-wrap: nowrap;
+    border-style:ridge;
+    width: 90%;
+    padding: 10px;
+}
+
+.mainCreateProduct .divCreateProduct {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-start;
+    margin-top: 7px;
+    
+
+}
+
+
+
+

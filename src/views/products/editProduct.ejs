@@ -4,25 +4,34 @@
 <body>
     <%- include("../partial/header")%>
 
+<main class ="mainCreateProduct">
+
     <form action="/editProduct/<%=pro.id%>?_method=PUT" method="post">
-        <section>
+    <section class="sectionCreateProduct">
+        <div class="divCreateProduct">
             <label for="nombreProducto">Nombre del producto</label>
             <input type="text" name="name_product" id="nombreProducto"  value="<%=pro.nombre_producto%>">
-            
+        </div>
+        <div class="divCreateProduct">   
             <label for="marca">Marca</label>
             <input type="text" name="marca" id="marca" value="<%=pro.marca%>">
-
+        </div>
+        <div class="divCreateProduct">
             <label for="descripcion">Descripción sobre el producto</label>
             <input type="text" name="descripcion" id="descripcion">
-
+        </div>
+        <div class="divCreateProduct">
             <label for="imagenProducto">Seleccione una imagen del producto</label>
             <input type="file" name="imagenProducto" id="imagenProducto">
-
+        </div>
+        <div class="divCreateProduct">
             <label for="precio">Precio</label>
             <input type="text" name="precio" id="precio" value="<%=pro.precio%>">
-
-            <div>
-                <h3>categoria</h3>
+        </div>
+        <div class="divCreateProduct">
+                <h3>Categoria</h3>
+        </div>
+        <div class="divCreateProduct">
                 <label for="alimento">Perro</label>
                 <input type="checkbox" name="articulo" id="alimento">
                 
@@ -30,17 +39,22 @@
                 <input type="checkbox" name="articulo" id="snack">
             </div>
             
-            <div>
+        <div class="divCreateProduct">
                 <h3>seleccione la mascota</h3>
+        </div>
+        <div class="divCreateProduct">
                 <label for="perro">Perro</label>
                 <input type="checkbox" name="mascota" id="perro">
                 
                 <label for="gato">Gato</label>
                 <input type="checkbox" name="mascota" id="gato">
-            </div>
+        </div>
+        <div class="divCreateProduct">
             <button type="submit">Crear</button>
             <button type="reset">Borrar</button>
+        </div>
         </section>
+    </main>
 
     <%- include("../partial/footer")%>
     
