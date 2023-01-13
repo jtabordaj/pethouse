@@ -379,19 +379,26 @@ footer .btns button{
 
 }
 
-.cart .title{
-	font-size: 22px;
-	font-family: 'Open Sans';
-	font-weight: 800;
-	color: #38220d;
+.cart .header{
+    display: flex;
 }
 
 
-
+.cart .title{
+	font-size: 22px;
+    width: 50%;
+    padding-left: 2vw;
+	font-family: 'Open Sans';
+	font-weight: 800;
+	color: #000000;
+}
 
 .cart .action{
 	font-size: 14px;
 	font-family: 'Open Sans';
+    padding-top: 2vw;
+    padding-right: 2vw;
+    width: 50%;
 	font-weight: 600;
 	color: #3CBACD;
 	cursor: pointer;
