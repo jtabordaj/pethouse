@@ -1,0 +1,12 @@
+[
+  {
+    "categoria": "alimento",
+    "titulo": "Alimentos",
+    "img": "/img/categoria_alimento-min.png"
+  },
+  {
+    "categoria": "snacks",
+    "titulo": "Snacks",
+    "img": "/img/categoria_snacks-min.png"
+  }
+]

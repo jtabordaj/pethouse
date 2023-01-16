@@ -1,36 +1,61 @@
-const base = require("../database/dataBasePr");
+const path = require('path');
+const fs = require('fs');
 
-const product = base.product;
-const category = base.category;
+//rutas para acceder a los archivos de la base de datos
+const rutaProduct = path.join(__dirname, "../database/product.json");
+const rutaCategory = path.join(__dirname, "../database/category.json");
+
+//trae la informacion de la base de dato  y lo parsea
+let product = JSON.parse(fs.readFileSync(rutaProduct));
+let category = JSON.parse(fs.readFileSync(rutaCategory));
+
 
 const indexController = {
     index: (req, res) =>{
-        res.render("./users/index", {product: product, category: category});
+        res.render("./users/index", {product: product, category: category, title:"Pet House"});
     },
     login: (req, res) =>{
-        res.render("./users/login");
+        res.render("./users/login", {title:"Login"});
     },
+
     register: (req, res) =>{
-        res.render("./users/register");
+        res.render("./users/register", {title:"registre"});
     },
     productCart: (req, res) =>{
-        res.render("./products/productCart");
+        res.render("./products/productCart", {title:"productCart"});
     },
     productDetail: (req, res) =>{
-        res.render("./products/productDetail");
+        res.render("./products/productDetail", {title:"productDetail"});
     },
     createProduct: (req, res) =>{
-        res.render("./products/createProduct");
+        res.render("./products/createProduct", {title:"createProduct"});
+    },
+    create: (req, res) => {
+        let id = product[product.length - 1].id + 1
+        let newProduct = {
+            id: id,
+            nombre_producto: req.body.name_product,
+            tipo_mascota: req.body.mascota,
+            marca: req.body.marca,
+            descripcion: req.body.descripcion,
+            categoria: req.body.articulo,
+            precio: req.body.precio,
+            img: req.body.imagenProducto,    
+        };
+        product.push(newProduct);
+        console.log(newProduct);
+        fs.writeFileSync(rutaProduct, JSON.stringify(product, null, 2));
+        res.render("./products/createProduct", {title:"createProduct"});
     },
     editProduct: (req, res) =>{
         const idProduct = req.params.idProduct;
         const producto = product.find( p => p.id == idProduct)
         
         if(producto){
-            res.render("./products/editProduct", {pro:producto});
+            res.render("./products/editProduct", {pro:producto, title:"editProduct"});
         }else{
-            res.send("Producto no encontrado")
-        }
+                res.send("Producto no encontrado")
+            }
     },
     modifyProduct: (req, res) =>{
         const idProduct = req.params.idProduct;
@@ -44,6 +69,7 @@ const indexController = {
         modify.precio = req.body.precio;
         modify.img = req.body.imagenProducto
     
+        fs.writeFileSync(rutaProduct, JSON.stringify(product, null, 2));
         res.send(modify);
         
     }

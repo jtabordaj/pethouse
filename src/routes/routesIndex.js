@@ -8,6 +8,7 @@ router.get("/register", indexController.register);
 router.get("/productCart", indexController.productCart);
 router.get("/productDetail", indexController.productDetail);
 router.get("/createProduct", indexController.createProduct);
+router.post("/createProduct", indexController.create);
 router.get("/editProduct/:idProduct", indexController.editProduct);
 router.put("/editProduct/:idProduct", indexController.modifyProduct);
 
