@@ -3,7 +3,7 @@ const base = {
         {
             id: 1,
             nombre_producto: "Razas",
-            tipo_mascota: ["perro"],
+            tipo_mascota: "perro",
             marca: "Pedigree",
             descripcion: "alimento",            
             categoria: "alimento",
