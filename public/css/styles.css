@@ -1,6 +1,6 @@
 
 body{
-    font-family: 'Open sans';
+    font-family: 'Cinzel', serif;
     margin: 0;
     
 }
@@ -207,6 +207,27 @@ footer .btns button{
     margin-bottom: 5px;
 }
 @media (min-width: 500px){
+
+    .product form section article div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 6px;
+        align-content: center;
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .product form section .check div{
+        display: flex;
+        flex-direction: column;
+    }
+    .product form section .check div div{
+        display: flex;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+    }
+
     header section .barra .logo{
         margin-left: 15px;
         margin-top: 15px;
@@ -285,6 +306,16 @@ footer .btns button{
         align-items: center;
         font-size: 21px;
         background-color: orange;
+    }
+
+    .product form section{
+        margin: 0;
+    }
+    .product form section .check div div{
+        font-size: 22px;
+    }
+    .product form section article label {
+        font-size: 18px;
     }
 }
 
@@ -566,33 +597,50 @@ footer .btns button{
 	border-color: #267f8c;
 }
 
-/* estilos createProduct */
+/* estilos createProduct - editProduct */
 
-.mainCreateProduct {
+.product {
     display: flex;
     justify-content: center;
-    padding: 20px;
-    width: 100vw;
+    background-color: rgba(1, 232, 147, 1);
 }
-
-.mainCreateProduct .sectionCreateProduct {
+.product form{
+    width: 62%;
+}
+.product form section{
     display: flex;
     flex-direction: column;
-    align-self:center;
-    flex-wrap: nowrap;
-    border-style:ridge;
-    width: 90%;
-    padding: 10px;
+    margin-left: 16%;
 }
-
-.mainCreateProduct .divCreateProduct {
+.product form section article{
+    margin-bottom: 20px;
     display: flex;
-    justify-content: space-between;
-    align-self: flex-start;
-    margin-top: 7px;
-    
-
+    flex-direction: column;
 }
+
+.product form section article label{
+    font-size: 13px;
+}
+.product form section article input{
+    border: none;
+    border-radius: 5px;
+    font-family: 'Cinzel', serif;
+}
+.product form section .button{
+    display: flex;
+
+    justify-content: space-between
+}
+.product form section .button button{
+    font-family: 'Cinzel', serif;
+    border: none;
+}
+
+.product form section .button button:hover{
+    background-color: rgba(39, 58, 245, 0.8), rgba(1, 232, 147, 1);
+}
+
+
 
 
 
