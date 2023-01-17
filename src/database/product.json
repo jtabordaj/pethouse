@@ -1,32 +1,54 @@
 [
   {
     "id": 1,
-    "nombre_producto": "Razas",
+    "nombre_producto": "asd",
     "tipo_mascota": "perro",
     "marca": "Pedigree",
-    "descripcion": "alimento",
+    "edad": "adulto",
+    "descripcion": "asda",
     "categoria": "alimento",
     "precio": 89250,
-    "img": "/img/pedigree-adulto.png"
+    "descuento": 15,
+    "img": "/img/product/pedigree-adulto.png"
   },
   {
     "id": 2,
-    "nombre_producto": "razas",
+    "nombre_producto": "asd",
     "tipo_mascota": "gato",
     "marca": "Proplan",
-    "descripcion": "alimento",
-    "categoria": "alimento",
+    "edad": "adulto",
+    "descripcion": "asda",
+    "categoria": "comida",
     "precio": 69270,
-    "img": "/img/proplan-esterilizado.png"
+    "descuento": 10,
+    "img": "/img/product/proplan-esterilizado.png"
   },
   {
     "id": 3,
-    "nombre_producto": "razas",
+    "nombre_producto": "asd",
     "tipo_mascota": "perro",
     "marca": "Proplan",
-    "descripcion": "alimento",
+    "edad": "adulto",
+    "descripcion": "asda",
     "categoria": "comida",
     "precio": 69255,
-    "img": "/img/proplan-perro-adulto.png"
+    "descuento": 19,
+    "img": "/img/product/proplan-perro-adulto.png"
+  },
+  {
+    "id": 5,
+    "nombre_producto": "hola",
+    "tipo_mascota": [
+      "on",
+      "on"
+    ],
+    "marca": "perro",
+    "descripcion": "comida",
+    "categoria": [
+      "on",
+      "on"
+    ],
+    "precio": "54654654",
+    "img": "/img/product/product1673987643906.jpg"
   }
 ]

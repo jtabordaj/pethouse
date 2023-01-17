@@ -29,7 +29,7 @@ const productController = {
             descripcion: req.body.descripcion,
             categoria: req.body.articulo,
             precio: req.body.precio,
-            img: req.body.imagenProducto,    
+            img: "/img/product/" + req.file.filename,    
         };
         product.push(newProduct);
         console.log(newProduct);
@@ -50,17 +50,39 @@ const productController = {
         const idProduct = req.params.idProduct;
         const modify = product.find(m => m.id == idProduct);
 
-        modify.nombre_producto = req.body.name_product;
-        modify.tipo_mascota = req.body.mascota;
-        modify.marca = req.body.marca;
-        modify.descripcion = req.body.descripcion;
-        modify.categoria = req.body.articulo;
-        modify.precio = req.body.precio;
-        modify.img = req.body.imagenProducto
+        if (req.body.name_product) modify.nombre_producto = req.body.name_product;
+        if (req.body.mascota) modify.tipo_mascota = req.body.mascota;
+        if (req.body.marca) modify.marca = req.body.marca;
+        if (req.body.descripcion) modify.descripcion = req.body.descripcion;
+        if (req.body.articulo) modify.categoria = req.body.articulo;
+        if (req.body.precio) modify.precio = req.body.precio;
+        if (req.body.descuento) modify.descuento = req.body.descuento;
+        if (req.file) modify.img = "/img/product/" + req.file.filename
     
         fs.writeFileSync(rutaProduct, JSON.stringify(product, null, 2));
         res.send(modify);
+    },
+    deleteProduct: (req, res) =>{
+        const idProduct = req.params.idProduct;
+        const producto = product.find( p => p.id == idProduct)
         
+        if(producto){
+            res.render("./products/deleteProduct", {pro:producto, title:"borrarProduct"});
+        }else{
+                res.send("Producto no encontrado")
+            }
+    },
+    delete: (req, res) =>{
+        const idProduct = req.params.idProduct;
+        const prod = product.find(p => p.id == idProduct);
+        const rutaImg = path.join(__dirname, "../../public",prod.img);
+        const productoEliminado = product.filter( p => p.id != idProduct);
+        fs.unlink(rutaImg, (err) => {
+            if (err) throw err;
+            console.log("File deleted!");
+        })
+        fs.writeFileSync(rutaProduct, JSON.stringify(productoEliminado, null, 2));
+        res.redirect("/");
     }
 }
 
