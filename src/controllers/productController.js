@@ -49,6 +49,7 @@ const productController = {
     modifyProduct: (req, res) =>{
         const idProduct = req.params.idProduct;
         const modify = product.find(m => m.id == idProduct);
+        const routImg = modify.img;
 
         if (req.body.name_product) modify.nombre_producto = req.body.name_product;
         if (req.body.mascota) modify.tipo_mascota = req.body.mascota;
@@ -57,7 +58,13 @@ const productController = {
         if (req.body.articulo) modify.categoria = req.body.articulo;
         if (req.body.precio) modify.precio = req.body.precio;
         if (req.body.descuento) modify.descuento = req.body.descuento;
-        if (req.file) modify.img = "/img/product/" + req.file.filename
+        if (req.file) {
+            fs.unlink(routImg, (err) => {
+                if (err) throw err;
+                console.log("File deleted!");
+            })
+            modify.img = "/img/product/" + req.file.filename
+        }
     
         fs.writeFileSync(rutaProduct, JSON.stringify(product, null, 2));
         res.send(modify);
@@ -80,7 +87,7 @@ const productController = {
         fs.unlink(rutaImg, (err) => {
             if (err) throw err;
             console.log("File deleted!");
-        })
+        });
         fs.writeFileSync(rutaProduct, JSON.stringify(productoEliminado, null, 2));
         res.redirect("/");
     }
