@@ -1,53 +1,11 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/29d377923f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Login</title>
-
+    <%- include('../partial/head')%>
 </head>
 <body>    
     <header>
-        <section>
-            <div class="barra">
-                <div class="boton">
-                    <button><i class="fas fa-bars"></i></button>                  
-                </div>
-                <picture class="logo">
-                    <a href="/"><img src="/img/logo.png"></a>
-                </picture>
-                <div class="boton">
-                    <a href="/productCart"><button><i class="fas fa-cart-plus"></i></button></a>  
-                </div>
-            </div>
-            <div class="buscador">
-                <input type="text" placeholder="producto a buscar">
-                <button><i class="fas fa-search"></i></button>
-            </div>
-        </section>
-        <nav>
-            <ul>
-                <li><a href="">Ofertas</a></li>
-                <li><a href="">Tiendas Oficiales</a></li>
-                <li><a href="">Ayuda</a></li>
-            </ul>
-            <ul>
-                <li><a href="/register">Creá tu cuenta<i class="far fa-address-card"></i></a></li>
-                <li><a href="/login">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href="/productCart">Mis compras<i class="fas fa-cart-plus"></i></a></li>
-            </ul>
-        </nav>
-        <section class="animal">
-            <h3>Animales</h3>
-            <div>
-                <button>perro <i class="fa-solid fa-dog"></i></button>
-                <button>gato <i class="fa-solid fa-cat"></i></button>
-            </div>
-        </section>
+        <%- include('../partial/header')%>
     </header>
 
     <main class="forms">
