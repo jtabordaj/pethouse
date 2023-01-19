@@ -19,7 +19,7 @@ const indexController = {
     },
 
     register: (req, res) =>{
-        res.render("./users/register", {title:"registre"});
+        res.render("./users/register", {title:"Registro"});
     }
     
 };
