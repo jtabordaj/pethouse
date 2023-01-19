@@ -1,54 +1,49 @@
 [
   {
+    "nombre_producto": "",
+    "tipo_mascota": "",
+    "marca": "",
+    "edad": "",
+    "descripcion": "",
+    "categoria": "",
+    "precio": 0,
+    "descuento": 0,
+    "img": ""
+  },
+  {
     "id": 1,
-    "nombre_producto": "asd",
+    "nombre_producto": "pedigree",
     "tipo_mascota": "perro",
     "marca": "Pedigree",
     "edad": "adulto",
-    "descripcion": "asda",
-    "categoria": "alimento",
-    "precio": 89250,
-    "descuento": 15,
-    "img": "/img/product/pedigree-adulto.png"
+    "descripcion": "alimento balanceado",
+    "categoria": "Alimentos",
+    "precio": "89250",
+    "descuento": "15",
+    "img": "/img/product/product1674114989165.png"
   },
   {
     "id": 2,
-    "nombre_producto": "asd",
+    "nombre_producto": "proplan",
     "tipo_mascota": "gato",
-    "marca": "Proplan",
+    "marca": "purina",
     "edad": "adulto",
-    "descripcion": "asda",
-    "categoria": "comida",
-    "precio": 69270,
-    "descuento": 10,
-    "img": "/img/product/proplan-esterilizado.png"
+    "descripcion": "alimento para gatos castrados",
+    "categoria": "Alimentos",
+    "precio": "69270",
+    "descuento": "10",
+    "img": "/img/product/product1674115037221.png"
   },
   {
     "id": 3,
-    "nombre_producto": "asd",
+    "nombre_producto": "proplan",
     "tipo_mascota": "perro",
-    "marca": "Proplan",
+    "marca": "purina",
     "edad": "adulto",
-    "descripcion": "asda",
-    "categoria": "comida",
-    "precio": 69255,
-    "descuento": 19,
-    "img": "/img/product/proplan-perro-adulto.png"
-  },
-  {
-    "id": 5,
-    "nombre_producto": "hola",
-    "tipo_mascota": [
-      "on",
-      "on"
-    ],
-    "marca": "perro",
-    "descripcion": "comida",
-    "categoria": [
-      "on",
-      "on"
-    ],
-    "precio": "54654654",
-    "img": "/img/product/product1673987643906.jpg"
+    "descripcion": "alimento para perros de raza pequeña",
+    "categoria": "Alimentos",
+    "precio": "69255",
+    "descuento": "19",
+    "img": "/img/product/product1674115117444.png"
   }
 ]

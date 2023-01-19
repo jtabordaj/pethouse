@@ -10,7 +10,7 @@
         <article>
             <div>
                 <label for="nombreProducto">Nombre del producto:</label>
-                <input type="text" name="name_product" id="nombreProducto"  value="<%=pro.nombre_producto%>">
+                <input type="text" name="nombre_producto" id="nombreProducto"  value="<%=pro.nombre_producto%>">
             </div>
             <div>
                 <label for="marca">Marca del producto:</label>
@@ -41,27 +41,24 @@
         <article class="check">
             <div>
                 <h3>Categoria</h3>
-                <div>
-                    <label for="alimento">Alimento</label>
-                    <input type="checkbox" name="articulo" id="alimento">
-                </div>
+                <% category.forEach(cat => {%>
                     <div>
-                        <label for="snack">snack</label>
-                        <input type="checkbox" name="articulo" id="snack">
+                        <label for="<%- cat.titulo %>"><%= cat.titulo %></label>
+                        <input type="checkbox" name="<%= cat.categoria %>" id="<%= cat.titulo %>" value="<%= cat.titulo %>" <% if(pro.categoria.includes(cat.titulo)) {%> checked<% } %> >
                     </div>
+                <%}); %> 
             </div>
-            
             <div>
-                <h3>seleccione la mascota</h3>
-                <div>
-                    <label for="perro">Perro</label>
-                    <input type="checkbox" name="mascota" id="perro">
-                </div>
-                <div>
-                    <label for="gato">Gato</label>
-                    <input type="checkbox" name="mascota" id="gato">
-                </div>
-            </div>
+                <h3>Tipo de mascota</h3>
+                
+                <% typeOfPets.forEach(cat => {%>
+                    
+                    <div>
+                        <label for="<%- cat.titulo %>"><%= cat.titulo %></label>
+                        <input type="checkbox" name="<%= cat.categoria %>" id="<%= cat.titulo %>" value="<%= cat.titulo %>" <% if(pro.tipo_mascota.includes(cat.titulo)) {%> checked<% } %> >
+                    </div>
+                <%}); %> 
+            </div> 
         </article>
         
         <div class="button">

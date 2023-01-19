@@ -206,118 +206,7 @@ footer .btns button{
     justify-content: space-between;
     margin-bottom: 5px;
 }
-@media (min-width: 500px){
 
-    .product form section article div {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 6px;
-        align-content: center;
-        flex-direction: row;
-        align-items: stretch;
-    }
-    .product form section .check div{
-        display: flex;
-        flex-direction: column;
-    }
-    .product form section .check div div{
-        display: flex;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: row;
-    }
-
-    header section .barra .logo{
-        margin-left: 15px;
-        margin-top: 15px;
-    }
-    header section .barra{
-        justify-content: flex-start;
-    }
-    header section .barra .boton button{
-        display: none;
-    }
-    header section .buscador{
-        position: absolute;
-        top: 7.5vh;
-        right: 41vw;
-        width: 10%;
-    }
-    header section .buscador input{
-        width: 41vw;
-        height: 25px;
-    }
-    header section .buscador button {
-        padding: 5px;
-        left: 19vw;
-    }
-    header nav{
-        display: flex;
-        justify-content: space-between;
-    }
-    header nav ul{
-        display: flex;
-        list-style: none;
-    }
-    header nav ul li{
-        padding: 5px;
-    }
-    header nav ul li a{
-        text-decoration: none;
-        color: black;   
-    }
-    header nav ul li a i{
-        margin-left: 3px;
-    }
-    header .animal{
-        display: none;
-    }
-
-    /* pruduct detail main*/
-    .mainProducto picture {
-        text-align: center;
-    }
-    .mainProducto .imagenProducto{
-        width: 300px;
-    }
-}
-@media (min-width: 800px){
-    
-    footer .logo{
-        width: 10%;
-    }
-    footer article p{
-        font-size: 24px;
-    }
-    footer article .icono i{
-        font-size: 25px;
-        margin-bottom: 20px;
-    }
-    footer .btns{
-        flex-direction: row;
-    }
-    footer .btns button {
-        border-radius: 6px;
-        display: flex;
-        justify-content: space-between;
-        margin-left: 10px;
-        height: 30px;
-        align-items: center;
-        font-size: 21px;
-        background-color: orange;
-    }
-
-    .product form section{
-        margin: 0;
-    }
-    .product form section .check div div{
-        font-size: 22px;
-    }
-    .product form section article label {
-        font-size: 18px;
-    }
-}
 
 /* Forms Login and Register */
 
@@ -643,8 +532,128 @@ footer .btns button{
     background-color: rgba(39, 58, 245, 0.8), rgba(1, 232, 147, 1);
 }
 
+.product .uploadImg input{
+    border: none;
+} 
+.product .uploadImg .img{
+    width: 40%;
+}
+.product .img img{
+    width: 50%;
+}
 
+@media (min-width: 500px){
 
+    .product form section article div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 6px;
+        align-content: center;
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .product form section .check div{
+        display: flex;
+        flex-direction: column;
+    }
+    .product form section .check div div{
+        display: flex;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    header section .barra .logo{
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+    header section .barra{
+        justify-content: flex-start;
+    }
+    header section .barra .boton button{
+        display: none;
+    }
+    header section .buscador{
+        position: absolute;
+        top: 7.5vh;
+        right: 41vw;
+        width: 10%;
+    }
+    header section .buscador input{
+        width: 41vw;
+        height: 25px;
+    }
+    header section .buscador button {
+        padding: 5px;
+        left: 19vw;
+    }
+    header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav ul{
+        display: flex;
+        list-style: none;
+    }
+    header nav ul li{
+        padding: 5px;
+    }
+    header nav ul li a{
+        text-decoration: none;
+        color: black;   
+    }
+    header nav ul li a i{
+        margin-left: 3px;
+    }
+    header .animal{
+        display: none;
+    }
+
+    /* pruduct detail main*/
+    .mainProducto picture {
+        text-align: center;
+    }
+    .mainProducto .imagenProducto{
+        width: 300px;
+    }
+}
+@media (min-width: 800px){
+    
+    footer .logo{
+        width: 10%;
+    }
+    footer article p{
+        font-size: 24px;
+    }
+    footer article .icono i{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    footer .btns{
+        flex-direction: row;
+    }
+    footer .btns button {
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+        height: 30px;
+        align-items: center;
+        font-size: 21px;
+        background-color: orange;
+    }
+
+    .product form section{
+        margin: 0;
+    }
+    .product form section .check div div{
+        font-size: 22px;
+    }
+    .product form section article label {
+        font-size: 18px;
+    }
+}
 
 
 
