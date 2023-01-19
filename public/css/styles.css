@@ -2,7 +2,7 @@
 body{
     font-family: 'Cinzel', serif;
     margin: 0;
-    
+    font-size: 13px;
 }
 
 /*header*/
@@ -18,7 +18,7 @@ header section .barra{
     align-items: center;
 }
 header section .barra .boton button{
-    background-color: #FFB547;
+    background: none;
     border: none;
 }
 header section .barra .logo, .logo{
@@ -543,6 +543,9 @@ footer .btns button{
 }
 
 @media (min-width: 500px){
+    body{
+        font-size: 15px;
+    }
 
     .product form section article div {
         display: flex;
@@ -619,7 +622,9 @@ footer .btns button{
     }
 }
 @media (min-width: 800px){
-    
+    body{
+        font-size: 20px;
+    }
     footer .logo{
         width: 10%;
     }
