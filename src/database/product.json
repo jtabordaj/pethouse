@@ -20,7 +20,8 @@
     "categoria": "Alimentos",
     "precio": "89250",
     "descuento": "15",
-    "img": "/img/product/product1674114989165.png"
+    "img": "/img/product/product1674114989165.png",
+    "borrado": true
   },
   {
     "id": 2,

@@ -291,13 +291,6 @@ footer .btns button{
     box-shadow: 0px 10px 20px #1687d933;
 }
 
-@media (max-width: 500px){
-	.cart .containerCart{
-		width: 100vw;
-		height: auto;
-	}
-
-}
 
 .cart .header{
     display: flex;
@@ -612,7 +605,10 @@ footer .btns button{
     header .animal{
         display: none;
     }
-
+    .cart .containerCart{
+		width: 100vw;
+		height: auto;
+	}
     /* pruduct detail main*/
     .mainProducto picture {
         text-align: center;

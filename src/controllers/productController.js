@@ -50,9 +50,7 @@ const productController = {
     },
     editProduct: (req, res) =>{
         const idProduct = req.params.idProduct;
-        const producto = product.find( p => p.id == idProduct)
-        
-        
+        const producto = product.find( p => p.id == idProduct && !p.borrado)
         if(producto){
             res.render("./products/produc", {
                 title:"editProduct",
@@ -105,13 +103,8 @@ const productController = {
     delete: (req, res) =>{
         const idProduct = req.params.idProduct;
         const prod = product.find(p => p.id == idProduct);
-        const rutaImg = path.join(__dirname, "../../public",prod.img);
-        const productoEliminado = product.filter( p => p.id != idProduct);
-        fs.unlink(rutaImg, (err) => {
-            if (err) throw err;
-            console.log("File deleted!");
-        })
-        fs.writeFileSync(rutaProduct, JSON.stringify(productoEliminado, null, 2));
+        prod.borrado = true;
+        fs.writeFileSync(rutaProduct, JSON.stringify(product, null, 2));
         res.redirect("/");
     },
 }

@@ -11,8 +11,10 @@ let category = JSON.parse(fs.readFileSync(rutaCategory));
 
 
 const indexController = {
+   
     index: (req, res) =>{
-        res.render("./users/index", {product: product, category: category.filter( c => c.categoria == "categoria"), title:"Pet House"});
+        const producShow = product.filter( p => !p.borrado && p.id);
+        res.render("./users/index", {product: producShow, category: category.filter( c => c.categoria == "categoria"), title:"Pet House"});
     },
     login: (req, res) =>{
         res.render("./users/login", {title:"Login"});
