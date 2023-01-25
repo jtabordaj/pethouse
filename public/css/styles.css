@@ -210,55 +210,160 @@ footer .btns button{
 
 /* Forms Login and Register */
 
-.forms h3{
-    text-align: center;
-}
+/* Login page */
 
-
-.forms  header{
-    background-color: #FFB547;
+.loginContainer{
     display: flex;
-    justify-content: center;
-	align-items: center;
-    padding: 3%;
-}
-
-.forms  .logo {    
-    width: 20vw;
-    margin: none;
-    background-color: none;
-    padding: none;
-    border: none;
-    align-items: center;
-}
-.forms  header button{
-    color: none;
-    border: none;
-    background-color:  #FFB547;
-    align-items: center;
-}
-.forms  {	
-	flex-wrap: wrap;
-	background: #ffffff;
-	display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-	justify-content: center;
-	align-items: center;
-    padding: 3%
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    width: 65vw;
+    height: auto;
+    margin: auto;
+    border-radius: 15px;
+    padding: 32px 32px;
 }
 
-.forms  .formulario section{
+.loginTitle{
+    font-size: 20px;
+    font-weight: bolder;
+    width: 100%;
+    padding: 10px;
+}
+
+.formLogin{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
 }
 
+.formLogin label{
+    margin: 0 0 5px 5px;
+    color: rgb(25, 25, 25);
+    padding-top: 10px;
+    font-weight: bold;
+}
 
+.formLogin button.send{
+    align-self: center;
+    margin-top: 30px;
+    width: 38%;
+    height: 34px;
+    font-size: 16px;
+    border: 3px solid #FFB547;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.5s;
+    background-color: #FFB547;
+    color: white;
+    cursor: pointer;
+}
 
-.forms  div article{
-    padding: 0 0 4% 0;
-    margin: 5%;
-    text-align: center;
+.formLogin button:hover{
+    background-color:#0022AA;
+    border-color: #0022AA;
+}
+
+/* Register page */
+
+.registerContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    border-radius: 15px;
+    padding: 32px 32px;
+}
+
+.formRegister{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.registerTitle{
+    padding-bottom: 15px;
+}
+
+.formRegister label{
+    margin: 0 0 5px 5px;
+    color: rgb(25, 25, 25);
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.registerInput{
+    background-color: white;
+    padding: 15px;
+    border: 3px solid #ebebeb;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.formRegister button.send{
+    align-self: center;
+    margin-top: 30px;
+    width: 38%;
+    height: 34px;
+    font-size: 16px;
+    border: 3px solid #FFB547;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.5s;
+    background-color: #FFB547;
+    color: white;
+    cursor: pointer;
+}
+
+.formRegister button.send:hover{
+        background-color:#0022AA;
+        border-color: #0022AA;
+    }
+
+    .formRegister button.delete:hover{
+        background-color:#aa0000;
+        border-color: #aa0000;
+    }
+
+.formRegister button.delete{
+    align-self: center;
+    margin-top: 30px;
+    width: 38%;
+    height: 34px;
+    font-size: 16px;
+    border: 3px solid #1bbcb6;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.5s;
+    background-color: #1bbcb6;
+    color: white;
+    cursor: pointer;
+}
+
+.radioSelect{
+    padding: 10px 10px 10px 10px;
+    align-self: center;
+}
+
+.checkboxSelect{
+    padding: 7px 7px 7px 7px;
+    align-self: center;
 }
 
 /* cart */
@@ -615,6 +720,14 @@ footer .btns button{
     }
     .mainProducto .imagenProducto{
         width: 300px;
+    }
+    .registerContainer, .loginContainer{
+        width: 99vw
+    }
+
+    .buttonForm{
+        height: 7vw;
+        width: 9%;
     }
 }
 @media (min-width: 800px){

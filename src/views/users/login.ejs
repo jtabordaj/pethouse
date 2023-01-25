@@ -8,75 +8,21 @@
         <%- include('../partial/header')%>
     </header>
 
-    <main class="forms">
-        <h3>Iniciar sesión</h3>
-
-        <section class="formulario">            
-        <div>
-            <form action="/" method="post">
-            <!-- Username -->
-            <article>
-        <div>
-                <label for="usuario">Correo electrónico: </label>
-                <input class="inputemail" type="email" id="usuario" placeholder="ejemplo@email.com" name="email"> 
-        </div>
-            </article>
-            <!-- Password -->
-            <article>
-            <div>
-                <label for="contrasenia">Contraseña: </label>
-                <input type="password" id="contrasenia" placeholder="Contraseña" name="contrasenia">
-            </div>
-            </article>
-            <article>
-                <div>
-                    <button><label for="botonEnviar"><a href="/">Iniciar sesión</a></label></button>
-                </div>
-            </article>
-            <article>
-                <div class=" politicas">
-                    <label >
-                        <input type="checkbox" >
-                        <option>He leído y acepto las políticas de privacidad</option>
-                    </label>
-                </div>
-                </article>           
+    <main>
+        <div class="loginContainer">
+            <div class="loginTitle">Bienvenido!!!!</div>        
+            <form class="formLogin" action="/login" method="POST">
+                <label for="userLogin"> Usuario </label>
+                <input class="registerInput" type="text" id="userLogin" name="userLogin" placeholder="Nombre de Usuario" required>
             
-        </section>    
-        </form>  
-        <div>
-            <button> <i> ¿Olvidaste tu contraseña?</i></button>
+                <label for="passwordLogin"> Contraseña </label>
+                <input class="registerInput" type="password" id="passwordLogin" name="passwordLogin" placeholder="Ingresa tu contraseña" required>
+
+             <button class="send" type="submit" id="buttonLogin" name="buttonLogin">Ingresar</button>
+            </form>    
         </div>
-        <div>
-            <i> ¿Es tu primera vez? </i>
-        </div>
-        <div>
-            <a href="/register"><button > Registrate</button></a>
-        </div>     
-    </div>
     </main>
-    <footer>
-        <img class="logo" src="/img/logo.png">
-        <article>
-            <p>Nuestras redes</p>
-            <div class="icono">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-youtube"></i>
-                <i class="fa-brands fa-twitter"></i>
-            </div>
-        </article>
-        <article class="btns">
-            <button>Sobre nosotros <i class="fa-solid fa-chevron-right"></i></button>
-            <button>Preguntas frecuentes <i class="fa-solid fa-chevron-right"></i></button>
-            <button>Informacion de contacto <i class="fa-solid fa-chevron-right"></i></button>
-        </article>
-        <article>
-            <p>Todos los derechos reservados - ® Pet House 2022</p>
-        </article>
-
-    </footer>
-
+    <%- include('../partial/footer')%>
     
 </body>
 </html>
