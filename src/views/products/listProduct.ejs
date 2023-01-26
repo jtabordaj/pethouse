@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partial/head")%>    
+<body>
+    <%- include("../partial/header")%>
+
+    <main class="listado">
+
+        <section>
+            <% product.forEach(p => { %>
+                <article>
+                    <picture>
+                        <img src="<%= "/img/product/" + p.img %> ">
+                    </picture>
+                    <div>
+                        <h3><%= p.nombre_producto %> </h3>
+                        <h3><%= p.precio %> </h3>
+                        <% if (p.descuento > 0) { %>
+                            <h3>Descuento del <%= p.descuento %> % </h3>                          
+                        <% } %>  
+                        <h3>Marca: <%= p.marca %> </h3>                      
+                        <p><%= p.descripcion %> </p>
+                    </div>
+                </article>             
+            <% }) %>
+        </section>
+        
+        
+    </main>
+
+    <%- include("../partial/footer")%>
+</body>
+</html>

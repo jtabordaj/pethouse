@@ -107,6 +107,16 @@ const productController = {
         fs.writeFileSync(rutaProduct, JSON.stringify(product, null, 2));
         res.redirect("/");
     },
+    listProduct: (req,res)=>{ 
+
+        console.log("entró")
+        res.render("./products/listProduct",{
+            title:"Lista de productos",
+            product: product,
+        })
+    }
+
+
 }
 
 module.exports = productController;

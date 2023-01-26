@@ -20,7 +20,7 @@
     "categoria": "Alimentos",
     "precio": "89250",
     "descuento": "15",
-    "img": "/img/product/product1674114989165.png",
+    "img": "product1674114989165.png",
     "borrado": true
   },
   {
@@ -33,7 +33,7 @@
     "categoria": "Alimentos",
     "precio": "69270",
     "descuento": "10",
-    "img": "/img/product/product1674115037221.png"
+    "img": "product1674115037221.png"
   },
   {
     "id": 3,
@@ -45,6 +45,6 @@
     "categoria": "Alimentos",
     "precio": "69255",
     "descuento": "19",
-    "img": "/img/product/product1674115117444.png"
+    "img": "product1674115117444.png"
   }
 ]
