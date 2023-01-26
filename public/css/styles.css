@@ -640,6 +640,21 @@ footer .btns button{
     width: 50%;
 }
 
+.listado section article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.listado section article picture {
+    width: 40%;
+}
+
+.listado section article picture img{
+    width: 100%;
+}
+
+
 @media (min-width: 500px){
     body{
         font-size: 15px;
