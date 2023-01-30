@@ -112,7 +112,8 @@ const productController = {
         console.log("entró")
         res.render("./products/listProduct",{
             title:"Lista de productos",
-            product: product,
+            product: product.filter(p => p.id ),
+
         })
     }
 

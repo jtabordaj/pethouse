@@ -640,6 +640,21 @@ footer .btns button{
     width: 50%;
 }
 
+.listado section article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.listado section article picture {
+    width: 40%;
+}
+
+.listado section article picture img{
+    width: 100%;
+}
+
+
 @media (min-width: 500px){
     body{
         font-size: 15px;
@@ -771,3 +786,30 @@ footer .btns button{
 
 
 
+
+
+/* 404 */
+
+.h1404{
+    font-size: 80px;
+    font-weight: 800;
+    text-align: center;
+    font-family: 'Roboto'
+}
+
+.h2404{
+    font-size:25px;
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    margin-top:-40px;
+}
+.p404{
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    font-size:12px;
+}
+.container404{
+    width:300px;
+    margin: 0 auto;
+    margin-top:15%;
+}

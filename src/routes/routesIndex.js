@@ -34,4 +34,5 @@ router.get("/editProduct/:idProduct", productController.editProduct);
 router.put("/editProduct/:idProduct",uploadFile.single('imagenProducto'), productController.modifyProduct);
 router.get("/deleteProduct/:idProduct", productController.deleteProduct);
 router.delete("/deleteProduct/:idProduct", productController.delete);
+router.get("/listProduct", productController.listProduct);
 module.exports = router;

@@ -16,7 +16,7 @@
                 <% for(let pr = 0;pr < product.length; pr ++){%>
                     <% if (product[pr].id >= 1 && product[pr].descuento > 0) { %>
                         <article>
-                            <img src=<%=product[pr].img%> alt="">
+                            <img src=<%="/img/product/" + product[pr].img%> alt="">
                             <div>
                                 <p><%= product[pr].nombre_producto %></p>
                                 <p> Precio $ <%=product[pr].precio%></p>
