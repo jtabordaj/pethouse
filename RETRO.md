@@ -22,3 +22,14 @@ Continuar haciendo: los metodos que hemos utilizado hasta el momento nos ha dado
 Hacer menos:--
 
 Dejar de hacer: para este sprint creo que hicimos las cosas a tiempo y organizadamente, por eso consideramos que debemos seguir trabajando de la misma manera.
+
+<!-- SPRINT 4 -->
+Comenzar a hacer: actualizaciones por chat, acerca del avance detallado de las actividades, para que todos los integrantes esten al tanto, no solo por gitHub, sino tambien por otros medios como whatsapp.
+
+Hacer mas: hacer reuniones donde podamos trabajar en el proyecto con todos o la mayoria de los integrantes, mediante videollamadas donde compartamos pantalla y poder aportar entre todos, ya que consideramos que son bastante productivas para el grupo.
+
+Continuar haciendo: los metodos que hemos utilizado hasta el momento nos ha dado buenos resultados, debemos continuar trabajando en equipo y comprometidos con el proyecto.
+
+Hacer menos:--
+
+Dejar de hacer: por el momento consideramos que no debemos de dejar de hacer nada, hasta ahora esta funcionando muy bien nuestro equipo.

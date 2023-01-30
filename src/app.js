@@ -17,7 +17,7 @@ app.listen(3000, ()=>{
     console.log("servidor activo en el puerto 3000");
 });
 
-app.use("/", router)
+app.use("/", router);
 // app.use("/product", routerProduct)
 
 // app.use((req,res,next) => {
