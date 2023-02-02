@@ -25,7 +25,9 @@ const uploadFile = multer({storage});
 
 router.get("/", indexController.index);
 router.get("/login", indexController.login);
+router.post("/login", indexController.loginForm);
 router.get("/register", indexController.register);
+router.post("/register", uploadFile.single('img'), indexController.registerForm);
 router.get("/productCart", productController.productCart);
 router.get("/productDetail", productController.productDetail);
 router.get("/createProduct", productController.createProduct);
@@ -35,4 +37,5 @@ router.put("/editProduct/:idProduct",uploadFile.single('imagenProducto'), produc
 router.get("/deleteProduct/:idProduct", productController.deleteProduct);
 router.delete("/deleteProduct/:idProduct", productController.delete);
 router.get("/listProduct", productController.listProduct);
+
 module.exports = router;

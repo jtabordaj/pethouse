@@ -1,0 +1,27 @@
+[
+  {},
+  {
+    "id": 1,
+    "img": "product1675296234826.jpg",
+    "name": "Maria",
+    "email": "m@gmail.com",
+    "address": "calle 40",
+    "password": "ahsjhdkjhak"
+  },
+  {
+    "id": 2,
+    "img": "product1675298870777.jpg",
+    "name": "Juan",
+    "email": "j@juan.com",
+    "address": "calle juan",
+    "password": "juan"
+  },
+  {
+    "id": 3,
+    "img": "product1675299760401.jpeg",
+    "name": "Martin",
+    "email": "mar@gmail",
+    "address": "Calle Martin",
+    "password": "123"
+  }
+]

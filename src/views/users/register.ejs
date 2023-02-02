@@ -13,7 +13,8 @@
                 <h2>Registrate</h2>
                 <p style="padding-top: 10px;"> Los campos marcados con * son obligatorios</p>
             </div>
-                <form action="/register" method="POST" class="formRegister">
+                <form action="/register" method="POST" class="formRegister" enctype="multipart/form-data" >
+                    <input type="file" name="img"  > 
                     <label for="name">Nombre Completo *</label>
                     <input class="registerInput" type="text" id="name" name="name" placeholder="Escribe tu nombre completo" required minlength="4" pattern="[a-zA-Z]*">
 
