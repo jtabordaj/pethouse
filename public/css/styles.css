@@ -717,6 +717,7 @@ footer .btns button{
     }
     header nav ul li a{
         text-decoration: none;
+        font-weight: bold;
         color: black;   
     }
     header nav ul li a i{
