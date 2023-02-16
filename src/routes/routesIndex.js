@@ -2,8 +2,10 @@ const express = require("express");
 const path = require('path');
 const router = express.Router();
 const indexController = require("../controllers/indexController");
-const productController = require("../controllers/productController")
+const productController = require("../controllers/productController");
 const multer = require('multer');
+const {body} = require('express-validator')
+const validator = require('../middleware/validation');
 
 const directorioImg = path.join(__dirname, "../../public/img/product")
 
@@ -27,7 +29,7 @@ router.get("/", indexController.index);
 router.get("/login", indexController.login);
 router.post("/login", indexController.loginForm);
 router.get("/register", indexController.register);
-router.post("/register", uploadFile.single('img'), indexController.registerForm);
+router.post("/register",validator.validatorRegister, uploadFile.single('img'), indexController.registerForm);
 router.get("/productCart", productController.productCart);
 router.get("/productDetail", productController.productDetail);
 router.get("/createProduct", productController.createProduct);

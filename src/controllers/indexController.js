@@ -1,5 +1,7 @@
 const path = require('path');
 const fs = require('fs');
+const {validationResult} = require("express-validator");
+
 
 //rutas para acceder a los archivos de la base de datos
 const rutaProduct = path.join(__dirname, "../database/product.json");
@@ -46,6 +48,11 @@ const indexController = {
     },
 
     registerForm: (req, res)=>{
+        let result = validationResult(req);
+        if(result){
+            // console.log(result)
+            return res.render("./users/register", {title:"Registro", error: result.mapped(), datosUsuario: req.body})
+        }
         const id =  users[users.length - 1].id + 1;
 
         const user = {

@@ -285,6 +285,12 @@ footer .btns button{
     padding: 32px 32px;
 }
 
+.formRegister .msgError {
+    font-size: small;
+    color: red;
+    font-weight: bolder;
+}
+
 .formRegister{
     display: flex;
     flex-wrap: wrap;
