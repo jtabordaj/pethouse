@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const {validationResult} = require("express-validator");
+const { validationResult } = require("express-validator");
 
 
 //rutas para acceder a los archivos de la base de datos
@@ -49,12 +49,13 @@ const indexController = {
 
     registerForm: (req, res)=>{
         let result = validationResult(req);
-        if(result){
-            // console.log(result)
+
+        if(result.errors.length > 0){
+            
             return res.render("./users/register", {title:"Registro", error: result.mapped(), datosUsuario: req.body})
         }
         const id =  users[users.length - 1].id + 1;
-
+        console.log(req.file.filename);
         const user = {
             id : id,
             img: req.file.filename,
