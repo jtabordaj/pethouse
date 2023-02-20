@@ -49,7 +49,7 @@ const indexController = {
 
     registerForm: (req, res)=>{
         let result = validationResult(req);
-        if(result){
+        if(result.errors.length > 0){
             // console.log(result)
             return res.render("./users/register", {title:"Registro", error: result.mapped(), datosUsuario: req.body})
         }

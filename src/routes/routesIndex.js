@@ -29,7 +29,7 @@ router.get("/", indexController.index);
 router.get("/login", indexController.login);
 router.post("/login", indexController.loginForm);
 router.get("/register", indexController.register);
-router.post("/register",validator.validatorRegister, uploadFile.single('img'), indexController.registerForm);
+router.post("/register", validator.validatorRegister, uploadFile.single('img'), indexController.registerForm);
 router.get("/productCart", productController.productCart);
 router.get("/productDetail", productController.productDetail);
 router.get("/createProduct", productController.createProduct);
