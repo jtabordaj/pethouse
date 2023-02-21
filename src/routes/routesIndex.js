@@ -28,10 +28,10 @@ const uploadFile = multer({storage});
 
 router.get("/", indexController.index);
 
-router.get("/login", indexController.login);
+router.get("/login",validator.session, indexController.login);
 router.post("/login", validator.validatorLogin, indexController.loginForm);
 
-router.get("/register", indexController.register);
+router.get("/register", validator.session, indexController.register);
 router.post("/register", uploadFile.single('img'), validator.validatorRegister, indexController.registerForm);
 
 

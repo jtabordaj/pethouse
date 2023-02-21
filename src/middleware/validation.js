@@ -1,4 +1,5 @@
 const {body} = require('express-validator');
+const session = require('express-session');
 
 module.exports = {
 
@@ -19,5 +20,11 @@ module.exports = {
     validatorLogin: [
         body("email").isEmail().normalizeEmail().withMessage('ingrese un correo valido'),
         body("passwordLogin").notEmpty().withMessage('contraseña minima 8 caracteres')
-    ]
+    ],
+    session : (res,req,next) => {
+        if(req.session.user){
+            res.send('Iniciaste sesión')
+        };
+        next()
+    }
 }

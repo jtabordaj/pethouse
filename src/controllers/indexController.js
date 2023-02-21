@@ -5,6 +5,7 @@ const bcrypt = require("bcryptjs");
 
 
 
+
 //rutas para acceder a los archivos de la base de datos
 const rutaProduct = path.join(__dirname, "../database/product.json");
 const rutaCategory = path.join(__dirname, "../database/category.json");
@@ -29,8 +30,7 @@ const indexController = {
     loginForm: (req, res)=>{
         let resultLogin = validationResult(req);
 
-        if(resultLogin.errors.length > 0) {
-           console.log(resultLogin.mapped()) 
+        if(resultLogin.errors.length > 0){ 
             return res.render("./users/login", {title:"Login", error: resultLogin.mapped(), datosUsuario: req.body})
         }
         let email = req.body.email;
@@ -38,11 +38,16 @@ const indexController = {
 
         // Buscar el usuario
        
-        let theUser = users.find(row => row.email == email);
-        if(!bcrypt.compareSync(req.body.passwordLogin, theUser.password)){
+        let theUser = users.find(row => row.email == email && !bcrypt.compareSync(req.body.passwordLogin, row.password));
+        if(theUser == undefined){
             return res.render("./users/login", {title:"Login", userPassword: "Contraseña o email incorrectos", datosUsuario: req.body})
         }
         else{
+            req.session.user = { 
+                name: theUser.name,
+                email: theUser.email,
+                address: theUser.address
+            }
             return res.redirect("/")
         }
 
