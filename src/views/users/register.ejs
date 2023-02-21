@@ -60,7 +60,7 @@
                     <% if (locals.error && locals.error.password2) { %>
                         <p class="msgError"><%= error.password2.msg %></p>
                        <% } %>
-                    <input class="registerInput" type="password2" id="password2" name="password2" placeholder="Confirma la contraseña" <% if (locals.datosUsuario && locals.datosUsuario.password2 != "") { %>
+                    <input class="registerInput" type="password" id="password2" name="password2" placeholder="Confirma la contraseña" <% if (locals.datosUsuario && locals.datosUsuario.password2 != "") { %>
                         value = <%= datosUsuario.password2 %>
                        <% } %> >
 

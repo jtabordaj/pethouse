@@ -1,6 +1,8 @@
 const path = require('path');
 const fs = require('fs');
-const {validationResult} = require("express-validator");
+const { validationResult } = require("express-validator");
+const bcrypt = require("bcryptjs");
+
 
 
 //rutas para acceder a los archivos de la base de datos
@@ -25,22 +27,25 @@ const indexController = {
     },
 
     loginForm: (req, res)=>{
+        let resultLogin = validationResult(req);
+
+        if(resultLogin.errors.length > 0) {
+           console.log(resultLogin.mapped()) 
+            return res.render("./users/login", {title:"Login", error: resultLogin.mapped(), datosUsuario: req.body})
+        }
         let email = req.body.email;
-        let password = req.body.passwordLogin;
+        
 
         // Buscar el usuario
        
-        let theUser = users.find(row => row.email == email && row.password == password);
-        
-        if (theUser == undefined){
-            return res.send("La contraseña no coincide con el email o el usuario no existe")
+        let theUser = users.find(row => row.email == email);
+        if(!bcrypt.compareSync(req.body.passwordLogin, theUser.password)){
+            return res.render("./users/login", {title:"Login", userPassword: "Contraseña o email incorrectos", datosUsuario: req.body})
         }
-
         else{
-            return res.send("¡Ingresó con éxito!")
+            return res.redirect("/")
         }
 
-        
     },
 
     register: (req, res) =>{
@@ -49,19 +54,21 @@ const indexController = {
 
     registerForm: (req, res)=>{
         let result = validationResult(req);
+
         if(result.errors.length > 0){
-            // console.log(result)
+            
             return res.render("./users/register", {title:"Registro", error: result.mapped(), datosUsuario: req.body})
         }
-        const id =  users[users.length - 1].id + 1;
 
+        const id =  users[users.length - 1].id + 1;
+        console.log(req.file.filename);
         const user = {
             id : id,
             img: req.file.filename,
             name: req.body.name,
             email: req.body.email,
             address: req.body.address,
-            password: req.body.password
+            password: bcrypt.hashSync(req.body.password, 10)
         };
         
         users.push(user);

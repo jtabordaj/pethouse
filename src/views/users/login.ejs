@@ -13,10 +13,19 @@
             <div class="loginTitle">¡Bienvenido!</div>        
             <form class="formLogin" action="/login" method="POST">
                 <!-- <label for="email"> Email </label> -->
-                <input class="registerInput" type="text" id="userLogin" name="email" placeholder="Email" required>
+                <% if (locals.userPassword) { %>
+                 <p class="msgError"><%= locals.userPassword %></p>
+                <% } %>
+                <% if (locals.error && locals.error.email) { %>
+                 <p class="msgError"><%=error['email'].msg %> </p>
+                <% } %>
+                <input class="registerInput" type="text" id="userLogin" name="email" placeholder="Email">
             
                 <!-- <label for="passwordLogin"> Contraseña </label> -->
-                <input class="registerInput" type="password" id="passwordLogin" name="passwordLogin" placeholder="Ingresa tu contraseña" required>
+                <% if (locals.error && locals.error.passwordLogin) { %>
+                    <p class="msgError"><%=error['passwordLogin'].msg %> </p>
+                   <% } %>
+                <input class="registerInput" type="password" id="passwordLogin" name="passwordLogin" placeholder="Ingresa tu contraseña">
 
              <button class="send" type="submit" id="buttonLogin" name="buttonLogin">Ingresar</button>
             </form>    

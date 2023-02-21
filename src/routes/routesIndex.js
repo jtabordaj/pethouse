@@ -4,8 +4,9 @@ const router = express.Router();
 const indexController = require("../controllers/indexController");
 const productController = require("../controllers/productController");
 const multer = require('multer');
-const {body} = require('express-validator')
-const validator = require('../middleware/validation');
+
+//llama al middleware
+const validator = require("../middleware/validation");
 
 const directorioImg = path.join(__dirname, "../../public/img/product")
 
@@ -26,18 +27,26 @@ const storage = multer.diskStorage({
 const uploadFile = multer({storage});
 
 router.get("/", indexController.index);
+
 router.get("/login", indexController.login);
-router.post("/login", indexController.loginForm);
+router.post("/login", validator.validatorLogin, indexController.loginForm);
+
 router.get("/register", indexController.register);
-router.post("/register", validator.validatorRegister, uploadFile.single('img'), indexController.registerForm);
+router.post("/register", uploadFile.single('img'), validator.validatorRegister, indexController.registerForm);
+
+
 router.get("/productCart", productController.productCart);
 router.get("/productDetail", productController.productDetail);
+
 router.get("/createProduct", productController.createProduct);
 router.post("/createProduct", uploadFile.single('imagenProducto'), productController.create);
+
 router.get("/editProduct/:idProduct", productController.editProduct);
 router.put("/editProduct/:idProduct",uploadFile.single('imagenProducto'), productController.modifyProduct);
+
 router.get("/deleteProduct/:idProduct", productController.deleteProduct);
 router.delete("/deleteProduct/:idProduct", productController.delete);
+
 router.get("/listProduct", productController.listProduct);
 
 module.exports = router;
