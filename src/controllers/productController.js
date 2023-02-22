@@ -16,6 +16,14 @@ const productController = {
     productDetail: (req, res) =>{
         res.render("./products/productDetail", {title:"productDetail"});
     },
+    getProduct: (req, res) => {
+        let productId = req.params.idProduct;
+        let result = product.find(p => p.id == productId);
+        if (!result) {
+            res.status(404).send("Producto no encontrado")
+            return;
+        } res.render("./products/productDetail", { result, title:"Producto" });
+    },
     createProduct: (req, res) =>{
         res.render("./products/produc", {
             title:"createProduct",
@@ -30,7 +38,7 @@ const productController = {
     create: (req, res) => {
         let id = product[product.length - 1].id + 1
         if(!req.file){
-            return res.send("no se cargo ninguna imagen por favor regrese al formulario y carge una imagen")
+            return res.send("No se cargo ninguna imagen por favor regrese al formulario y carge una imagen")
         };
         let newProduct = {
             id: id,

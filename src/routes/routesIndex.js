@@ -34,9 +34,8 @@ router.post("/login", validator.validatorLogin, indexController.loginForm);
 router.get("/register", validator.session, indexController.register);
 router.post("/register", uploadFile.single('img'), validator.validatorRegister, indexController.registerForm);
 
-
 router.get("/productCart", productController.productCart);
-router.get("/productDetail", productController.productDetail);
+router.get("/productDetail/:idProduct", productController.getProduct);
 
 router.get("/createProduct", productController.createProduct);
 router.post("/createProduct", uploadFile.single('imagenProducto'), productController.create);
