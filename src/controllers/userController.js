@@ -1,6 +1,8 @@
 const path = require('path');
 const fs = require('fs');
+const { validationResult } = require("express-validator");
 const bcrypt = require('bcryptjs')
+
 
 //rutas para acceder a los archivos de la base de datos
 const rutaProduct = path.join(__dirname, "../database/product.json");
@@ -16,41 +18,47 @@ const userController = {
     login: (req, res) =>{
         res.render("./users/login", {title:"Login"});
     },
-
     loginForm: (req, res)=>{
+        let resultLogin = validationResult(req);
+
+        if(resultLogin.errors.length > 0){ 
+            return res.render("./users/login", {title:"Login", error: resultLogin.mapped(), datosUsuario: req.body})
+        }
         let email = req.body.email;
-        let password = req.body.passwordLogin
-
-        // Buscar el usuario
-       
-        let theUser = users.find(row => row.email == email && bcrypt.compareSync(password, row.password)
-        == true);
-        
-        if (theUser == undefined){
-            return res.send("La contraseña no coincide con el email o el usuario no existe")
+        // Buscar el usuario   
+        let theUser = users.find(row => row.email == email && !bcrypt.compareSync(req.body.passwordLogin, row.password));
+        if(theUser == undefined){
+            return res.render("./users/login", {title:"Login", userPassword: "Contraseña o email incorrectos", datosUsuario: req.body})
         }
-
         else{
-            return res.send("¡Ingresó con éxito!")
+            req.session.user = { 
+                name: theUser.name,
+                email: theUser.email,
+                address: theUser.address
+            }
+            return res.redirect("/")
         }
-
-        
     },
-
     register: (req, res) =>{
         res.render("./users/register", {title:"Registro"});
     },
-
     registerForm: (req, res)=>{
-        const id =  users[users.length - 1].id + 1;
+        let result = validationResult(req);
 
+        if(result.errors.length > 0){
+            
+            return res.render("./users/register", {title:"Registro", error: result.mapped(), datosUsuario: req.body})
+        }
+
+        const id =  users[users.length - 1].id + 1;
+        console.log(req.file.filename);
         const user = {
             id : id,
             img: req.file.filename,
             name: req.body.name,
             email: req.body.email,
             address: req.body.address,
-            password: bcrypt.hashSync(req.body.password,10)
+            password: bcrypt.hashSync(req.body.password, 10)
         };
         
         users.push(user);
@@ -66,6 +74,7 @@ const userController = {
         res.redirect("/");
 
     }
-}
+    
+};
 
 module.exports = userController;

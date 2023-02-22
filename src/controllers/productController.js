@@ -122,8 +122,6 @@ const productController = {
             product: product.filter(p => p.id ),
         })
     }
-
-
 }
 
 module.exports = productController;

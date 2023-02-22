@@ -21,7 +21,7 @@ module.exports = {
         body("email").isEmail().normalizeEmail().withMessage('Ingrese un correo valido'),
         body("passwordLogin").notEmpty().withMessage('Contraseña minima 8 caracteres')
     ],
-    session : (res,req,next) => {
+    session : (req,res,next) => {
         if(req.session.user){
             res.send('Iniciaste sesión')
         };

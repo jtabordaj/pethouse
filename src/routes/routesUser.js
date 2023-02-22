@@ -4,9 +4,10 @@ const router = express.Router();
 const userController = require("../controllers/userController");
 const multer = require('multer');
 
+//llama al middleware
+const validator = require("../middleware/validation");
 
 const directorioImg = path.join(__dirname, "../../public/img/users")
-
 
 //configurando en donde se va a guardar los archivos
 const storage = multer.diskStorage({
@@ -23,9 +24,10 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({storage});
 
-router.get("/login", userController.login);
-router.post("/login", userController.loginForm);
-router.get("/register", userController.register);
-router.post("/register", uploadFile.single('img'), userController.registerForm);
+router.get("/login",validator.session, userController.login);
+router.post("/login", validator.validatorLogin, userController.loginForm);
 
-module.exports = router;
+router.get("/register", validator.session, userController.register);
+router.post("/register", uploadFile.single('img'), validator.validatorRegister, userController.registerForm);
+
+module.exports = router

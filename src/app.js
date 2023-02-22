@@ -25,7 +25,7 @@ app.listen(3000, ()=>{
 });
 
 app.use("/", router);
-app.use("/user", routerUser);
+app.use("/", routerUser);
 
 app.use((req,res,next) => {
     res.status(404).render('./404.ejs')
