@@ -116,12 +116,10 @@ const productController = {
         res.redirect("/");
     },
     listProduct: (req,res)=>{ 
-
         console.log("entró")
         res.render("./products/listProduct",{
             title:"Lista de productos",
             product: product.filter(p => p.id ),
-
         })
     }
 
