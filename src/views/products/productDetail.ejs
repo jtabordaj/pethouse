@@ -9,12 +9,12 @@
         </div>
         <h2>Tu producto selecionado:</h2>
         <section class="sectionProducto">
-            <h3>Purina Pro Plan-Gatos esterilizados-Urinary-1.5 Kg</h3>
+            <h3><%= result.nombre_producto  %></h3>
             <picture>
-                <img class="imagenProducto" src="/img/proplan-esterilizado.png">
+                <img class="imagenProducto" src=<%= "/img/product/"+result.img %> >
             </picture>
             <div class="infoProducto">
-                <p>$130.000</p>
+                <p>$ <%= result.precio %> </p>
                 <p>
                     <select class="cuadroCant" name="cantidad" id="cantidad">
                         <option value="uno">1</option>
@@ -53,7 +53,7 @@
             </div>
             <div>
                 <h3>Descripción</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda repellendus vel incidunt similique veniam repellat nam, tenetur mollitia quasi voluptas nostrum eaque minima animi tempora rerum amet corrupti. Minima, dolorum!</p>
+                <p><%= result.descripcion %> </p>
 
             </div>
             <div>

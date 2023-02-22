@@ -23,7 +23,6 @@
                     <input class="registerInput" type="text" id="name" name="name" placeholder="Escribe tu nombre completo" <% if (locals.datosUsuario && locals.datosUsuario.name != "") { %>
                      value = <%= datosUsuario.name %>
                     <% } %>>
-
                     <label for="user">Usuario *</label>
                     <% if (locals.error && locals.error.user) { %>
                         <p class="msgError"><%= error.user.msg %></p>

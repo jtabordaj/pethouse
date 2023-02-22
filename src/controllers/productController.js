@@ -16,6 +16,14 @@ const productController = {
     productDetail: (req, res) =>{
         res.render("./products/productDetail", {title:"productDetail"});
     },
+    getProduct: (req, res) => {
+        let productId = req.params.idProduct;
+        let result = product.find(p => p.id == productId);
+        if (!result) {
+            res.status(404).send("Producto no encontrado")
+            return;
+        } res.render("./products/productDetail", { result, title:"Producto" });
+    },
     createProduct: (req, res) =>{
         res.render("./products/produc", {
             title:"createProduct",
@@ -108,12 +116,10 @@ const productController = {
         res.redirect("/");
     },
     listProduct: (req,res)=>{ 
-
         console.log("entró")
         res.render("./products/listProduct",{
             title:"Lista de productos",
             product: product.filter(p => p.id ),
-
         })
     }
 
