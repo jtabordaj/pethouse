@@ -78,6 +78,54 @@ const userController = {
 
         res.redirect("/");
 
+    },
+
+    editProfile: (req,res) => {
+
+        let email =req.session.user.email;
+        let editUser = users.find(user=>user.email== email);
+        
+        if (editUser){
+
+            return res.render("./users/register", { 
+                title: "Perfil",
+                datosUsuario: editUser       })
+        }
+    },
+
+    saveProfile:(req, res) => {
+
+        let result = validationResult(req);
+
+        if(result.errors.length > 0){
+            
+            return res.render("./users/register", {title:"Registro", error: result.mapped(), datosUsuario: req.body})
+        }
+
+        let email =req.session.user.email;
+        //let editUser = users.find(user=>user.email== email);
+        
+        users.forEach(user =>{ 
+            
+            if(user.email == email){
+
+                user.img = req.file.filename,
+                user.name = req.body.name,
+                user.email = req.body.email,
+                user.address = req.body.address,
+                user.password = bcrypt.hashSync(req.body.password, 10)
+            }
+        })
+        
+        let usersJson = JSON.stringify(users, null, 2);
+        
+        // Escritura de JSON
+
+        fs.writeFileSync(rutaUser, usersJson);
+        
+
+        
+
     }
     
 };

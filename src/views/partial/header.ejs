@@ -28,8 +28,10 @@
                 <li><a href="/login">Ingresar<i class="fas fa-sign-in-alt"></i></a></li>
             <% } %>
             <li><a href="/productCart">Carrito<i class="fas fa-cart-plus"></i></a></li>
+
             <% if (locals.session) { %>
-             <li class="user"><a href="/logOut"><%= session.name %></a> <img src= "<%= session.img %>"></li>
+             <li class="user"><a href="/editProfile"><%= session.name %></a> <img src= "<%= session.img %>"></li>
+
             <% } %>
         </ul>
     </nav>
