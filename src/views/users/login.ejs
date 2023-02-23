@@ -11,7 +11,7 @@
     <main>
         <div class="loginContainer">
             <div class="loginTitle">¡Bienvenido!</div>        
-            <form class="formLogin" action="/user/login" method="POST">
+            <form class="formLogin" action="/login" method="POST">
                 <!-- <label for="email"> Email </label> -->
                 <% if (locals.userPassword) { %>
                  <p class="msgError"><%= locals.userPassword %></p>

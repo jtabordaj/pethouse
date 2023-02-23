@@ -7,6 +7,7 @@ const multer = require('multer');
 
 //llama al middleware
 const validator = require("../middleware/validation");
+const midSession = require("../middleware/midSession")
 
 const directorioImg = path.join(__dirname, "../../public/img/product")
 
@@ -28,18 +29,19 @@ const uploadFile = multer({storage});
 
 router.get("/", indexController.index);
 
-router.get("/productCart", productController.productCart);
+router.get("/productCart", midSession.logIn, productController.productCart);
+
 router.get("/productDetail/:idProduct", productController.getProduct);
 
-router.get("/createProduct", productController.createProduct);
+router.get("/createProduct", midSession.logOut, productController.createProduct);
 router.post("/createProduct", uploadFile.single('imagenProducto'), productController.create);
 
-router.get("/editProduct/:idProduct", productController.editProduct);
+router.get("/editProduct/:idProduct", midSession.logOut, productController.editProduct);
 router.put("/editProduct/:idProduct",uploadFile.single('imagenProducto'), productController.modifyProduct);
 
-router.get("/deleteProduct/:idProduct", productController.deleteProduct);
+router.get("/deleteProduct/:idProduct", midSession.logOut, productController.deleteProduct);
 router.delete("/deleteProduct/:idProduct", productController.delete);
 
-router.get("/listProduct", productController.listProduct);
+router.get("/listProduct", midSession.logOut, productController.listProduct);
 
 module.exports = router;

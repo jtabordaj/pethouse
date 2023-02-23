@@ -6,6 +6,7 @@ const multer = require('multer');
 
 //llama al middleware
 const validator = require("../middleware/validation");
+const midSession = require("../middleware/midSession");
 
 const directorioImg = path.join(__dirname, "../../public/img/users")
 
@@ -24,10 +25,12 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({storage});
 
-router.get("/login",validator.session, userController.login);
+router.get("/logOut", userController.logOut)
+
+router.get("/login", midSession.logIn, userController.login);
 router.post("/login", validator.validatorLogin, userController.loginForm);
 
-router.get("/register", validator.session, userController.register);
+router.get("/register", midSession.logIn, userController.register);
 router.post("/register", uploadFile.single('img'), validator.validatorRegister, userController.registerForm);
 
 module.exports = router

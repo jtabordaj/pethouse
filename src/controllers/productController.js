@@ -11,10 +11,16 @@ let category = JSON.parse(fs.readFileSync(rutaCategory));
 
 const productController = {
     productCart: (req, res) =>{
-        res.render("./products/productCart", {title:"productCart"});
+        res.render("./products/productCart", {
+            title:"productCart",
+            session: req.session.user
+        });
     },
     productDetail: (req, res) =>{
-        res.render("./products/productDetail", {title:"productDetail"});
+        res.render("./products/productDetail", {
+            title:"productDetail",
+            session: req.session.user
+        });
     },
     getProduct: (req, res) => {
         let productId = req.params.idProduct;
@@ -22,7 +28,7 @@ const productController = {
         if (!result) {
             res.status(404).send("Producto no encontrado")
             return;
-        } res.render("./products/productDetail", { result, title:"Producto" });
+        } res.render("./products/productDetail", { result, title:"Producto", session: req.session.user });
     },
     createProduct: (req, res) =>{
         res.render("./products/produc", {
@@ -31,7 +37,8 @@ const productController = {
             box: product[0], 
             category: category.filter( c => c.categoria == "categoria"),
             typeOfPets: category.filter( c => c.categoria == "tipo_mascota"),
-            actions: "/createProduct"
+            actions: "/createProduct",
+            session: req.session.user
            
         });
     },
@@ -66,7 +73,8 @@ const productController = {
                 box: producto, 
                 category: category.filter( c => c.categoria == "categoria"), 
                 typeOfPets: category.filter( c => c.categoria == "tipo_mascota"),
-                actions: "/editProduct/" + idProduct + "?_method=PUT"
+                actions: "/editProduct/" + idProduct + "?_method=PUT",
+                session: req.session.user
             });
         }else{
                 res.send("Producto no encontrado")
@@ -87,7 +95,7 @@ const productController = {
                 if (err) throw err;
                 console.log("File deleted!");
             })
-            modify.img = "/img/product/" + req.file.filename
+            modify.img = req.file.filename
         }
         fs.writeFileSync(rutaProduct, JSON.stringify(product, null, 2));
         res.redirect("/");
@@ -102,8 +110,9 @@ const productController = {
                 pro:producto, 
                 category: category.filter( c => c.categoria == "categoria"), 
                 typeOfPets: category.filter( c => c.categoria == "tipo_mascota"),
-                title:"borrarProduct"}
-                );
+                title:"borrarProduct",
+                session: req.session.user
+            });
         }else{
                 res.send("Producto no encontrado")
             }

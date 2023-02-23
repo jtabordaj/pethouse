@@ -15,12 +15,16 @@ let category = JSON.parse(fs.readFileSync(rutaCategory));
 let users = JSON.parse(fs.readFileSync(rutaUser));
 
 const userController = {
+    logOut: (req, res)=>{
+        req.session.destroy();
+        res.redirect("/");
+    },
+
     login: (req, res) =>{
         res.render("./users/login", {title:"Login"});
     },
     loginForm: (req, res)=>{
         let resultLogin = validationResult(req);
-
         if(resultLogin.errors.length > 0){ 
             return res.render("./users/login", {title:"Login", error: resultLogin.mapped(), datosUsuario: req.body})
         }
@@ -34,7 +38,8 @@ const userController = {
             req.session.user = { 
                 name: theUser.name,
                 email: theUser.email,
-                address: theUser.address
+                address: theUser.address,
+                img: "./img/users/" + theUser.img
             }
             return res.redirect("/")
         }

@@ -18,6 +18,11 @@ const indexController = {
    
     index: (req, res) =>{
         const producShow = product.filter( p => !p.borrado && p.id);
-        res.render("./users/index", {product: producShow, category: category.filter( c => c.categoria == "categoria"), title:"Pet House"});
+        res.render("./users/index", {
+            product: producShow, 
+            category: category.filter( c => c.categoria == "categoria"), 
+            title:"Pet House",
+            session: req.session.user
+        });
     }};
 module.exports = indexController;

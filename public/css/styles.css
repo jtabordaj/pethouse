@@ -48,6 +48,14 @@ header section .buscador button{
 header nav{
     display: none;
 }
+header nav .user{
+    display: flex;
+    justify-content: flex-end;
+}
+header nav .user img{
+    width: 10%;
+    border-radius: 15px;
+}
 header .animal h3{
     text-align: center;
 }
