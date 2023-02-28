@@ -65,7 +65,8 @@ const productController = {
     },
     editProduct: (req, res) =>{
         const idProduct = req.params.idProduct;
-        const producto = product.find( p => p.id == idProduct && !p.borrado)
+        const producto = product.find( p => p.id == idProduct && !p.borrado);
+        
         if(producto){
             res.render("./products/produc", {
                 title:"editProduct",

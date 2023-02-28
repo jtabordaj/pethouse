@@ -1,7 +1,8 @@
 const path = require('path');
 const fs = require('fs');
 const { validationResult } = require("express-validator");
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
+const { type } = require('os');
 
 
 //rutas para acceder a los archivos de la base de datos
@@ -89,7 +90,9 @@ const userController = {
 
             return res.render("./users/register", { 
                 title: "Perfil",
-                datosUsuario: editUser       })
+                datosUsuario: editUser,
+                type: "edit"
+            })
         }
     },
 
@@ -99,7 +102,12 @@ const userController = {
 
         if(result.errors.length > 0){
             
-            return res.render("./users/register", {title:"Registro", error: result.mapped(), datosUsuario: req.body})
+            return res.render("./users/register", {
+                title:"Registro", 
+                error: result.mapped(), 
+                datosUsuario: req.body,
+                type: "edit"
+            })
         }
 
         let email =req.session.user.email;

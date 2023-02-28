@@ -45,22 +45,24 @@
                     <input class="registerInput" type="text" id="address" name="address" placeholder="Direccion de residencia" <% if (locals.datosUsuario && locals.datosUsuario.address != "") { %>
                         value = <%= datosUsuario.address %>
                        <% } %> >
+                    <% if (!locals.type == "edit") { %>
+                        <label for="password">Escribe una contraseña *</label>
+                        <% if (locals.error && locals.error.password) { %>
+                            <p class="msgError"><%= error.password.msg %></p>
+                        <% } %>
+                        <input class="registerInput" type="password" id="password" name="password" placeholder="Contraseña" <% if (locals.datosUsuario && locals.datosUsuario.password != "") { %>
+                            value = <%= datosUsuario.password %>
+                        <% } %>>
 
-                    <label for="password">Escribe una contraseña *</label>
-                    <% if (locals.error && locals.error.password) { %>
-                        <p class="msgError"><%= error.password.msg %></p>
-                       <% } %>
-                    <input class="registerInput" type="password" id="password" name="password" placeholder="Contraseña" <% if (locals.datosUsuario && locals.datosUsuario.password != "") { %>
-                        value = <%= datosUsuario.password %>
-                       <% } %>>
-
-                    <label for="password2">Confirma tu contraseña *</label>
-                    <% if (locals.error && locals.error.password2) { %>
-                        <p class="msgError"><%= error.password2.msg %></p>
-                       <% } %>
-                    <input class="registerInput" type="password" id="password2" name="password2" placeholder="Confirma la contraseña" <% if (locals.datosUsuario && locals.datosUsuario.password2 != "") { %>
-                        value = <%= datosUsuario.password2 %>
-                       <% } %> >
+                        <label for="password2">Confirma tu contraseña *</label>
+                        <% if (locals.error && locals.error.password2) { %>
+                            <p class="msgError"><%= error.password2.msg %></p>
+                        <% } %>
+                        <input class="registerInput" type="password" id="password2" name="password2" placeholder="Confirma la contraseña" <% if (locals.datosUsuario && locals.datosUsuario.password2 != "") { %>
+                            value = <%= datosUsuario.password2 %>
+                        <% } %> >
+                    <% } %>
+                    
 
                     <button class= "send" type="submit" name="enviar" >Registrarte</button>
                     <button class= "delete" type="reset" name="borrar" >Borrar Todo</button>
