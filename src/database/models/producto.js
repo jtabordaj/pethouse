@@ -45,11 +45,38 @@ module.exports = (Sequelize, DataTypes) => {
 
     // hacer relaciones aca //
 
-    Marca.hasMany(Producto, { foreignKey: 'id_marca' });
-    Producto.belongsTo(Marca, { foreignKey: 'id_marca' });
+    Producto.associate = (models) =>{
+      //relacion de mucho a mucho
+      Producto.belongsToMany(models.Factura, {
+          //nombre de la relacion
+          as: "facturas",
+          //nombre de la tabla pibot
+          through: "Producto_factura",
+          //nombre de la columna que hace referencia a la tabla actual
+          foreignKey: "id_product",
+          //nombre de la columna que hace referencia a la tabla 
+          otherKey: "id_factura",
+          timestamps: false
+      });
+      
+      //relacion de producto y marca
+      Producto.belongsTo(models.Marca, {
+        as: "marcas",
+        foreignKey: "id_marca"
+      });
 
-    Categoria.hasMany(Producto, { foreignKey: 'id_categoria' });
-    Producto.belongsTo(Categoria, { foreignKey: 'id_categoria' });
+      //categorias
+      Producto.belongsTo(models.Categoria, {
+        as: "categorias",
+        foreignKey: "id_categoria"
+      });
+  }
+
+    // Marca.hasMany(Producto, { foreignKey: 'id_marca' });
+    // Producto.belongsTo(Marca, { foreignKey: 'id_marca' });
+
+    // Categoria.hasMany(Producto, { foreignKey: 'id_categoria' });
+    // Producto.belongsTo(Categoria, { foreignKey: 'id_categoria' });
 
     return Producto
 

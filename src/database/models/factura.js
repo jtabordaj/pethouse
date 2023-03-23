@@ -28,7 +28,7 @@ module.exports = (Sequelize, DataTypes) =>{
 
     //relaciones 
     Factura.associate = (models)=>{
-        Factura.belongsTo(models.usuario, {
+        Factura.belongsTo(models.Usuario, {
             as: "facturacion",
             foreignKey: "id_usuario"
         })

@@ -45,7 +45,7 @@
                     <input class="registerInput" type="text" id="address" name="address" placeholder="Direccion de residencia" <% if (locals.datosUsuario && locals.datosUsuario.address != "") { %>
                         value = <%= datosUsuario.address %>
                        <% } %> >
-                    <% if (!locals.type == "edit") { %>
+                    <% if (!locals.type) { %>
                         <label for="password">Escribe una contraseña *</label>
                         <% if (locals.error && locals.error.password) { %>
                             <p class="msgError"><%= error.password.msg %></p>
