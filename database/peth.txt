@@ -94,3 +94,43 @@ ADD CONSTRAINT id_producto
   REFERENCES pet_h_grupo.producto (id)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
+
+
+INSERT INTO rol (id,nombre)
+VALUES( DEFAULT, 'Admin');
+  
+INSERT INTO rol (id,nombre)
+VALUES( DEFAULT, 'Cliente');
+
+select * from rol;
+
+INSERT INTO categoria (id,nombre)
+VALUES( DEFAULT, 'Alimento');
+
+INSERT INTO categoria (id,nombre)
+VALUES( DEFAULT, 'Snack');
+
+INSERT INTO categoria (id,nombre)
+VALUES( DEFAULT, 'Medicamentos');
+
+INSERT INTO categoria (id,nombre)
+VALUES( DEFAULT, 'Juguetes');
+
+select * from categoria;
+
+INSERT INTO marca (id,nombre)
+VALUES( DEFAULT, 'Pedigree');
+
+INSERT INTO marca (id,nombre)
+VALUES( DEFAULT, 'Purina');
+
+INSERT INTO marca (id,nombre)
+VALUES( DEFAULT, "Hill's");
+
+INSERT INTO marca (id,nombre)
+VALUES( DEFAULT, 'Dog Chow');
+
+INSERT INTO marca (id,nombre)
+VALUES( DEFAULT, 'Italcol');
+
+select * from marca;
