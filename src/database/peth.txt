@@ -102,21 +102,18 @@ VALUES( DEFAULT, 'Admin');
 INSERT INTO rol (id,nombre)
 VALUES( DEFAULT, 'Cliente');
 
-select * from rol;
 
-INSERT INTO categoria (id,nombre)
+INSERT INTO categoria (id,categoria)
 VALUES( DEFAULT, 'Alimento');
 
-INSERT INTO categoria (id,nombre)
+INSERT INTO categoria (id,categoria)
 VALUES( DEFAULT, 'Snack');
 
-INSERT INTO categoria (id,nombre)
+INSERT INTO categoria (id,categoria)
 VALUES( DEFAULT, 'Medicamentos');
 
-INSERT INTO categoria (id,nombre)
+INSERT INTO categoria (id,categoria)
 VALUES( DEFAULT, 'Juguetes');
-
-select * from categoria;
 
 INSERT INTO marca (id,nombre)
 VALUES( DEFAULT, 'Pedigree');
@@ -132,5 +129,3 @@ VALUES( DEFAULT, 'Dog Chow');
 
 INSERT INTO marca (id,nombre)
 VALUES( DEFAULT, 'Italcol');
-
-select * from marca;
