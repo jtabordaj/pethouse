@@ -4,6 +4,8 @@ const { validationResult } = require("express-validator");
 const bcrypt = require('bcryptjs');
 const { type } = require('os');
 
+const bd = require("../database/models")
+
 
 //rutas para acceder a los archivos de la base de datos
 const rutaProduct = path.join(__dirname, "../database/product.json");
@@ -56,26 +58,47 @@ const userController = {
             return res.render("./users/register", {title:"Registro", error: result.mapped(), datosUsuario: req.body})
         }
 
-        const id =  users[users.length - 1].id + 1;
-        console.log(req.file.filename);
-        const user = {
-            id : id,
-            img: req.file.filename,
-            name: req.body.name,
-            email: req.body.email,
-            address: req.body.address,
-            password: bcrypt.hashSync(req.body.password, 10)
-        };
         
-        users.push(user);
         
-        // Convertir formato JSON
-        
-        let usersJson = JSON.stringify(users, null, 2);
-        
-        // Escritura de JSON
 
-        fs.writeFileSync(rutaUser, usersJson);
+        bd.Usuario.create({
+            nombre_y_apellido: req.body.name,
+            user: req.body.user,
+            email: req.body.email,
+            direccion: req.body.address,
+            password:req.body.password,
+            img:  req.file.filename,
+            id_rol: 1
+        })
+
+
+
+
+
+
+
+        
+        //json
+        // const id =  users[users.length - 1].id + 1;
+        // console.log(req.file.filename);
+        // const user = {
+        //     id : id,
+        //     img: req.file.filename,
+        //     name: req.body.name,
+        //     email: req.body.email,
+        //     address: req.body.address,
+        //     password: bcrypt.hashSync(req.body.password, 10)
+        // };
+        
+        // users.push(user);
+        
+        // // Convertir formato JSON
+        
+        // let usersJson = JSON.stringify(users, null, 2);
+        
+        // // Escritura de JSON
+
+        // fs.writeFileSync(rutaUser, usersJson);
 
         res.redirect("/");
 

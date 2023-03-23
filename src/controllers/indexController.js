@@ -3,6 +3,7 @@ const fs = require('fs');
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 
+
 //rutas para acceder a los archivos de la base de datos
 const rutaProduct = path.join(__dirname, "../database/product.json");
 const rutaCategory = path.join(__dirname, "../database/category.json");
@@ -17,6 +18,7 @@ let users = JSON.parse(fs.readFileSync(rutaUser));
 const indexController = {
    
     index: (req, res) =>{
+
         const producShow = product.filter( p => !p.borrado && p.id);
         res.render("./users/index", {
             product: producShow, 
@@ -24,5 +26,7 @@ const indexController = {
             title:"Pet House",
             session: req.session.user
         });
+
+
     }};
 module.exports = indexController;
