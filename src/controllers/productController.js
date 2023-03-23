@@ -2,6 +2,8 @@ const path = require('path');
 const fs = require('fs');
 
 //rutas para acceder a los archivos de la base de datos
+
+const bd = require("../database/models")
 const rutaProduct = path.join(__dirname, "../database/product.json");
 const rutaCategory = path.join(__dirname, "../database/category.json");
 
@@ -22,9 +24,11 @@ const productController = {
             session: req.session.user
         });
     },
-    getProduct: (req, res) => {
+    getProduct: async (req, res) => {
         let productId = req.params.idProduct;
-        let result = product.find(p => p.id == productId);
+
+        let result = product.find(p => p.id == productId);   
+        
         if (!result) {
             res.status(404).send("Producto no encontrado")
             return;
@@ -47,20 +51,36 @@ const productController = {
         if(!req.file){
             return res.send("No se cargo ninguna imagen por favor regrese al formulario y carge una imagen")
         };
-        let newProduct = {
-            id: id,
-            nombre_producto: req.body.nombre_producto,
-            tipo_mascota: req.body.tipo_mascota,
-            categoria:req.body.categoria,
-            marca: req.body.marca,
-            descripcion: req.body.descripcion,
-            categoria: req.body.categoria,
+         
+        //falta subir el producto a la base de dato
+        //guardar producto en sql
+        bd.Producto.create({
+            id_marca: 0,
+            nombre: req.body.nombre_producto,
             precio: req.body.precio,
-            descuento: req.body.descuento,
-            img: "/img/product/" + req.file.filename
-        };
-        product.push(newProduct);
-        fs.writeFileSync(rutaProduct, JSON.stringify(product, null, 2));
+            cantidad_descuento: req.body.descuento,
+            img: "/img/product/" + req.file.filename,
+            descripcion: req.body.descripcion,
+            id_categoria: 1
+        })
+        
+
+        
+        
+        // let newProduct = {
+        //     id: id,
+        //     nombre_producto: req.body.nombre_producto,
+        //     tipo_mascota: req.body.tipo_mascota,
+        //     categoria:req.body.categoria,
+        //     marca: req.body.marca,
+        //     descripcion: req.body.descripcion,
+        //     categoria: req.body.categoria,
+        //     precio: req.body.precio,
+        //     descuento: req.body.descuento,
+        //     img: "/img/product/" + req.file.filename
+        // };
+        // product.push(newProduct);
+        // fs.writeFileSync(rutaProduct, JSON.stringify(product, null, 2));
         res.redirect("/");
     },
     editProduct: (req, res) =>{

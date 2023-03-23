@@ -26,14 +26,20 @@ const userController = {
     login: (req, res) =>{
         res.render("./users/login", {title:"Login"});
     },
-    loginForm: (req, res)=>{
+    loginForm: async (req, res)=>{
         let resultLogin = validationResult(req);
         if(resultLogin.errors.length > 0){ 
             return res.render("./users/login", {title:"Login", error: resultLogin.mapped(), datosUsuario: req.body})
         }
         let email = req.body.email;
         // Buscar el usuario   
-        let theUser = users.find(row => row.email == email && !bcrypt.compareSync(req.body.passwordLogin, row.password));
+
+
+        let theUser = await bd.Usuario.findOne({
+            where: {email: email}
+        })
+        //let theUser = users.find(row => row.email == email && !bcrypt.compareSync(req.body.passwordLogin, row.password));
+        
         if(theUser == undefined){
             return res.render("./users/login", {title:"Login", userPassword: "Contraseña o email incorrectos", datosUsuario: req.body})
         }
@@ -66,7 +72,7 @@ const userController = {
             user: req.body.user,
             email: req.body.email,
             direccion: req.body.address,
-            password:req.body.password,
+            password: bcrypt.hashSync(req.body.password, 10),
             img:  req.file.filename,
             id_rol: 1
         })
