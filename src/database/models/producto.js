@@ -2,37 +2,30 @@ module.exports = (Sequelize, DataTypes) => {
     const alias = "Producto";
     const column = {
         id: {
-            type: DataTypes.INTEGER.UNSIGNED,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
           },
           id_marca: {
-            type: DataTypes.INTEGER.UNSIGNED,
-            allowNull: false
+            type: DataTypes.INTEGER,
           },
           nombre: {
-            type: DataTypes.STRING(255),
-            allowNull: false
+            type: DataTypes.STRING,
           },
           precio: {
             type: DataTypes.FLOAT,
-            allowNull: false
           },
           cantidad_descuento: {
             type: DataTypes.FLOAT,
-            allowNull: false
           },
           img: {
-            type: DataTypes.STRING(255),
-            allowNull: false
+            type: DataTypes.STRING,
           },
           descripcion: {
-            type: DataTypes.TEXT('medium'),
-            allowNull: false
+            type: DataTypes.TEXT,
           },
           id_categoria: {
-            type: DataTypes.INTEGER.UNSIGNED,
-            allowNull: false
+            type: DataTypes.INTEGER
           }
     };
 

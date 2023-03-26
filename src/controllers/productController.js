@@ -12,18 +12,21 @@ let product = JSON.parse(fs.readFileSync(rutaProduct));
 let category = JSON.parse(fs.readFileSync(rutaCategory));
 
 const productController = {
+    //carrito
     productCart: (req, res) =>{
         res.render("./products/productCart", {
             title:"productCart",
             session: req.session.user
         });
     },
+    //detalle del producto
     productDetail: (req, res) =>{
         res.render("./products/productDetail", {
             title:"productDetail",
             session: req.session.user
         });
     },
+
     getProduct: async (req, res) => {
         let productId = req.params.idProduct;
 
@@ -34,38 +37,63 @@ const productController = {
             return;
         } res.render("./products/productDetail", { result, title:"Producto", session: req.session.user });
     },
-    createProduct: (req, res) =>{
+    
+    //creacion de producto
+    createProduct: async (req, res) =>{
+        let marca = {};
+        let categoria = {}
+        try {
+            categoria = await bd.Categoria.findAll();
+            marca = await bd.Marca.findAll();
+        } catch (error) {
+            console.log(error);
+        }
         res.render("./products/produc", {
             title:"createProduct",
             type:"crear",
             box: product[0], 
-            category: category.filter( c => c.categoria == "categoria"),
-            typeOfPets: category.filter( c => c.categoria == "tipo_mascota"),
+            category: categoria,
+            marca: marca,
             actions: "/createProduct",
             session: req.session.user
            
         });
     },
-    create: (req, res) => {
-        let id = product[product.length - 1].id + 1
+    create: async (req, res) => {
+
         if(!req.file){
             return res.send("No se cargo ninguna imagen por favor regrese al formulario y carge una imagen")
         };
-         
-        //falta subir el producto a la base de dato
-        //guardar producto en sql
-        bd.Producto.create({
-            id_marca: 0,
-            nombre: req.body.nombre_producto,
-            precio: req.body.precio,
-            cantidad_descuento: req.body.descuento,
-            img: "/img/product/" + req.file.filename,
-            descripcion: req.body.descripcion,
-            id_categoria: 1
-        })
-        
+        let marca = {};
+        let categoria = {}
+        try {
+            categoria = await bd.Categoria.findAll();
+            marca = await bd.Marca.findAll();
+        } catch (error) {
+            console.log(error);
+        }
+    
+        let marc_select = marca.find(name => name.nombre == req.body.marca);
+        //let cat_select = categoria.find(name => name.categoria == req.body.categoria);
+        marc_select = marc_select.id;
+        //cat_select = cat_select.id;
+        //guardar producto en sql       
+        try{
+            await bd.Producto.create({
+                id_marca: marc_select,
+                nombre: req.body.nombre_producto,
+                precio: req.body.precio,
+                cantidad_descuento: req.body.descuento,
+                img: req.file.filename,
+                descripcion: req.body.descripcion,
+                id_categoria: 1
+            })
 
-        
+        }catch(error){
+            console.log(error);
+            res.redirect("/");
+        }
+            
         
         // let newProduct = {
         //     id: id,
