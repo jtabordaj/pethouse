@@ -64,29 +64,23 @@ const productController = {
         if(!req.file){
             return res.send("No se cargo ninguna imagen por favor regrese al formulario y carge una imagen")
         };
-        let marca = {};
-        let categoria = {}
-        try {
-            categoria = await bd.Categoria.findAll();
-            marca = await bd.Marca.findAll();
-        } catch (error) {
-            console.log(error);
-        }
-    
-        let marc_select = marca.find(name => name.nombre == req.body.marca);
-        //let cat_select = categoria.find(name => name.categoria == req.body.categoria);
-        marc_select = marc_select.id;
-        //cat_select = cat_select.id;
+        
         //guardar producto en sql       
         try{
+            // se busca id de la categoria seleccionada
+            const categoria = await bd.Categoria.findOne({where: {categoria: req.body.category}});
+            
+            //se busca id de la marca seleccionada
+            const marca = await bd.Marca.findOne({where: {nombre: req.body.marca}});
+            
             await bd.Producto.create({
-                id_marca: marc_select,
+                id_marca: marca.id,
                 nombre: req.body.nombre_producto,
                 precio: req.body.precio,
                 cantidad_descuento: req.body.descuento,
                 img: req.file.filename,
                 descripcion: req.body.descripcion,
-                id_categoria: 1
+                id_categoria: categoria.id
             })
 
         }catch(error){
@@ -95,26 +89,23 @@ const productController = {
         }
             
         
-        // let newProduct = {
-        //     id: id,
-        //     nombre_producto: req.body.nombre_producto,
-        //     tipo_mascota: req.body.tipo_mascota,
-        //     categoria:req.body.categoria,
-        //     marca: req.body.marca,
-        //     descripcion: req.body.descripcion,
-        //     categoria: req.body.categoria,
-        //     precio: req.body.precio,
-        //     descuento: req.body.descuento,
-        //     img: "/img/product/" + req.file.filename
-        // };
-        // product.push(newProduct);
-        // fs.writeFileSync(rutaProduct, JSON.stringify(product, null, 2));
+        
         res.redirect("/");
     },
-    editProduct: (req, res) =>{
+
+    //edicion del producto
+    editProduct: async (req, res) =>{
+
         const idProduct = req.params.idProduct;
-        const producto = product.find( p => p.id == idProduct && !p.borrado);
+        let producto = {};
+        try {
+            //se busca el producto por el numero de id
+            producto = bd.Producto.findByPk(idProduct)
+        } catch (error) {
+            console.log(error);
+        }
         
+        //falta modificar para que la vista reciba el producto bien
         if(producto){
             res.render("./products/produc", {
                 title:"editProduct",

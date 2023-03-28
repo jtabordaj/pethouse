@@ -64,13 +64,6 @@ module.exports = (Sequelize, DataTypes) => {
         foreignKey: "id_categoria"
       });
   }
-
-    // Marca.hasMany(Producto, { foreignKey: 'id_marca' });
-    // Producto.belongsTo(Marca, { foreignKey: 'id_marca' });
-
-    // Categoria.hasMany(Producto, { foreignKey: 'id_categoria' });
-    // Producto.belongsTo(Categoria, { foreignKey: 'id_categoria' });
-
     return Producto
 
 }

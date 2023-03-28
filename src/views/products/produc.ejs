@@ -43,7 +43,7 @@
                         <% category.forEach(cat => {%>
                             <div>
                                 <label for="<%- cat.categoria %>"><%= cat.categoria %></label>
-                                <input type="checkbox" name="<%= cat.categoria %>" id="<%= cat.categoria %>" value="<%= cat.categoria %>" >
+                                <input type="radio" name="category" id="<%= cat.categoria %>" value="<%= cat.categoria %>" >
                             </div>
                         <%}); %> 
                     </div>
