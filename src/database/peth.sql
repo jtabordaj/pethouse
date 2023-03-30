@@ -94,3 +94,11 @@ ADD CONSTRAINT id_producto
   REFERENCES pet_h_grupo.producto (id)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
+
+
+INSERT INTO usuario (id,nombre_y_apellido,user,email,direccion,password,img,id_rol)
+VALUES(DEFAULT,'admin', 'admin', 'elgranadmin@pet.com', 'calle del admin', '$2a$10$6bdCimwGg3yItkbCjRpBaew/TXw3s9/HrDtpZfJV3Jq74T.C1c6jy','user1680142460883.webp','1' );
+
+INSERT INTO usuario (id,nombre_y_apellido,user,email,direccion,password,img,id_rol)
+VALUES(DEFAULT,'maria', 'maria', 'maria@pet.com', 'calle de maria', '$2a$10$AdPsJ/kPzUyVwv1d.pj/2OqxMtwcbASupm1IyS6klar3yuWoi.Xme','user1680143028656.jpg','2' );
+
