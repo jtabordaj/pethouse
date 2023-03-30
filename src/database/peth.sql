@@ -95,6 +95,40 @@ ADD CONSTRAINT id_producto
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
 
+  INSERT INTO rol (id,nombre)
+VALUES( DEFAULT, 'Admin');
+  
+INSERT INTO rol (id,nombre)
+VALUES( DEFAULT, 'Cliente');
+
+
+INSERT INTO categoria (id,categoria)
+VALUES( DEFAULT, 'Alimento');
+
+INSERT INTO categoria (id,categoria)
+VALUES( DEFAULT, 'Snack');
+
+INSERT INTO categoria (id,categoria)
+VALUES( DEFAULT, 'Medicamentos');
+
+INSERT INTO categoria (id,categoria)
+VALUES( DEFAULT, 'Juguetes');
+
+INSERT INTO marca (id,nombre)
+VALUES( DEFAULT, 'Pedigree');
+
+INSERT INTO marca (id,nombre)
+VALUES( DEFAULT, 'Purina');
+
+INSERT INTO marca (id,nombre)
+VALUES( DEFAULT, "Hill's");
+
+INSERT INTO marca (id,nombre)
+VALUES( DEFAULT, 'Dog Chow');
+
+INSERT INTO marca (id,nombre)
+VALUES( DEFAULT, 'Italcol');
+
 
 INSERT INTO usuario (id,nombre_y_apellido,user,email,direccion,password,img,id_rol)
 VALUES(DEFAULT,'admin', 'admin', 'elgranadmin@pet.com', 'calle del admin', '$2a$10$6bdCimwGg3yItkbCjRpBaew/TXw3s9/HrDtpZfJV3Jq74T.C1c6jy','user1680142460883.webp','1' );
@@ -102,3 +136,11 @@ VALUES(DEFAULT,'admin', 'admin', 'elgranadmin@pet.com', 'calle del admin', '$2a$
 INSERT INTO usuario (id,nombre_y_apellido,user,email,direccion,password,img,id_rol)
 VALUES(DEFAULT,'maria', 'maria', 'maria@pet.com', 'calle de maria', '$2a$10$AdPsJ/kPzUyVwv1d.pj/2OqxMtwcbASupm1IyS6klar3yuWoi.Xme','user1680143028656.jpg','2' );
 
+INSERT INTO producto (id,id_marca,nombre,precio,cantidad_descuento,img,descripcion,id_categoria)
+VALUES(DEFAULT,'1', 'Pedigree adulto', '54000', '10', 'product1674114989165.png','Alimento para perros adultos de razas grandes','1');
+
+INSERT INTO producto (id,id_marca,nombre,precio,cantidad_descuento,img,descripcion,id_categoria)
+VALUES(DEFAULT,'2', 'Proplan urinary', '60000', '0', 'product1674115037221.png','Alimento para gatos adultos','1');
+
+INSERT INTO producto (id,id_marca,nombre,precio,cantidad_descuento,img,descripcion,id_categoria)
+VALUES(DEFAULT,'2', 'Proplan adultos', '140000', '0', 'product1674115117444.png','Alimento para perros adultos de razas pequeño','1');
