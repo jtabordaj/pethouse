@@ -5,60 +5,46 @@
     <%- include("../partial/header")%>
 
 <main class ="product">
-    <form action="/deleteProduct/<%=pro.id%>?_method=delete" method="post">
+    <form action="/deleteProduct/<%=product.id%>?_method=delete" method="post">
     <section>
         <article>
+            
+            <% for(let campo in product) { %>
+                <div>
+                    <% if (campo != "id" && campo != "id_categoria" && campo != "id_marca" && campo != "img") { %>
+                        <label for=""> <%= campo %> del producto</label>
+                        <input type="text" value="<%= product[campo] %>">
+                       <% } %>
+                </div>
+            <% } %>
             <div>
-                <label for="nombreProducto">Nombre del producto:</label>
-                <input type="text" name="nombre_producto" id="nombreProducto"  value="<%=pro.nombre_producto%>">
-            </div>
-            <div>
-                <label for="marca">Marca del producto:</label>
-                <input type="text" name="marca" id="marca" value="<%=pro.marca%>">
-            </div>
-            <div>
-                <label for="descripcion">Descripción sobre el producto:</label>
-                <input type="text" name="descripcion" id="descripcion" value="<%=pro.descripcion%>">
+                <label for=""> Marca del producto </label>
+                <select name="marca">
+                    <% marca.forEach(function(marca) { %>
+                      <option <%= (marca.id == product.id_marca) ? 'selected' : '' %>><%= marca.nombre %></option>
+                    <% }); %>
+                  </select>
             </div>
         </article>
 
         <article class="deleteProduct">
             <label for="imagenProducto">imagen del producto:</label>
-            <picture><img src=<%=pro.img%> alt=""></picture>
+            <picture><img src="<%= "/img/product/" + product.img%>" alt=""></picture>
         </article>
 
-        <article>
-            <div>
-                <label for="precio">Precio del producto:</label>
-                <input type="text" name="precio" id="precio" value="<%=pro.precio%>">
-            </div>
-            <div>
-                <label for="descuento">descuento</label>
-                <input type="text" name="descuento" id="descuento" value="<%=pro.descuento%>">
-            </div>
-        </article>
+        
         
         <article class="check">
             <div>
                 <h3>Categoria</h3>
                 <% category.forEach(cat => {%>
                     <div>
-                        <label for="<%- cat.titulo %>"><%= cat.titulo %></label>
-                        <input type="checkbox" name="<%= cat.categoria %>" id="<%= cat.titulo %>" value="<%= cat.titulo %>" <% if(pro.categoria.includes(cat.titulo)) {%> checked<% } %> >
+                        <label for="<%- cat.categoria %>"><%= cat.categoria %></label>
+                        <input type="radio" name="category" id="<%= cat.categoria %>" value="<%= cat.id %>" <%= (cat.id == product.id_categoria) ? 'checked' : '' %> >
                     </div>
                 <%}); %> 
             </div>
-            <div>
-                <h3>Tipo de mascota</h3>
-                
-                <% typeOfPets.forEach(cat => {%>
-                    
-                    <div>
-                        <label for="<%- cat.titulo %>"><%= cat.titulo %></label>
-                        <input type="checkbox" name="<%= cat.categoria %>" id="<%= cat.titulo %>" value="<%= cat.titulo %>" <% if(pro.tipo_mascota.includes(cat.titulo)) {%> checked<% } %> >
-                    </div>
-                <%}); %> 
-            </div> 
+          
         </article>
         
         <div class="button">

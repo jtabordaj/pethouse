@@ -9,11 +9,14 @@
             <section>
                 <article>
                     <% for(let n in box){%>
-                        <% if(n != "categoria" && n != "tipo_mascota" && n != "id" && n != "img" && n != "marca") {%>
+                        <% if(n != "categoria" && n != "tipo_mascota" && n != "id_categoria" && n != "img" && n != "marca" && n != "id" && n != "id_marca") {%>
                             <div>
                                 <!-- modificar para que se vea en lista desplegable el nombre de -->
                                 <label for="<%=n%>"><%=n%> del producto</label>
-                                <input type="text" name="<%=n%>" id="<%=n%>" value=<%if(type == "editar"){%><%= box[n] %><%}%> >
+            
+                                <input type="text" name="<%=n%>" id="<%=n%>" value="<%if(type == "editar"){%> <%= box[n] %> <%}%>">
+
+                               
                             </div>    
                         <% } %>  
                     <% } %>
@@ -23,10 +26,17 @@
                             <label for=""> Marca del producto</label>
                             <select name="marca">
                                 <% marca.forEach(cat => {%>
-                                    <option><%= cat.nombre %></option>
+                                    <option value="<%= cat.id %>"><%= cat.nombre %></option>
                                     <%}); %>
                             </select>
-                        <% } %>                         
+                        <% } else { %>
+                            <label for=""> Marca del producto </label>
+                            <select name="marca">
+                                <% marca.forEach(function(marca) { %>
+                                  <option value="<%= marca.id %>" <%= (marca.id == box.id_marca) ? 'selected' : '' %>><%= marca.nombre %></option>
+                                <% }); %>
+                              </select>
+                            <%}%>
                     </div> 
                 </article>
                 <article class="uploadImg">
@@ -43,7 +53,7 @@
                         <% category.forEach(cat => {%>
                             <div>
                                 <label for="<%- cat.categoria %>"><%= cat.categoria %></label>
-                                <input type="radio" name="category" id="<%= cat.categoria %>" value="<%= cat.categoria %>" >
+                                <input type="radio" name="category" id="<%= cat.categoria %>" value="<%= cat.id %>" <%= (cat.id == box.id_categoria) ? 'checked' : '' %> >
                             </div>
                         <%}); %> 
                     </div>
