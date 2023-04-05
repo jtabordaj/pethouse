@@ -41,13 +41,14 @@ window.addEventListener('load', function() {
 
             if (imagen.value.toLowerCase().includes("jpg") || imagen.value.toLowerCase().includes("jpeg") || imagen.value.toLowerCase().includes("png") || imagen.value.toLowerCase().includes("gif") ) {
                 console.log("entro al switch");
-                imagen.style.border = "5px solid green"
+                imagen.style.border = "3px solid green"
             } else {
-                imagen.style.border = "5px solid red"
+                imagen.style.border = "3px solid red"
                 error.push("formato de imagen no reconocido")
             }
             
         }else{
+            imagen.style.border = "3px solid red"
             error.push("formato de imagen no reconocido")
         }
         
