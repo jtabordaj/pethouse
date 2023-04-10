@@ -69,10 +69,10 @@ window.addEventListener('load', function() {
             nombre.style.border = '1px solid green'
         }
         else{
-            // if(!error.includes("Ingresar un nombre con mínimo dos caracteres")){
-            //     nombre.style.border = '1px solid red'
+            if(!error.includes("Ingresar un nombre con mínimo dos caracteres")){
+                nombre.style.border = '1px solid red'
                 error.push("Ingresar un nombre con mínimo dos caracteres")
-            // }
+             }
         }        
 
 
@@ -81,10 +81,10 @@ window.addEventListener('load', function() {
         }
 
         else{
-            // if(!email.includes("Ingresar un email válido")){
-            //     nombre.style.border = '1px solid red'
+            if(!error.includes("Ingresar un email válido")){
+                nombre.style.border = '1px solid red'
                 error.push("Ingresar un email válido")
-            // }
+             }
         
         }
 
