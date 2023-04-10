@@ -829,3 +829,9 @@ footer .btns button{
     margin-top:15%;
 }
 
+.error{
+    color: red;
+    font-size: 12px;
+    text-align: center;
+}
+

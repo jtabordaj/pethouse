@@ -7,6 +7,9 @@
         
         <form action= <%= actions %>  method="post" enctype="multipart/form-data">
             <section>
+                <article class="error">
+
+                </article>
                 <article>
                     <% for(let n in box){%>
                         <% if(n != "categoria" && n != "tipo_mascota" && n != "id_categoria" && n != "img" && n != "marca" && n != "id" && n != "id_marca") {%>
@@ -52,7 +55,7 @@
                         <% category.forEach(cat => {%>
                             <div>
                                 <label for="<%- cat.categoria %>"><%= cat.categoria %></label>
-                                <input type="radio" name="category" id="<%= cat.categoria %>" value="<%= cat.id %>" <%= (cat.id == box.id_categoria) ? 'checked' : '' %> >
+                                <input type="radio" clas="<%= cat.categoria %>" name="category" id="<%= cat.categoria %>" value="<%= cat.id %>" <%= (cat.id == box.id_categoria) ? 'checked' : '' %> >
                             </div>
                         <%}); %> 
                     </div>

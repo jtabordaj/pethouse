@@ -14,6 +14,13 @@
                 <p style="padding-top: 10px;"> Los campos marcados con * son obligatorios</p>
             </div>
                 <form action="/register" method="POST" class="formRegister" enctype="multipart/form-data" >
+                    
+                    <article class="error">
+
+                    </article>
+                    
+                    
+                    
                     <input type="file" name="img" accept="image/*" id="img" > 
                     <label for="name">Nombre Completo *</label>
                     <% if (locals.error && locals.error.name) { %>
