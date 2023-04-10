@@ -67,8 +67,7 @@ window.addEventListener('load', function() {
 
         if(nombre.value.length >= 2){            
             nombre.style.border = '1px solid green'
-        }
-        else{
+        }else{
             if(!error.includes("Ingresar un nombre con mínimo dos caracteres")){
                 nombre.style.border = '1px solid red'
                 error.push("Ingresar un nombre con mínimo dos caracteres")
@@ -78,11 +77,11 @@ window.addEventListener('load', function() {
 
         if(email.value.includes('@') && email.value.includes('.') ){
             email.style.border = '1px solid green'
-        }
-
-        else{
-            if(!email.includes("Ingresar un email válido")){
-                nombre.style.border = '1px solid red'
+        }else{
+            console.log("entro al else")
+            error.push("Ingresar un email válido")
+            if(!error.includes("Ingresar un email válido")){
+                email.style.border = '1px solid red'
                 error.push("Ingresar un email válido")
             }
         
@@ -109,9 +108,7 @@ window.addEventListener('load', function() {
                 imagen.style.border = "3px solid red"
                 error.push("formato de imagen no reconocido")
             }
-        }  
-
-        else{
+        }else{
             imagen.style.border = "3px solid red"
             error.push("formato de imagen no reconocido")
         };
@@ -121,7 +118,8 @@ window.addEventListener('load', function() {
         }
 
     
-        if(error.length > 0){
+        if(error.length >= 1){
+            console.log("entro a error")
             e.preventDefault();
             let ulError = document.querySelector(".error")
             ulError.innerHTML = ""
