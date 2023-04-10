@@ -55,3 +55,14 @@ Continuar haciendo: los metodos que hemos utilizado hasta el momento nos ha dado
 Hacer menos:--
 
 Dejar de hacer: por el momento consideramos que no debemos de dejar de hacer nada, hasta ahora esta funcionando muy bien nuestro equipo.
+
+<!-- SPRINT 7 -->
+Comenzar a hacer: una reunion adicional en la semana(nos estamos reuniendo dos veces a a la semana), ya con la tercera reunion, podemos repartir mejor el tiempo.
+
+Hacer mas: Documentar mejor las funciones
+
+Continuar haciendo: los metodos que hemos utilizado hasta el momento nos ha dado buenos resultados, debemos continuar trabajando en equipo y comprometidos con el proyecto.
+
+Hacer menos:--
+
+Dejar de hacer: -- Estamos trabajando muy bien y cumpliendo con los tiempos de entrega, por eso consideramos que no debemos de dejar de hacer nada hasta el momento!.

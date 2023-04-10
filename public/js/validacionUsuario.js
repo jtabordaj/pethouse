@@ -67,23 +67,24 @@ window.addEventListener('load', function() {
 
         if(nombre.value.length >= 2){            
             nombre.style.border = '1px solid green'
-        }else{
+        }
+        else{
             if(!error.includes("Ingresar un nombre con mínimo dos caracteres")){
                 nombre.style.border = '1px solid red'
                 error.push("Ingresar un nombre con mínimo dos caracteres")
-            }
+             }
         }        
 
 
         if(email.value.includes('@') && email.value.includes('.') ){
             email.style.border = '1px solid green'
-        }else{
-            console.log("entro al else")
-            error.push("Ingresar un email válido")
+        }
+
+        else{
             if(!error.includes("Ingresar un email válido")){
-                email.style.border = '1px solid red'
+                nombre.style.border = '1px solid red'
                 error.push("Ingresar un email válido")
-            }
+             }
         
         }
 
