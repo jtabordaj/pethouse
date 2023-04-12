@@ -18,6 +18,7 @@
     </section>
     <nav>
         <ul>
+            <li><a href="/productCart">Carrito<i class="fas fa-cart-plus"></i></a></li>
             <li><a href="">Ofertas</a></li>
             <li><i class="fa-solid fa-dog"></i><a href=""> </i>Perros</a></li>
             <li><i class="fa-solid fa-cat"></i><a href=""> </i>Gatos</a></li>
@@ -27,10 +28,8 @@
                 <li><a href="/register">Registrate<i class="far fa-address-card"></i></a></li>
                 <li><a href="/login">Ingresar<i class="fas fa-sign-in-alt"></i></a></li>
             <% } %>
-            <li><a href="/productCart">Carrito<i class="fas fa-cart-plus"></i></a></li>
-
             <% if (locals.session) { %>
-             <li class="user"><a class="nombreUser" href="/profile"> Hola, <%= session.user %> </a> <img src= "<%= session.img %>"></li>
+             <li class="user"><a class="nombreUser" href="/profile"> <%= session.user %> </a> <img src= "<%= session.img %>"></li>
             <% } %>
         </ul>
     </nav>
