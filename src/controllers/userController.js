@@ -45,7 +45,8 @@ const userController = {
         }
         else{
             req.session.user = { 
-                name: theUser.name,
+                name: theUser.nombre_y_apellido,
+                user: theUser.user,
                 email: theUser.email,
                 address: theUser.address,
                 img: "./img/users/" + theUser.img

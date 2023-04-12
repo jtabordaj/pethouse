@@ -30,10 +30,10 @@ router.post("/editProfile",uploadFile.single('img'), validator.validatorRegister
 
 router.get("/logOut", userController.logOut)
 
-router.get("/login", midSession.logIn, userController.login);
+router.get("/login", userController.login);
 router.post("/login", validator.validatorLogin, userController.loginForm);
 
-router.get("/register", midSession.logIn, userController.register);
+router.get("/register", midSession.hasSession, userController.register);
 router.post("/register", uploadFile.single('img'), validator.validatorRegister, userController.registerForm);
 
 module.exports = router
