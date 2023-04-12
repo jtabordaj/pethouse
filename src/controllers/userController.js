@@ -26,6 +26,7 @@ const userController = {
     login: (req, res) =>{
         res.render("./users/login", {title:"Login"});
     },
+    
     loginForm: async (req, res)=>{
         let resultLogin = validationResult(req);
         if(resultLogin.errors.length > 0){ 
@@ -33,8 +34,6 @@ const userController = {
         }
         let email = req.body.email;
         // Buscar el usuario   
-
-
         let theUser = await bd.Usuario.findOne({
             where: {email: email}
         })
@@ -52,9 +51,11 @@ const userController = {
             return res.redirect("/")
         }
     },
+
     register: (req, res) =>{
         res.render("./users/register", {title:"Registro"});
     },
+
     registerForm: (req, res)=>{
         let result = validationResult(req);
 
@@ -100,8 +101,10 @@ const userController = {
     },
 
     editProfile: (req,res) => {
-        let email =req.session.user.email;
-        let editUser = users.find(user=>user.email== email);
+        let theEmail = req.session.user.email;
+        let editUser = bd.Usuario.findOne({
+            where: {email: theEmail}
+        });
         if (editUser){
             return res.render("./users/register", { 
                 title: "Perfil",
@@ -110,12 +113,10 @@ const userController = {
             })
         }
     },
+
     saveProfile:(req, res) => {
-
         let result = validationResult(req);
-
         if(result.errors.length > 0){
-            
             return res.render("./users/register", {
                 title:"Registro", 
                 error: result.mapped(), 
@@ -123,14 +124,10 @@ const userController = {
                 type: "edit"
             })
         }
-
         let email = req.session.user.email;
         //let editUser = users.find(user=>user.email== email);
-        
         users.forEach(user =>{ 
-            
             if(user.email == email){
-
                 user.img = req.file.filename,
                 user.name = req.body.name,
                 user.email = req.body.email,
@@ -138,11 +135,8 @@ const userController = {
                 user.password = bcrypt.hashSync(req.body.password, 10)
             }
         })
-        
         let usersJson = JSON.stringify(users, null, 2);
-        
         // Escritura de JSON
-
         fs.writeFileSync(rutaUser, usersJson);
     }
 };

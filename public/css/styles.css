@@ -547,11 +547,6 @@ footer .btns button{
 	cursor: pointer;
 }
 
-
-
-
-
-
 .cart .checkout{
 	float: right;
 	margin-right: 5%;
@@ -756,10 +751,9 @@ footer .btns button{
     .mainProducto .imagenProducto{
         width: 300px;
     }
-    .registerContainer, .loginContainer{
+    .registerContainer, .loginContainer, .containerProfile{
         width: 80%
     }
-
     .buttonForm{
         height: 7vw;
         width: 9%;
@@ -840,3 +834,23 @@ footer .btns button{
     text-align: center;
 }
 
+/* Profile */
+
+.containerProfile{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    border-radius: 15px;
+    padding: 32px 32px;
+}
+
+.imgProfile{
+    display: flex;
+    align-self: center;
+}
