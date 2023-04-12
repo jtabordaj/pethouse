@@ -102,6 +102,7 @@ const userController = {
             return res.render("./users/editProfile", { 
                 title: "Perfil",
                 datosUsuario: editUser,
+                session: req.session.user,
                 type: "edit"
             })
         }
@@ -122,13 +123,13 @@ const userController = {
             user: req.body.user,
             email: req.body.email,
             direccion: req.body.address,
-            password: bcrypt.hashSync(req.body.password, 10),
             img:  req.file.filename,
             id_rol: 1
         }, 
         {
-        where: {email: req.session.user.email}
+        where: {email: req.body.email}
         })
+    res.redirect('/login')
     }
 };
 

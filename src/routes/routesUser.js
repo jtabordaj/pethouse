@@ -26,7 +26,7 @@ const storage = multer.diskStorage({
 const uploadFile = multer({storage});
 
 router.get("/editProfile", midSession.hasSession, userController.editProfile)
-router.post("/editProfile",uploadFile.single('img'), validator.validatorRegister, userController.saveProfile)
+router.post("/saveProfile",uploadFile.single('img'), midSession.hasSession, validator.validatorEdit, userController.saveProfile)
 
 router.get("/logOut", userController.logOut)
 

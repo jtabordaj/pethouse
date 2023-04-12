@@ -20,6 +20,12 @@ module.exports = {
             }
         })
     ],
+    validatorEdit: [
+        body("name").notEmpty().trim().withMessage('Completa campo de Nombre'),
+        body("user").notEmpty().withMessage('Completa campo de Usuario'),
+        body("email").isEmail().normalizeEmail().withMessage('Ingrese un correo valido'),
+        body("address").notEmpty().withMessage('Completa campo de dirección')
+    ],
     validatorLogin: [
         body("email").isEmail().normalizeEmail().withMessage('Ingrese un correo valido'),
         body("passwordLogin").notEmpty().custom(async (value, {req}) => {

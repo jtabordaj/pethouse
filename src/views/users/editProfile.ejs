@@ -4,16 +4,14 @@
     <%- include('../partial/head')%>
 </head>
 <body>
-    <header>
-        <%- include('../partial/header')%>
-    </header>
+    <%- include('../partial/header')%>
     <main>
         <div class="registerContainer">
             <div class="registerTitle">
                 <h2>Actualiza tu perfil</h2>
                 <p style="padding-top: 10px;"> Los campos marcados con * son obligatorios</p>
             </div>
-                <form action="/editProfile" method="POST" class="formRegister" enctype="multipart/form-data" >
+                <form action="/saveProfile" method="POST" class="formRegister" enctype="multipart/form-data" >
                     
                     <article class="error">
 
