@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <%- include('../partial/head')%>
+</head>
+<body>    
+    <header>
+        <%- include('../partial/header')%>
+    </header>
+    <main>
+        <!DOCTYPE html>
+        <h1>Profile Page</h1>
+        <img src="profile-picture.jpg" alt="Profile Picture">
+        <h2>Name:</h2>
+        <p>John Doe</p>
+        <h2>Username:</h2>
+        <p>johndoe</p>
+        <h2>Address:</h2>
+        <p>123 Main St, Anytown USA</p>
+        <button>Edit Profile</button>
+        <button>Create New Product</button>
+        <form action="/logOut" onclick="showLogoutMessage()">
+            <script>
+                function showLogoutMessage() {
+                  alert("Tu sesion ha finalizado.");
+                }
+              </script>
+            <button>Log Out</button>
+        </form>
+    </main>
+</body>
+</html>

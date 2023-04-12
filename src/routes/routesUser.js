@@ -36,4 +36,6 @@ router.post("/login", validator.validatorLogin, userController.loginForm);
 router.get("/register", midSession.hasSession, userController.register);
 router.post("/register", uploadFile.single('img'), validator.validatorRegister, userController.registerForm);
 
+router.get("/profile", midSession.hasSession, userController.showProfile)
+
 module.exports = router

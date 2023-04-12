@@ -38,8 +38,6 @@ const userController = {
         let theUser = await bd.Usuario.findOne({
             where: {email: email}
         })
-        //let theUser = users.find(row => row.email == email && !bcrypt.compareSync(req.body.passwordLogin, row.password));
-        
         if(theUser == undefined){
             return res.render("./users/login", {title:"Login", userPassword: "Contraseña o email incorrectos", datosUsuario: req.body})
         }
@@ -48,7 +46,7 @@ const userController = {
                 name: theUser.nombre_y_apellido,
                 user: theUser.user,
                 email: theUser.email,
-                address: theUser.address,
+                direccion: theUser.direccion,
                 img: "./img/users/" + theUser.img
             }
             return res.redirect("/")
@@ -64,10 +62,6 @@ const userController = {
             
             return res.render("./users/register", {title:"Registro", error: result.mapped(), datosUsuario: req.body})
         }
-
-        
-        
-
         bd.Usuario.create({
             nombre_y_apellido: req.body.name,
             user: req.body.user,
@@ -77,14 +71,6 @@ const userController = {
             img:  req.file.filename,
             id_rol: 1
         })
-
-
-
-
-
-
-
-        
         //json
         // const id =  users[users.length - 1].id + 1;
         // console.log(req.file.filename);
@@ -106,18 +92,17 @@ const userController = {
         // // Escritura de JSON
 
         // fs.writeFileSync(rutaUser, usersJson);
-
         res.redirect("/");
+    },
 
+    showProfile: (req,res) => {
+        res.render("./users/profile", {title: "Perfil", session: req.session.user})
     },
 
     editProfile: (req,res) => {
-
         let email =req.session.user.email;
         let editUser = users.find(user=>user.email== email);
-        
         if (editUser){
-
             return res.render("./users/register", { 
                 title: "Perfil",
                 datosUsuario: editUser,
@@ -125,7 +110,6 @@ const userController = {
             })
         }
     },
-
     saveProfile:(req, res) => {
 
         let result = validationResult(req);
@@ -140,7 +124,7 @@ const userController = {
             })
         }
 
-        let email =req.session.user.email;
+        let email = req.session.user.email;
         //let editUser = users.find(user=>user.email== email);
         
         users.forEach(user =>{ 
@@ -160,12 +144,7 @@ const userController = {
         // Escritura de JSON
 
         fs.writeFileSync(rutaUser, usersJson);
-        
-
-        
-
     }
-    
 };
 
 module.exports = userController;

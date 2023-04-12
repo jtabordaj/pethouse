@@ -31,7 +31,7 @@ router.get("/", indexController.index);
 
 router.get("/productCart", midSession.hasSession, productController.productCart);
 
-router.get("/productDetail/:idProduct", midSession.hasSession, productController.getProduct);
+router.get("/productDetail/:idProduct", productController.getProduct);
 
 router.get("/createProduct", midSession.hasSession, productController.createProduct);
 router.post("/createProduct", uploadFile.single('imagenProducto'), productController.create);
