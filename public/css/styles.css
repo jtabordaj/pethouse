@@ -53,9 +53,14 @@ header nav .user{
     justify-content: flex-end;
 }
 header nav .user img{
-    width: 10%;
+    width: 25%;
     border-radius: 15px;
 }
+
+.nombreUser{
+    padding-right: 1em;
+}
+
 header .animal h3{
     text-align: center;
 }
