@@ -58,8 +58,14 @@ const userController = {
 
     registerForm: (req, res)=>{
         let result = validationResult(req);
+        let type_usuario = 0;
         if(result.errors.length > 0){
-            return res.render("./users/register", {title:"Registro", error: result.mapped(), datosUsuario: req.body})
+            return res.render("./users/register", {title:"Registro", error: result.mapped(), datosUsuario: req.body})  
+        }
+        if (req.session.user != undefined && req.session.user.type == 1) {
+            type_usuario = 1
+        }else{
+            type_usuario = 2
         }
         bd.Usuario.create({
             nombre_y_apellido: req.body.name,
@@ -68,7 +74,7 @@ const userController = {
             direccion: req.body.address,
             password: bcrypt.hashSync(req.body.password, 10),
             img:  req.file.filename,
-            id_rol: 1
+            id_rol: type_usuario
         })
         //json
         // const id =  users[users.length - 1].id + 1;
