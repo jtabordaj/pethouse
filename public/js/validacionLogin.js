@@ -22,7 +22,7 @@ email.addEventListener('blur', function(e){
 
 clave.addEventListener('blur', function(e){
     console.log(clave.value.length)
-    if(clave.value != ""){
+    if(clave.value.length >= 8){
         clave.style.border = '1px solid green'
     }
     else{
@@ -33,7 +33,7 @@ clave.addEventListener('blur', function(e){
 
 form.addEventListener("submit", (e)=>{
   
-    if(error.length>0){
+    if(error.length > 0){
         e.preventDefault();
     }
 });
