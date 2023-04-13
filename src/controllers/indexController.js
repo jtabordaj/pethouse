@@ -18,7 +18,6 @@ let users = JSON.parse(fs.readFileSync(rutaUser));
 const indexController = {
    
     index: (req, res) =>{
-
         const producShow = product.filter( p => !p.borrado && p.id);
         res.render("./users/index", {
             product: producShow, 
@@ -26,7 +25,5 @@ const indexController = {
             title:"Pet House",
             session: req.session.user
         });
-
-
     }};
 module.exports = indexController;

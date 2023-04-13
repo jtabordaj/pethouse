@@ -22,7 +22,6 @@ window.addEventListener('load', function() {
         }        
     } )
 
-       
     email.addEventListener('blur', function(e){
         console.log(email.value.length)
         if(email.value.includes('@') && email.value.includes('.') ){
@@ -54,16 +53,10 @@ window.addEventListener('load', function() {
         else{
             clave2.style.border = '1px solid red'
         }
-    })
+})
 
 
-
-
-
-
-    form.addEventListener("submit", (e)=>{
-
-
+form.addEventListener("submit", (e)=>{
 
         if(nombre.value.length >= 2){            
             nombre.style.border = '1px solid green'
@@ -74,7 +67,6 @@ window.addEventListener('load', function() {
                 error.push("Ingresar un nombre con mínimo dos caracteres")
              }
         }        
-
 
         if(email.value.includes('@') && email.value.includes('.') ){
             email.style.border = '1px solid green'
@@ -88,8 +80,6 @@ window.addEventListener('load', function() {
         
         }
 
-
-
         if(clave.value.length >= 8){
             clave.style.border = '1px solid green'
         }
@@ -98,13 +88,11 @@ window.addEventListener('load', function() {
             error.push("Ingresar una clave con mínimo 8 caracteres")
         }
 
-
         if (imagen.value != "") {
 
             if (imagen.value.toLowerCase().includes("jpg") || imagen.value.toLowerCase().includes("jpeg") || imagen.value.toLowerCase().includes("png") || imagen.value.toLowerCase().includes("gif") ) {
                     imagen.style.border = "3px solid green"
             } 
-            
             else {
                 imagen.style.border = "3px solid red"
                 error.push("formato de imagen no reconocido")
@@ -117,7 +105,6 @@ window.addEventListener('load', function() {
         if(clave.value != clave2.value){
             error.push("La contraseña no coincide")
         }
-
     
         if(error.length >= 1){
             console.log("entro a error")
@@ -128,7 +115,5 @@ window.addEventListener('load', function() {
                 ulError.innerHTML += `<li> ${error[e]} </li>`
             }
         }
-               
-       
     })
 });

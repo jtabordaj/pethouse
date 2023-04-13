@@ -4,7 +4,7 @@ const { validationResult } = require("express-validator");
 const bcrypt = require('bcryptjs');
 const { type } = require('os');
 
-const bd = require("../database/models")
+const bd = require("../database/models");
 
 
 //rutas para acceder a los archivos de la base de datos
@@ -26,6 +26,7 @@ const userController = {
     login: (req, res) =>{
         res.render("./users/login", {title:"Login"});
     },
+
     loginForm: async (req, res)=>{
         let resultLogin = validationResult(req);
         if(resultLogin.errors.length > 0){ 
@@ -33,13 +34,9 @@ const userController = {
         }
         let email = req.body.email;
         // Buscar el usuario   
-
-
         let theUser = await bd.Usuario.findOne({
             where: {email: email}
         })
-        //let theUser = users.find(row => row.email == email && !bcrypt.compareSync(req.body.passwordLogin, row.password));
-        
         if(theUser == undefined){
             return res.render("./users/login", {title:"Login", userPassword: "Contraseña o email incorrectos", datosUsuario: req.body})
         }
@@ -48,26 +45,22 @@ const userController = {
                 name: theUser.nombre_y_apellido,
                 user: theUser.user,
                 email: theUser.email,
-                address: theUser.address,
+                direccion: theUser.direccion,
                 img: "./img/users/" + theUser.img
             }
             return res.redirect("/")
         }
     },
+
     register: (req, res) =>{
         res.render("./users/register", {title:"Registro"});
     },
+
     registerForm: (req, res)=>{
         let result = validationResult(req);
-
         if(result.errors.length > 0){
-            
             return res.render("./users/register", {title:"Registro", error: result.mapped(), datosUsuario: req.body})
         }
-
-        
-        
-
         bd.Usuario.create({
             nombre_y_apellido: req.body.name,
             user: req.body.user,
@@ -77,14 +70,6 @@ const userController = {
             img:  req.file.filename,
             id_rol: 1
         })
-
-
-
-
-
-
-
-        
         //json
         // const id =  users[users.length - 1].id + 1;
         // console.log(req.file.filename);
@@ -96,76 +81,56 @@ const userController = {
         //     address: req.body.address,
         //     password: bcrypt.hashSync(req.body.password, 10)
         // };
-        
         // users.push(user);
-        
         // // Convertir formato JSON
-        
         // let usersJson = JSON.stringify(users, null, 2);
-        
         // // Escritura de JSON
-
         // fs.writeFileSync(rutaUser, usersJson);
-
         res.redirect("/");
+    },
 
+    showProfile: (req,res) => {
+        res.render("./users/profile", {title: "Perfil", session: req.session.user})
     },
 
     editProfile: (req,res) => {
-
-        let email =req.session.user.email;
-        let editUser = users.find(user=>user.email== email);
-        
+        let theEmail = req.session.user.email;
+        let editUser = bd.Usuario.findOne({
+            where: {email: theEmail}
+        });
         if (editUser){
-
-            return res.render("./users/register", { 
+            return res.render("./users/editProfile", { 
                 title: "Perfil",
                 datosUsuario: editUser,
+                session: req.session.user,
                 type: "edit"
             })
         }
     },
 
     saveProfile:(req, res) => {
-
-        let result = validationResult(req);
-
-        if(result.errors.length > 0){
-            
-            return res.render("./users/register", {
-                title:"Registro", 
-                error: result.mapped(), 
+        let results = validationResult(req);
+        if(results.errors.length > 0){
+            return res.render("./users/editProfile", {
+                title:"Editar Perfil", 
+                error: results.mapped(), 
                 datosUsuario: req.body,
                 type: "edit"
             })
         }
-
-        let email =req.session.user.email;
-        //let editUser = users.find(user=>user.email== email);
-        
-        users.forEach(user =>{ 
-            
-            if(user.email == email){
-
-                user.img = req.file.filename,
-                user.name = req.body.name,
-                user.email = req.body.email,
-                user.address = req.body.address,
-                user.password = bcrypt.hashSync(req.body.password, 10)
-            }
+        bd.Usuario.update({
+            nombre_y_apellido: req.body.name,
+            user: req.body.user,
+            email: req.body.email,
+            direccion: req.body.address,
+            img:  req.file.filename,
+            id_rol: 1
+        }, 
+        {
+        where: {email: req.body.email}
         })
-        
-        let usersJson = JSON.stringify(users, null, 2);
-        
-        // Escritura de JSON
-
-        fs.writeFileSync(rutaUser, usersJson);
-        
-
-        
-
+    res.redirect('/login')
     }
-    
 };
 
 module.exports = userController;

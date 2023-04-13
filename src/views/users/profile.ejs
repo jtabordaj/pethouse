@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <%- include('../partial/head')%>
+</head>
+<body>    
+    <header>
+        <%- include('../partial/header')%>
+    </header>
+    <main>
+    <div class="containerProfile">
+        <h1>Tu Perfil</h1>
+        <img class="imgProfile" src="<%= session.img %>" alt="Profile Picture">
+
+        <h2>Nombre:</h2>
+        <p><%= session.name %></p>
+
+        <h2>Usuario:</h2>
+        <p><%= session.user %></p>
+
+        <h2>Direccion:</h2>
+        <p><%= session.direccion %></p>
+
+        <form action="/editProfile">
+            <button>Editar Perfil</button>
+        </form>
+        <button>Crear producto</button>
+        <form action="/logOut" onclick="showLogoutMessage()">
+            <script>
+                function showLogoutMessage() {
+                  alert("Tu sesion ha finalizado.");
+                }
+              </script>
+            <button>Cerrar Sesion</button>
+        </form>
+    </div>
+    </main>
+</body>
+</html>

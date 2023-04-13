@@ -19,23 +19,14 @@ const productController = {
             session: req.session.user
         });
     },
-    //detalle del producto
-    productDetail: (req, res) =>{
-        res.render("./products/productDetail", {
-            title:"productDetail",
-            session: req.session.user
-        });
-    },
-
+    //detalle del productt
     getProduct: async (req, res) => {
         let productId = req.params.idProduct;
-
-        let result = product.find(p => p.id == productId);   
-        
+        let result = product.find(p => p.id == productId);
         if (!result) {
             res.status(404).send("Producto no encontrado")
             return;
-        } res.render("./products/productDetail", { result, title:"Producto", session: req.session.user });
+        } res.render("./products/productDetail", {result, title:"Producto", session: req.session.user});
     },
     
     //creacion de producto

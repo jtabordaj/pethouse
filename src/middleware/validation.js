@@ -1,5 +1,8 @@
 const {body} = require('express-validator');
 const session = require('express-session');
+const bcrypt = require("bcryptjs");
+const User = require("../database/models/usuario");
+const bd = require("../database/models")
 
 module.exports = {
 
@@ -17,9 +20,22 @@ module.exports = {
             }
         })
     ],
+    validatorEdit: [
+        body("name").notEmpty().trim().withMessage('Completa campo de Nombre'),
+        body("user").notEmpty().withMessage('Completa campo de Usuario'),
+        body("email").isEmail().normalizeEmail().withMessage('Ingrese un correo valido'),
+        body("address").notEmpty().withMessage('Completa campo de dirección')
+    ],
     validatorLogin: [
         body("email").isEmail().normalizeEmail().withMessage('Ingrese un correo valido'),
-        body("passwordLogin").notEmpty().withMessage('Contraseña minima 8 caracteres')
+        body("passwordLogin").notEmpty().custom(async (value, {req}) => {
+            const user = await bd.Usuario.findOne({where:{ email: req.body.email }});
+            const match = await bcrypt.compare(value, user.password);
+            if (!user | !match) {
+              throw new Error("El correo o la contraseña son incorrectos");
+            }
+            return true;
+          }),
     ],
     session : (req,res,next) => {
         if(req.session.user){
