@@ -11,7 +11,7 @@ module.exports = {
         body("user").notEmpty().withMessage('Completa campo de Usuario'),
         body("email").isEmail().normalizeEmail().withMessage('Ingrese un correo valido'),
         body("address").notEmpty().withMessage('Completa campo de dirección'),
-        body("password").notEmpty().withMessage('Contraseña minima 8 caracteres').isLength({min:8}),
+        body("password").notEmpty().isLength({min:8}).withMessage('Contraseña minima 8 caracteres'),
         body("password2").notEmpty().custom((value, {req}) =>{
             if(value != req.body.password){
                 throw new Error('La contraseña no coincide');
