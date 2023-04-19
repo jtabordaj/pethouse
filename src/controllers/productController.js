@@ -39,8 +39,8 @@ const productController = {
         } catch (error) {
             console.log(error);
         }
-        res.render("./products/produc", {
-            title:"createProduct",
+        res.render("./products/createProduct", {
+            title:"Crear Producto",
             type:"crear",
             box: product[0], 
             category: categoria,

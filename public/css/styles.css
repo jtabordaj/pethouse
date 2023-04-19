@@ -269,11 +269,11 @@ footer .btns button{
     width: 38%;
     height: 34px;
     font-size: 16px;
-    border: 3px solid #FFB547;
+    border: 3px solid #2b8800;
     border-radius: 5px;
     font-weight: 600;
     transition: background-color 0.5s;
-    background-color: #FFB547;
+    background-color: #2b8800;
     color: white;
     cursor: pointer;
 }
@@ -336,42 +336,48 @@ footer .btns button{
     width: 100%;
 }
 
-.formRegister button.send{
+button.send{
     align-self: center;
     margin-top: 30px;
     width: 38%;
     height: 34px;
     font-size: 16px;
-    border: 3px solid #FFB547;
+    border: 3px solid #2b8800;
     border-radius: 5px;
     font-weight: 600;
     transition: background-color 0.5s;
-    background-color: #FFB547;
+    background-color: #2b8800;
     color: white;
     cursor: pointer;
 }
 
-.formRegister button.send:hover{
-        background-color:#0022AA;
-        border-color: #0022AA;
+button.send:hover{
+        background-color:#3cb500;
+        border-color: #3cb500;
     }
 
-    .formRegister button.delete:hover{
+button.delete:hover{
         background-color:#aa0000;
         border-color: #aa0000;
-    }
+}
 
-.formRegister button.delete{
+button.delete:hover{
+    background-color:#ce0000;
+    border-color: #ce0000;
+}
+
+
+button.delete{
     align-self: center;
     margin-top: 30px;
     width: 38%;
     height: 34px;
     font-size: 16px;
-    border: 3px solid #1bbcb6;
+    border: 3px solid #800015;
     border-radius: 5px;
     font-weight: 600;
     transition: background-color 0.5s;
-    background-color: #1bbcb6;
+    background-color: #800015;
     color: white;
     cursor: pointer;
 }
@@ -857,3 +863,73 @@ footer .btns button{
     height: 15vw;
     width: 15vw;
 }
+
+.profileButtons{
+    display: flex;
+    justify-content: center;
+}
+
+.profileButtons button{
+    margin: 1vw 1vw 1vw 1vw
+}
+
+button.profileEdit{
+    align-self: center;
+    width: auto;
+    height:auto;
+    padding: 1vw;
+    font-size: 16px;
+    border: 3px solid #3db904;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.5s;
+    background-color: #3db904;
+    color: white;
+    cursor: pointer;
+}
+
+button.profileCreate{
+    align-self: center;
+    width: auto;
+    height:auto;
+    padding: 1vw;
+    font-size: 16px;
+    border: 3px solid #03b3df;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.5s;
+    background-color: #03b3df;
+    color: white;
+    cursor: pointer;
+}
+
+button.logOut{
+    align-self: center;
+    width: auto;
+    height:auto;
+    padding: 1vw;
+    font-size: 16px;
+    border: 3px solid #c00020;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.5s;
+    background-color: #c00020;
+    color: white;
+    cursor: pointer;
+}
+
+button.profileEdit:hover{
+        background-color:#2b8800;
+        border-color: #2b8800;
+    }
+
+button.logOut:hover{
+        background-color:#7e0000;
+        border-color: #7e0000;
+}
+
+button.profileCreate:hover{
+    background-color:#006c87;
+    border-color: #006c87;
+}
+
