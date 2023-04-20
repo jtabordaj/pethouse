@@ -5,6 +5,7 @@ const routerUser = require("./routes/routesUser")
 //const routerProduct = require("./routes/routesProduct")
 const methodOverride = require("method-override");
 const session = require('express-session');
+const routerApis = require("./routes/routesApis")
 
 const app = express();
 
@@ -26,7 +27,8 @@ app.listen(3000, ()=>{
 
 app.use("/", router);
 app.use("/", routerUser);
-
+app.use("/", routerApis);
 app.use((req,res,next) => {
     res.status(404).render('./404.ejs')
 });
+

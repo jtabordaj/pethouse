@@ -13,19 +13,9 @@
                 <div class="flecha">
                     <i class="fa-solid fa-chevron-left"></i>
                 </div>
-                <% for(let pr = 0;pr < product.length; pr ++){%>
-                    <% if (product[pr].id >= 1 && product[pr].descuento > 0) { %>
-                        <article>
-                            <a href=<%="/productDetail/" + product[pr].id%> ><img src=<%="/img/product/" + product[pr].img%> alt=""></a>
-                            <div>
-                                <p><%= product[pr].nombre_producto %></p>
-                                <p> Precio $ <%=product[pr].precio%></p>
-                                <p> Descuento <%=product[pr].descuento%>%</p>
-                            </div>
-                        </article>
-                    <% } %>
-                    
-                <%}%>
+                <article id="carts">
+
+                </article>
                 <div class="flecha">
                     <i class="fa-solid fa-chevron-right"></i>
                 </div>
@@ -49,6 +39,7 @@
             </div>
         </section>
     </main>
+    <script src="/js/index.js"></script>
     <%- include('../partial/footer')%>
 </body>
 </html>

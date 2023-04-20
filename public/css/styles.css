@@ -1,6 +1,7 @@
 
 body{
     font-family: 'Cinzel', serif;
+    background-color: #F3F3F5;
     margin: 0;
     font-size: 13px;
 }
@@ -86,17 +87,48 @@ header .animal div button i{
 /* ofertas home */
 .home section .ofertas{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
 }
-.home section .ofertas article{
-    width: 20%;
+.home section .ofertas #carts{
+    width: 47%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-.home section .ofertas article img{
+.home section .ofertas article .cart1{
+    margin: 20px;
+    background-color: white;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.home section .ofertas article .cart1 a{
+    text-decoration: none;
+}
+
+.home section .ofertas .cart1 .abajofoto{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+
+}
+.home section .ofertas .cart1 .abajofoto p{
+    text-align: center;
+}
+
+
+
+.home section .ofertas article picture{
+    width: 100%;
+    text-align: center;
+}
+.home section .ofertas article picture img{
+    width: 90%;
 }
 .home section .flecha{
     display: flex;
@@ -674,7 +706,9 @@ footer .btns button{
     body{
         font-size: 15px;
     }
-
+    .home section .ofertas #carts {
+        width: 32%;
+    }
     .product form section article div {
         display: flex;
         justify-content: space-between;
@@ -760,7 +794,14 @@ footer .btns button{
         width: 9%;
     }
 }
-@media (min-width: 800px){
+@media (min-width: 760px){
+
+    .home section .ofertas #carts {
+        width: 20%;
+    }
+
+
+
     body{
         font-size: 20px;
     }
@@ -857,3 +898,14 @@ footer .btns button{
     height: 15vw;
     width: 15vw;
 }
+
+
+.ocultar {
+    display: none;
+}
+
+.home .carts .imgcart{
+    width: 95%;
+}
+
+
