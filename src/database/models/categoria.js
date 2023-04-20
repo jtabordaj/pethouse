@@ -9,6 +9,9 @@ module.exports = (Sequelize, DataTypes) =>{
         },
         categoria: {
             type: DataTypes.STRING
+        },
+        img: {
+            type: DataTypes.STRING
         }
     }
 

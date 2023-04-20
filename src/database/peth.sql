@@ -51,6 +51,9 @@ CREATE TABLE pet_h_grupo.usuario (
   id INT NOT NULL AUTO_INCREMENT,
   categoria VARCHAR(255) NOT NULL,
   PRIMARY KEY (id));
+
+    ALTER TABLE `pet_h_grupo`.`categoria` 
+ADD COLUMN `img` VARCHAR(255) NOT NULL AFTER `categoria`;
   
   ALTER TABLE pet_h_grupo.producto 
 ADD INDEX id_marca_idx (id_marca ASC),
@@ -68,6 +71,7 @@ ADD CONSTRAINT id_categoria
   REFERENCES pet_h_grupo.categoria (id)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
+
   
   ALTER TABLE pet_h_grupo.factura 
 ADD INDEX id_usuario_idx (id_usuario ASC);
@@ -94,6 +98,8 @@ ADD CONSTRAINT id_producto
   REFERENCES pet_h_grupo.producto (id)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
+
+
 
   INSERT INTO rol (id,nombre)
 VALUES( DEFAULT, 'Admin');
@@ -144,3 +150,9 @@ VALUES(DEFAULT,'2', 'Proplan urinary', '60000', '0', 'product1674115037221.png',
 
 INSERT INTO producto (id,id_marca,nombre,precio,cantidad_descuento,img,descripcion,id_categoria)
 VALUES(DEFAULT,'2', 'Proplan adultos', '140000', '0', 'product1674115117444.png','Alimento para perros adultos de razas pequeño','1');
+
+UPDATE categoria SET img = "categoria_alimento-min.png" 
+WHERE id= 1
+
+UPDATE categoria SET img = "categoria_snacks-min.png" 
+WHERE id= 2
