@@ -9,12 +9,12 @@
         </div>
         <h2>Tu producto selecionado:</h2>
         <section class="sectionProducto">
-            <h3><%= result.nombre_producto  %></h3>
+            <h3 id="nombre"> <%= result.nombre  %> </h3>
             <picture>
-                <img class="imagenProducto" src=<%= "/img/product/"+result.img %> >
+                <img class="imagenProducto" id="imagen" src=<%= "/img/product/"+result.img %> >
             </picture>
             <div class="infoProducto">
-                <p>$ <%= result.precio %> </p>
+                <p id="precio">$ <%= result.precio %>  </p>
                 <p>
                     <select class="cuadroCant" name="cantidad" id="cantidad">
                         <option value="uno">1</option>
@@ -57,7 +57,7 @@
             </div>
             <div>
                 <h3>Descripción</h3>
-                <p><%= result.descripcion %> </p>
+                <p id="desc"> <%= result.descripcion %> </p>
 
             </div>
             <div>
@@ -71,6 +71,7 @@
                 
             </div>
         </section>
+        <script src="/js/producto.js"></script>
 
     </main>
     <%- include('../partial/footer')%>

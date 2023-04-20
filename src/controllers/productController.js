@@ -21,14 +21,16 @@ const productController = {
     },
     //detalle del productt
     getProduct: async (req, res) => {
-        let productId = req.params.idProduct;
-        let result = product.find(p => p.id == productId);
-        if (!result) {
-            res.status(404).send("Producto no encontrado")
+        const idProduct = req.params.idProduct;
+        try {
+            const result = await bd.Producto.findOne({where:{id: idProduct}});
+            res.render("./products/productDetail", {result: result, title:"Producto", session: req.session.user});
+        } catch (error) {
+            console.error(error);
+            res.status(404).render("./404");
             return;
-        } res.render("./products/productDetail", {result, title:"Producto", session: req.session.user});
+        }
     },
-    
     //creacion de producto
     createProduct: async (req, res) =>{
         let marca = {};
