@@ -20,20 +20,26 @@
 
         <h2>Direccion:</h2>
         <p><%= session.direccion %></p>
-
+    </div>
+    <div class="profileButtons">
         <form action="/editProfile">
-            <button>Editar Perfil</button>
+            <button class="profileEdit">Editar Perfil</button>
         </form>
-        <button>Crear producto</button>
+
+        <form action="/createProduct">
+            <button class="profileCreate">Crear producto</button>
+        </form>
+
         <form action="/logOut" onclick="showLogoutMessage()">
             <script>
                 function showLogoutMessage() {
                   alert("Tu sesion ha finalizado.");
                 }
-              </script>
-            <button>Cerrar Sesion</button>
+            </script>
+            <button class="logOut">Cerrar Sesion</button>
         </form>
     </div>
     </main>
+<%- include('../partial/footer')%>
 </body>
 </html>
