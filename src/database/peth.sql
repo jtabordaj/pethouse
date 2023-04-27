@@ -1,5 +1,5 @@
 CREATE SCHEMA `pet_h_grupo` ;
-USE `pet_h_grupo`:
+USE `pet_h_grupo`;
 
 CREATE TABLE pet_h_grupo.usuario (
   id INT NOT NULL AUTO_INCREMENT,
