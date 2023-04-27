@@ -156,3 +156,71 @@ WHERE id= 1
 
 UPDATE categoria SET img = "categoria_snacks-min.png" 
 WHERE id= 2
+
+CREATE TABLE pet_h_grupo.tipo_mascota (
+  id INT NULL AUTO_INCREMENT,
+  tipo_mascota VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id));
+
+  ALTER TABLE pet_h_grupo.producto 
+ADD COLUMN id_tipo_mascota INT NOT NULL AFTER id_categoria;
+
+ALTER TABLE pet_h_grupo.producto 
+ADD INDEX id_tipo_mascota_idx (id_tipo_mascota ASC);
+;
+ALTER TABLE pet_h_grupo.producto 
+ADD CONSTRAINT id_tipo_mascota
+  FOREIGN KEY (id_tipo_mascota)
+  REFERENCES pet_h_grupo.tipo_mascota (id)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+INSERT INTO tipo_mascota (id, tipo_mascota)
+values (default, 'Perros');
+
+INSERT INTO tipo_mascota (id, tipo_mascota)
+values (default, 'Gatos');
+
+UPDATE producto
+SET id_tipo_mascota = 1
+WHERE id =1
+
+UPDATE producto
+SET id_tipo_mascota = 2
+WHERE id =2
+
+UPDATE producto
+SET id_tipo_mascota = 1
+WHERE id =3
+
+INSERT INTO marca (id, nombre)
+VALUE (default, 'Equilibrio')
+
+INSERT INTO marca (id, nombre)
+VALUE (default, 'Dogourmet')
+
+INSERT INTO marca (id, nombre)
+VALUE (default, 'Mirringo')
+
+INSERT INTO marca (id, nombre)
+VALUE (default, 'Whiskas')
+
+INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
+VALUES (DEFAULT, 11, 'Equilibrio adultos', 58800, 20, 'EQUILIBRIO.webp', ' Alimento para perros adultos de razas pequeñas', 1, 1)
+
+INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
+VALUES (DEFAULT, 12, 'Dogourmet adultos', 57592, 0, 'dogurmet.png', ' Alimento para perros adultos de carne a la parrilla', 1, 1)
+
+INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
+VALUES (DEFAULT, 13, 'Mirringo Pro adultos', 90525, 5, 'Mirringo.avif', ' Alimento para gatos adultos cuidado urinario', 1, 2)
+
+INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
+VALUES (DEFAULT, 14, 'Whiskas para adultos', 24460, 0, 'wiskas.avif', ' Alimento para gatos adultos de carne', 1, 2)
+
+UPDATE categoria
+SET img = 'juguete-para-perros.jpg'
+WHERE id = 4
+
+UPDATE categoria
+SET img = 'medicamentos.jpg'
+WHERE id = 3
