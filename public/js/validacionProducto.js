@@ -47,7 +47,6 @@ window.addEventListener('load', function() {
         if (imagen.value != "") {
 
             if (imagen.value.toLowerCase().includes("jpg") || imagen.value.toLowerCase().includes("jpeg") || imagen.value.toLowerCase().includes("png") || imagen.value.toLowerCase().includes("gif") ) {
-                console.log("entro al switch");
                 imagen.style.border = "3px solid green"
             } else {
                 imagen.style.border = "3px solid red"
@@ -62,13 +61,14 @@ window.addEventListener('load', function() {
         
         
         
-    if(error.length > 0){
+    if(error.length >= 1){
         e.preventDefault();
         let ulError = document.querySelector(".error")
         ulError.innerHTML = ""
         for (let e in error){
             ulError.innerHTML += `<li> ${error[e]} </li>`
         }
+        error = []
     }
     })
 });
