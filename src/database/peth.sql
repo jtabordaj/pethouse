@@ -56,7 +56,7 @@ CREATE TABLE pet_h_grupo.usuario (
     ALTER TABLE `pet_h_grupo`.`categoria` 
 ADD COLUMN `img` VARCHAR(255) NOT NULL AFTER `categoria`;
   
-  ALTER TABLE pet_h_grupo.producto 
+ALTER TABLE pet_h_grupo.producto 
 ADD INDEX id_marca_idx (id_marca ASC),
 ADD INDEX id_categoria_idx (id_categoria ASC);
 ;
@@ -102,7 +102,7 @@ ADD CONSTRAINT id_producto
 
 
 
-  INSERT INTO rol (id,nombre)
+INSERT INTO rol (id,nombre)
 VALUES( DEFAULT, 'Admin');
   
 INSERT INTO rol (id,nombre)
@@ -136,21 +136,25 @@ VALUES( DEFAULT, 'Dog Chow');
 INSERT INTO marca (id,nombre)
 VALUES( DEFAULT, 'Italcol');
 
+INSERT INTO marca (id, nombre)
+VALUE (default, 'Equilibrio');
+
+INSERT INTO marca (id, nombre)
+VALUE (default, 'Dogourmet');
+
+INSERT INTO marca (id, nombre)
+VALUE (default, 'Mirringo');
+
+INSERT INTO marca (id, nombre)
+VALUE (default, 'Whiskas');
+
 
 INSERT INTO usuario (id,nombre_y_apellido,user,email,direccion,password,img,id_rol)
-VALUES(DEFAULT,'admin', 'admin', 'elgranadmin@pet.com', 'calle del admin', '$2a$10$6bdCimwGg3yItkbCjRpBaew/TXw3s9/HrDtpZfJV3Jq74T.C1c6jy','user1680142460883.webp','1' );
+VALUES(DEFAULT,'admin', 'admin', 'elgranadmin@pet.com', 'calle del admin', '$2a$10$6bdCimwGg3yItkbCjRpBaew/TXw3s9/HrDtpZfJV3Jq74T.C1c6jy','user1680142460883.png','1' );
 
 INSERT INTO usuario (id,nombre_y_apellido,user,email,direccion,password,img,id_rol)
 VALUES(DEFAULT,'maria', 'maria', 'maria@pet.com', 'calle de maria', '$2a$10$AdPsJ/kPzUyVwv1d.pj/2OqxMtwcbASupm1IyS6klar3yuWoi.Xme','user1680143028656.jpg','2' );
 
-INSERT INTO producto (id,id_marca,nombre,precio,cantidad_descuento,img,descripcion,id_categoria)
-VALUES(DEFAULT,'1', 'Pedigree adulto', '54000', '10', 'product1674114989165.png','Alimento para perros adultos de razas grandes','1');
-
-INSERT INTO producto (id,id_marca,nombre,precio,cantidad_descuento,img,descripcion,id_categoria)
-VALUES(DEFAULT,'2', 'Proplan urinary', '60000', '0', 'product1674115037221.png','Alimento para gatos adultos','1');
-
-INSERT INTO producto (id,id_marca,nombre,precio,cantidad_descuento,img,descripcion,id_categoria)
-VALUES(DEFAULT,'2', 'Proplan adultos', '140000', '0', 'product1674115117444.png','Alimento para perros adultos de razas pequeño','1');
 
 UPDATE categoria SET img = "categoria_alimento-min.png" 
 WHERE id= 1;
@@ -182,41 +186,28 @@ values (default, 'Perros');
 INSERT INTO tipo_mascota (id, tipo_mascota)
 values (default, 'Gatos');
 
-UPDATE producto
-SET id_tipo_mascota = 1
-WHERE id =1;
 
-UPDATE producto
-SET id_tipo_mascota = 2
-WHERE id =2;
+INSERT INTO producto (id,id_marca,nombre,precio,cantidad_descuento,img,descripcion,id_categoria, id_tipo_mascota)
+VALUES(DEFAULT, 1, 'Pedigree adulto', 54000, 10, 'product1674114989165.png','Alimento para perros adultos de razas grandes',1, 1 );
 
-UPDATE producto
-SET id_tipo_mascota = 1
-WHERE id =3;
+INSERT INTO producto (id,id_marca,nombre,precio,cantidad_descuento,img,descripcion,id_categoria, id_tipo_mascota)
+VALUES(DEFAULT, 2, 'Proplan urinary', 60000, 0, 'product1674115037221.png','Alimento para gatos adultos', 1, 2);
 
-INSERT INTO marca (id, nombre)
-VALUE (default, 'Equilibrio');
+INSERT INTO producto (id,id_marca,nombre,precio,cantidad_descuento,img,descripcion,id_categoria, id_tipo_mascota)
+VALUES(DEFAULT, 2, 'Proplan adultos', 140000 , 0, 'product1674115117444.png','Alimento para perros adultos de razas pequeño',1 , 1);
 
-INSERT INTO marca (id, nombre)
-VALUE (default, 'Dogourmet');
-
-INSERT INTO marca (id, nombre)
-VALUE (default, 'Mirringo');
-
-INSERT INTO marca (id, nombre)
-VALUE (default, 'Whiskas');
 
 INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
-VALUES (DEFAULT, 11, 'Equilibrio adultos', 58800, 20, 'EQUILIBRIO.webp', ' Alimento para perros adultos de razas pequeñas', 1, 1);
+VALUES (DEFAULT, 6, 'Equilibrio adultos', 58800, 20, 'EQUILIBRIO.png', ' Alimento para perros adultos de razas pequeñas', 1, 1);
 
 INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
-VALUES (DEFAULT, 12, 'Dogourmet adultos', 57592, 0, 'dogurmet.png', ' Alimento para perros adultos de carne a la parrilla', 1, 1);
+VALUES (DEFAULT, 7, 'Dogourmet adultos', 57592, 0, 'dogurmet.png', ' Alimento para perros adultos de carne a la parrilla', 1, 1);
 
 INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
-VALUES (DEFAULT, 13, 'Mirringo Pro adultos', 90525, 5, 'Mirringo.avif', ' Alimento para gatos adultos cuidado urinario', 1, 2);
+VALUES (DEFAULT, 8, 'Mirringo Pro adultos', 90525, 5, 'Mirringo.png', ' Alimento para gatos adultos cuidado urinario', 1, 2);
 
 INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
-VALUES (DEFAULT, 14, 'Whiskas para adultos', 24460, 0, 'wiskas.avif', ' Alimento para gatos adultos de carne', 1, 2);
+VALUES (DEFAULT, 9, 'Whiskas para adultos', 24460, 0, 'wiskas.png', ' Alimento para gatos adultos de carne', 1, 2);
 
 UPDATE categoria
 SET img = 'juguete-para-perros.jpg'
