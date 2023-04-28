@@ -30,8 +30,8 @@ module.exports = {
         body("email").isEmail().normalizeEmail().withMessage('Ingrese un correo valido'),
         body("passwordLogin").notEmpty().custom(async (value, {req}) => {
             const user = await bd.Usuario.findOne({where:{ email: req.body.email }});
-            const match = await bcrypt.compare(value, user.password);
-            if (!user | !match) {
+            const match = bcrypt.compare(value, user.password);
+            if (!user || !match) {
               throw new Error("El correo o la contraseña son incorrectos");
             }
             return true;

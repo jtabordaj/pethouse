@@ -1,4 +1,5 @@
 CREATE SCHEMA `pet_h_grupo` ;
+USE `pet_h_grupo`;
 
 CREATE TABLE pet_h_grupo.usuario (
   id INT NOT NULL AUTO_INCREMENT,
@@ -152,10 +153,10 @@ INSERT INTO producto (id,id_marca,nombre,precio,cantidad_descuento,img,descripci
 VALUES(DEFAULT,'2', 'Proplan adultos', '140000', '0', 'product1674115117444.png','Alimento para perros adultos de razas pequeño','1');
 
 UPDATE categoria SET img = "categoria_alimento-min.png" 
-WHERE id= 1
+WHERE id= 1;
 
 UPDATE categoria SET img = "categoria_snacks-min.png" 
-WHERE id= 2
+WHERE id= 2;
 
 CREATE TABLE pet_h_grupo.tipo_mascota (
   id INT NULL AUTO_INCREMENT,
@@ -183,44 +184,44 @@ values (default, 'Gatos');
 
 UPDATE producto
 SET id_tipo_mascota = 1
-WHERE id =1
+WHERE id =1;
 
 UPDATE producto
 SET id_tipo_mascota = 2
-WHERE id =2
+WHERE id =2;
 
 UPDATE producto
 SET id_tipo_mascota = 1
-WHERE id =3
+WHERE id =3;
 
 INSERT INTO marca (id, nombre)
-VALUE (default, 'Equilibrio')
+VALUE (default, 'Equilibrio');
 
 INSERT INTO marca (id, nombre)
-VALUE (default, 'Dogourmet')
+VALUE (default, 'Dogourmet');
 
 INSERT INTO marca (id, nombre)
-VALUE (default, 'Mirringo')
+VALUE (default, 'Mirringo');
 
 INSERT INTO marca (id, nombre)
-VALUE (default, 'Whiskas')
+VALUE (default, 'Whiskas');
 
 INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
-VALUES (DEFAULT, 11, 'Equilibrio adultos', 58800, 20, 'EQUILIBRIO.webp', ' Alimento para perros adultos de razas pequeñas', 1, 1)
+VALUES (DEFAULT, 11, 'Equilibrio adultos', 58800, 20, 'EQUILIBRIO.webp', ' Alimento para perros adultos de razas pequeñas', 1, 1);
 
 INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
-VALUES (DEFAULT, 12, 'Dogourmet adultos', 57592, 0, 'dogurmet.png', ' Alimento para perros adultos de carne a la parrilla', 1, 1)
+VALUES (DEFAULT, 12, 'Dogourmet adultos', 57592, 0, 'dogurmet.png', ' Alimento para perros adultos de carne a la parrilla', 1, 1);
 
 INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
-VALUES (DEFAULT, 13, 'Mirringo Pro adultos', 90525, 5, 'Mirringo.avif', ' Alimento para gatos adultos cuidado urinario', 1, 2)
+VALUES (DEFAULT, 13, 'Mirringo Pro adultos', 90525, 5, 'Mirringo.avif', ' Alimento para gatos adultos cuidado urinario', 1, 2);
 
 INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
-VALUES (DEFAULT, 14, 'Whiskas para adultos', 24460, 0, 'wiskas.avif', ' Alimento para gatos adultos de carne', 1, 2)
+VALUES (DEFAULT, 14, 'Whiskas para adultos', 24460, 0, 'wiskas.avif', ' Alimento para gatos adultos de carne', 1, 2);
 
 UPDATE categoria
 SET img = 'juguete-para-perros.jpg'
-WHERE id = 4
+WHERE id = 4;
 
 UPDATE categoria
 SET img = 'medicamentos.jpg'
-WHERE id = 3
+WHERE id = 3;
