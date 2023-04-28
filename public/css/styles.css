@@ -249,7 +249,7 @@ header .animal div button i{
 }
 
 .mainProducto .letraNaranja {
-    color:#FFB547;
+    color:#BA55D3;
     font-weight: bold;
 }
 
@@ -270,9 +270,9 @@ header .animal div button i{
 }
 
 .mainProducto .buttonP2 {
-    background-color: #ffff;
+    background-color: #BA55D3;
     width: 160px;
-    color: #97b5c9e8;
+    color: #ffff;
     font-weight: bold ;
     border-radius: 5px;
     box-shadow: #1bbcb6;
@@ -349,11 +349,11 @@ footer .btns button{
     width: 38%;
     height: 34px;
     font-size: 16px;
-    border: 3px solid #2b8800;
+    border: 3px solid gray;
     border-radius: 5px;
     font-weight: 600;
     transition: background-color 0.5s;
-    background-color: #2b8800;
+    background-color: gray;
     color: white;
     cursor: pointer;
 }
@@ -838,7 +838,7 @@ button.delete{
         text-align: center;
     }
     .mainProducto .imagenProducto{
-        width: 300px;
+        width: 170px;
     }
     .registerContainer, .loginContainer, .containerProfile{
         width: 80%
