@@ -8,9 +8,8 @@ body{
 
 /*header*/
 header{
-    background-image:  linear-gradient(rgba(39, 221, 245, 0.8), rgb(236, 166, 17)), url("/img/huellitas.png");
+    background: #FFA500;
     image-orientation: from-image;
-    background-color: #FFB547;
     position: relative;
 }
 header section .barra{
@@ -233,7 +232,7 @@ header .animal div button i{
 .mainProducto .buttonP2 {
     background-color: #ffff;
     width: 160px;
-    color: rgb(247, 128, 9);
+    color: #97b5c9e8;
     font-weight: bold ;
     border-radius: 5px;
     box-shadow: #1bbcb6;
@@ -246,7 +245,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image:  linear-gradient(rgba(39, 221, 245, 0.8), rgb(236, 166, 17)), url("/img/huellitas.png");
+    background: #BA55D3;
 }
 footer .logo{
     margin-top: 10px;
@@ -841,7 +840,7 @@ button.delete{
         height: 30px;
         align-items: center;
         font-size: 21px;
-        background-color: orange;
+        
     }
 
     .product form section{
