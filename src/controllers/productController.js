@@ -184,12 +184,71 @@ const productController = {
         
         res.redirect("/");
     },
-    listProduct: (req,res)=>{ 
-        console.log("entró")
-        res.render("./products/listProduct",{
-            title:"Lista de productos",
-            product: product.filter(p => p.id ),
-        })
+    listProduct: async (req,res)=>{ 
+        let data = req.query;
+        let produc = {}
+        console.log(data);
+        
+        if(data.animal){
+            //pone la primera letra en mayuscula
+            data.animal = data.animal[0].toUpperCase() + data.animal.substring(1)
+            
+            //busca los productos segun el tipo de animal
+            produc = await bd.Producto.findAll({
+                include:[{
+                    model: bd.Tipo_mascota,
+                    as: "tipo_mascotas",
+                    where: {tipo_mascota: data.animal}
+                },{
+                    model: bd.Marca,
+                    as: "marcas",
+                },{
+                    model: bd.Categoria,
+                    as: "categorias",
+                }
+            ]
+            })
+            if (produc.length >= 1) {
+                return res.render("./products/listProduct",{
+                    title:"Lista de productos",
+                    product: produc,
+                })      
+            }else{
+                  return res.render("./products/listProduct", {
+                    title:"Lista de productos",
+                    error: "no se encontraron productos"
+                  })  
+            } 
+        }else if(data.oferta){
+            produc = await bd.Producto.findAll(
+                {
+                    where:{cantidad_descuento: this.cantidad_descuento > 0},
+                    include:[{
+                        model: bd.Tipo_mascota,
+                        as: "tipo_mascotas"
+                    },{
+                        model: bd.Marca,
+                        as: "marcas",
+                    },{
+                        model: bd.Categoria,
+                        as: "categorias",
+                    }
+                ]
+                }
+            );
+            if (produc.length >= 1) {
+                return res.render("./products/listProduct",{
+                    title:"Lista de productos",
+                    product: produc,
+                })      
+            }else{
+                  return res.render("./products/listProduct", {
+                    title:"Lista de productos",
+                    error: "no se encontraron productos con descuentos"
+                  })  
+            }
+
+        }
     }
 }
 

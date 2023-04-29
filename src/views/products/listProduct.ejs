@@ -6,23 +6,29 @@
 
     <main class="listado">
 
-        <section>
-            <% product.forEach(p => { %>
-                <article>
-                    <picture>
-                        <img src="<%= "/img/product/" + p.img %> ">
-                    </picture>
-                    <div>
-                        <h3><%= p.nombre_producto %> </h3>
-                        <h3><%= p.precio %> </h3>
-                        <% if (p.descuento > 0) { %>
-                            <h3>Descuento del <%= p.descuento %> % </h3>                          
-                        <% } %>  
-                        <h3>Marca: <%= p.marca %> </h3>                      
-                        <p><%= p.descripcion %> </p>
-                    </div>
-                </article>             
-            <% }) %>
+        <section class="tarjetas">
+            <% if (locals.product) { %>
+                <% product.forEach(p => { %>
+                    <a href="apis/product/<%= p.id %>"><article>
+                        <picture>
+                            <img src="<%= "/img/product/" + p.img %> ">
+                        </picture>
+                        <div>
+                            <h3><%= p.nombre %> </h3>
+                            <h3>Marca: <%= p.marcas.nombre %> </h3>
+                            <p> precio: <%= p.precio %> cop </p>
+                            <% if (p.descuento > 0) { %>
+                                <p>Descuento del <%= p.descuento %> % </p>                          
+                            <% } %> 
+                            <p>categoria: <%= p.categorias.categoria %></p>  
+                            <p> tipo de mascota: <%= p.tipo_mascotas.tipo_mascota %></p>                     
+                            <p><%= p.descripcion %> </p>
+                        </div>
+                    </article></a>            
+                <% }) %>
+            <% } else { %>
+                <h3> <%= error %></h3>
+            <% }%>
         </section>
         
         

@@ -63,6 +63,12 @@ module.exports = (Sequelize, DataTypes) => {
         as: "categorias",
         foreignKey: "id_categoria"
       });
+
+      //tipo_mascota
+      Producto.belongsTo(models.Tipo_mascota, {
+        as: "tipo_mascotas",
+        foreignKey: "id_tipo_mascota"
+      });
   }
     return Producto
 

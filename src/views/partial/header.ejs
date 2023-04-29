@@ -22,9 +22,9 @@
     <nav>
         <ul>
             <li><a href="/productCart">Carrito<i class="fas fa-cart-plus"></i></a></li>
-            <li><a href="">Ofertas</a></li>
-            <li><i class="fa-solid fa-dog"></i><a href=""> </i>Perros</a></li>
-            <li><i class="fa-solid fa-cat"></i><a href=""> </i>Gatos</a></li>
+            <li><a href="listProduct?oferta=true">Ofertas</a></li>
+            <li><a href="/listProduct?animal=Perros"><i class="fa-solid fa-dog"></i>Perros</a></li>
+            <li><a href="/listProduct?animal=Gatos"><i class="fa-solid fa-cat"></i>Gatos</a></li>
         </ul>
         <ul>
             <% if (!locals.session) { %>
@@ -39,8 +39,8 @@
     <section class="animal">
         <h3>Animales</h3>
         <div>
-            <button>Perros <i class="fa-solid fa-dog"></i></button>
-            <button>Gatos <i class="fa-solid fa-cat"></i></button>
+            <a href="/listProduct?animal=Perros"><button>Perros <i class="fa-solid fa-dog"></i></button></a>
+            <a href="/listProduct?animal=Gatos"><button>Gatos <i class="fa-solid fa-cat"></i></button></a>
         </div>
     </section>
     <script src="/js/header.js"></script>
