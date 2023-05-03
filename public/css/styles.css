@@ -25,13 +25,19 @@ header section #menu.show {
 
 
 header section #menu .contenMenu{
-    background-color: wheat;
+    background-color: lavender;
+    border-radius: 5px;
     
 }
 
 header section #menu .contenMenu ul{
     padding-left: 0;
     list-style: none;
+}
+
+header section #menu .contenMenu li{
+    padding: 3px;
+    margin-left: 7px;
 }
 
 header section #menu .contenMenu li a{
@@ -292,6 +298,7 @@ header .animal div button i{
 
 .listado .tarjetas a{
     text-decoration: none;
+    background-color: beige;
 }
 
 
