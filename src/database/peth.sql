@@ -216,3 +216,9 @@ WHERE id = 4;
 UPDATE categoria
 SET img = 'medicamentos.jpg'
 WHERE id = 3;
+
+UPDATE usuario SET password = "$2a$10$oHXrad51jYQ9L/AtDH3dSOZ.nhUHGbIFkg15TxSvJNEAS8q3cQIAK" 
+WHERE id= 1;
+
+UPDATE usuario SET password = "$2a$10$oHXrad51jYQ9L/AtDH3dSOZ.nhUHGbIFkg15TxSvJNEAS8q3cQIAK" 
+WHERE id= 2;
