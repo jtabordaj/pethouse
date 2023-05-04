@@ -288,20 +288,25 @@ header .animal div button i{
 .mainProducto .buttonP {
     background-color: rgb(247, 128, 9);
     width: 160px;
+    padding: 13px;
     color: #ffff;
-    font-weight: bold ;
+    font-weight: bold;
     border-radius: 5px;
     box-shadow: #1bbcb6;
     margin-bottom: 5px;
+    font-size: 14px;
 }
 
 .mainProducto .buttonP2 {
     background-color: #BA55D3;
     width: 160px;
+    padding: 13px;
     color: #ffff;
-    font-weight: bold ;
+    font-weight: bold;
     border-radius: 5px;
     box-shadow: #1bbcb6;
+    margin-bottom: 5px;
+    font-size: 14px;
 }
 
 /* listado de productos */
@@ -878,7 +883,7 @@ button.delete{
         text-align: center;
     }
     .mainProducto .imagenProducto{
-        width: 170px;
+        width: 268px;
     }
     .registerContainer, .loginContainer, .containerProfile{
         width: 80%
@@ -1069,5 +1074,35 @@ button.logOut:hover{
 button.profileCreate:hover{
     background-color:#006c87;
     border-color: #006c87;
+}
+
+.btnVioleta {
+    background-color:#BA55D3;
+    border-color: #BA55D3;
+    align-self: center;
+    width: auto;
+    height:auto;
+    padding: 1vw;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.5s;
+    color: white;
+    cursor: pointer; 
+}
+
+.btnNaranja {
+    background-color: #FFA500;
+    border-color: #FFA500; 
+    align-self: center;
+    width: auto;
+    height:auto;
+    padding: 1vw;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.5s;
+    color: white;
+    cursor: pointer;
 }
 

@@ -242,7 +242,7 @@ INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, des
 VALUES (DEFAULT, 2, 'Pelota de goma', 11000, 0, 'pelotaDeGoma.png', ' Pelota de goma antisarro ', 4 , 1);
 
 INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
-VALUES (DEFAULT, 1, 'gymCat', 30000, 10, 'gimansio.jpg', ' gimnasio para gatos,proporciona diversion y descanso a tu gatito ', 2 , 2);
+VALUES (DEFAULT, 1, 'gymCat', 30000, 10, 'gimansio.jpg', ' gimnasio para gatos,proporciona diversion y descanso a tu gatito ', 4 , 2);
 
 INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
 VALUES (DEFAULT, 3, 'Lazo para perro', 12000, 0, 'lazoPerro.jpg', ' Lazo Knot para perro ', 4 , 1);

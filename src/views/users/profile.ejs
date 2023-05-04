@@ -27,14 +27,15 @@
         </form>
 
         <% if (session.typeUser == 1) { %>
-            <form action="/createProduct">
-                <button class="profileCreate">Crear producto</button>
-            </form>
             <form action="/register">
-                <button class="profileCreate">registrar admin</button>
+                <button class="btnNaranja">Registrar admin</button>
             </form>
+            <form action="/createProduct">
+                <button class="btnVioleta">Crear producto</button>
+            </form>
+            
             <form action="/listProducts">
-                <button class="profileCreate">Listado de productos</button>
+                <button class="btnNaranja">Listado de productos</button>
             </form>
         <% } %>
 

@@ -42,7 +42,7 @@ window.addEventListener("load", ()=>{
             })
             if (produc.length > 0) {
                 produc.forEach(p => {
-                    resultado.innerHTML += `<a href="productDetail/${p.id}">
+                    resultado.innerHTML += `<a href="/productDetail/${p.id}">
                                                 <div class="contBuscador">
                                                     <img src="/img/product/${p.img}" alt="">
                                                     <p>${p.nombre}</p>
@@ -64,7 +64,7 @@ window.addEventListener("load", ()=>{
         })
         if (produc.length > 0) {
             produc.forEach(p => {
-                resultado.innerHTML += `<a href="productDetail/${p.id}">
+                resultado.innerHTML += `<a href="/productDetail/${p.id}">
                                             <div class="contBuscador">
                                                 <img src="/img/product/${p.img}" alt="">
                                                 <p>${p.nombre}</p>
