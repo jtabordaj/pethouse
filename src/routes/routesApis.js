@@ -1,17 +1,14 @@
 const express = require("express");
 const router = express.Router();
 const controller = require("../controllers/apisController")
-const appiUsuario = require("../controllers/apis/usuarios/usuarioController")
+// const appiUsuario = require("../controllers/apis/usuarios/usuarioController")
 const appiProducto = require("../controllers/apis/productos/productoController")
 
 router.get("/apis/users", appiUsuario.obtenerUsuarios);
 router.get("/apis/user/:id", appiUsuario.obtenerUsuarioID);
 
-router.get("/apis/products", appiProducto.obtenerProductos);
-router.get("/apis/product/:id", appiProducto.obtenerProductoID);
-
-
-
+router.get("/apis/products", apiProducto.obtenerProductos);
+router.get("/apis/product/:id", controller.obtenerProductoID);
 
 router.get("/apis/buscador/:nombre", controller.buscador);
 

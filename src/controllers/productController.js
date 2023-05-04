@@ -23,7 +23,7 @@ const productController = {
             session: req.session.user
         });
     },
-    //detalle del productt
+    //detalle del product
     getProduct: async (req, res) => {
         const idProduct = req.params.idProduct;
         try {
