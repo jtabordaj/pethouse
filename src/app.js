@@ -7,8 +7,10 @@ const methodOverride = require("method-override");
 const session = require('express-session');
 const routerApis = require("./routes/routesApis")
 
-const app = express();
+const cookieParser = require('cookie-parser');
 
+const app = express();
+app.use(cookieParser());
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(methodOverride('_method'));

@@ -20,6 +20,7 @@ let users = JSON.parse(fs.readFileSync(rutaUser));
 const userController = {
     logOut: (req, res)=>{
         req.session.destroy();
+        res.cookie('tmp', "", {maxAge: 0})
         res.redirect("/");
     },
 
@@ -48,7 +49,10 @@ const userController = {
                 direccion: theUser.direccion,
                 img: "./img/users/" + theUser.img
             }
-            return res.redirect("/")
+            if (req.body.recordarme) {
+                res.cookie('tmp', theUser.email, {maxAge: 60000 * 24})
+            }
+            return res.redirect('back')
         }
     },
 
@@ -121,7 +125,8 @@ const userController = {
                 title:"Editar Perfil", 
                 error: results.mapped(), 
                 datosUsuario: req.body,
-                type: "edit"
+                type: "edit",
+                session: req.session.user
             })
         }
         bd.Usuario.update({
@@ -129,8 +134,7 @@ const userController = {
             user: req.body.user,
             email: req.body.email,
             direccion: req.body.address,
-            img:  req.file.filename,
-            id_rol: 1
+            img: req.file.filename,
         }, 
         {
         where: {email: req.body.email}

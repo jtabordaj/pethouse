@@ -4,12 +4,15 @@ const fs = require('fs');
 //rutas para acceder a los archivos de la base de datos
 
 const bd = require("../database/models")
-const rutaProduct = path.join(__dirname, "../database/product.json");
-const rutaCategory = path.join(__dirname, "../database/category.json");
 
-//trae la informacion de la base de dato  y lo parsea
-let product = JSON.parse(fs.readFileSync(rutaProduct));
-let category = JSON.parse(fs.readFileSync(rutaCategory));
+const modelsProduct = {
+    nombre: "",
+    precio: "",
+    descuento: 0,
+    descripcion: "",
+    tipo_mascota: 0
+}
+
 
 const productController = {
     //carrito
@@ -35,7 +38,9 @@ const productController = {
     createProduct: async (req, res) =>{
         let marca = {};
         let categoria = {}
+        let tipo_mascota = {}
         try {
+            tipo_mascota = await bd.Tipo_mascota.findAll()
             categoria = await bd.Categoria.findAll();
             marca = await bd.Marca.findAll();
         } catch (error) {
@@ -44,9 +49,10 @@ const productController = {
         res.render("./products/createProduct", {
             title:"Crear Producto",
             type:"crear",
-            box: product[0], 
+            box: modelsProduct, 
             category: categoria,
             marca: marca,
+            tipo_mascota: tipo_mascota,
             actions: "/createProduct",
             session: req.session.user
            
@@ -60,20 +66,15 @@ const productController = {
         
         //guardar producto en sql       
         try{
-            // se busca id de la categoria seleccionada
-            //const categoria = await bd.Categoria.findOne({where: {categoria: req.body.category}});
-            
-            //se busca id de la marca seleccionada
-            //const marca = await bd.Marca.findOne({where: {nombre: req.body.marca}});
-            
             await bd.Producto.create({
                 id_marca: req.body.marca,
-                nombre: req.body.nombre_producto,
+                nombre: req.body.nombre,
                 precio: req.body.precio,
                 cantidad_descuento: req.body.descuento,
                 img: req.file.filename,
                 descripcion: req.body.descripcion,
-                id_categoria: req.body.category
+                id_categoria: req.body.category,
+                id_tipo_mascota: req.body.tipo_mascota
             })
 
         }catch(error){
@@ -96,10 +97,11 @@ const productController = {
             let producto = await bd.Producto.findByPk(idProduct);
             
             if(producto){
-                res.render("./products/produc", {
+                res.render("./products/createProduct", {
                     title:"editProduct",
                     type:"editar", 
-                    box: producto.dataValues, 
+                    box: producto.dataValues,
+                    tipo_mascota: await bd.Tipo_mascota.findAll(), 
                     category: await bd.Categoria.findAll(), 
                     marca: await bd.Marca.findAll(),
                     actions: "/editProduct/" + idProduct + "?_method=PUT",
@@ -135,24 +137,6 @@ const productController = {
         } catch (error) {
             console.log(error);
         }
-
-
-        // const modify = product.find(m => m.id == idProduct);
-        // if (req.body.nombre_producto) modify.nombre_producto = req.body.nombre_producto;
-        // if (req.body.tipo_mascota)modify.tipo_mascota = req.body.tipo_mascota;
-        // if (req.body.marca)modify.marca = req.body.marca;
-        // if (req.body.descripcion) modify.descripcion = req.body.descripcion;
-        // if (req.body.categoria) modify.categoria = req.body.categoria;
-        // if (req.body.precio) modify.precio = req.body.precio;
-        // if (req.body.descuento) modify.descuento = req.body.descuento;
-        // if (req.file){
-        //     fs.unlink(__dirname + '../../../public' + modify.img, (err) => {
-        //         if (err) throw err;
-        //         console.log("File deleted!");
-        //     })
-        //     modify.img = req.file.filename
-        // }
-        //fs.writeFileSync(rutaProduct, JSON.stringify(product, null, 2));
         res.redirect("/");
         
     },
@@ -188,17 +172,79 @@ const productController = {
         let data = req.query;
         let produc = {}
         console.log(data);
-        
-        if(data.animal){
-            //pone la primera letra en mayuscula
-            data.animal = data.animal[0].toUpperCase() + data.animal.substring(1)
-            
-            //busca los productos segun el tipo de animal
+        if(data.length > 0)
+        {
+            if(data.animal){
+                //pone la primera letra en mayuscula
+                data.animal = data.animal[0].toUpperCase() + data.animal.substring(1)
+                
+                //busca los productos segun el tipo de animal
+                produc = await bd.Producto.findAll({
+                    include:[{
+                        model: bd.Tipo_mascota,
+                        as: "tipo_mascotas",
+                        where: {tipo_mascota: data.animal}
+                    },{
+                        model: bd.Marca,
+                        as: "marcas",
+                    },{
+                        model: bd.Categoria,
+                        as: "categorias",
+                    }
+                ]
+                })
+                if (produc.length >= 1) {
+                    return res.render("./products/listProduct",{
+                        title:"Lista de productos",
+                        product: produc,
+                        session: req.session.user
+                    })      
+                }else{
+                      return res.render("./products/listProduct", {
+                        title:"Lista de productos",
+                        error: "no se encontraron productos",
+                        session: req.session.user
+                      })  
+                } 
+            }else if(data.oferta){
+                produc = await bd.Producto.findAll(
+                    {
+                        where:{cantidad_descuento: this.cantidad_descuento > 0},
+                        include:[{
+                            model: bd.Tipo_mascota,
+                            as: "tipo_mascotas"
+                        },{
+                            model: bd.Marca,
+                            as: "marcas",
+                        },{
+                            model: bd.Categoria,
+                            as: "categorias",
+                        }
+                    ]
+                    }
+                );
+                if (produc.length >= 1) {
+                    return res.render("./products/listProduct",{
+                        title:"Lista de productos",
+                        product: produc,
+                        session: req.session.user
+                    })      
+                }else{
+                      return res.render("./products/listProduct", {
+                        title:"Lista de productos",
+                        error: "no se encontraron productos con descuentos",
+                        session: req.session.user
+                      })  
+                }
+    
+            }
+
+        }else{
+            console.log("entro");
             produc = await bd.Producto.findAll({
                 include:[{
                     model: bd.Tipo_mascota,
                     as: "tipo_mascotas",
-                    where: {tipo_mascota: data.animal}
                 },{
                     model: bd.Marca,
                     as: "marcas",
@@ -208,47 +254,15 @@ const productController = {
                 }
             ]
             })
-            if (produc.length >= 1) {
-                return res.render("./products/listProduct",{
-                    title:"Lista de productos",
-                    product: produc,
-                })      
-            }else{
-                  return res.render("./products/listProduct", {
-                    title:"Lista de productos",
-                    error: "no se encontraron productos"
-                  })  
-            } 
-        }else if(data.oferta){
-            produc = await bd.Producto.findAll(
-                {
-                    where:{cantidad_descuento: this.cantidad_descuento > 0},
-                    include:[{
-                        model: bd.Tipo_mascota,
-                        as: "tipo_mascotas"
-                    },{
-                        model: bd.Marca,
-                        as: "marcas",
-                    },{
-                        model: bd.Categoria,
-                        as: "categorias",
-                    }
-                ]
-                }
-            );
-            if (produc.length >= 1) {
-                return res.render("./products/listProduct",{
-                    title:"Lista de productos",
-                    product: produc,
-                })      
-            }else{
-                  return res.render("./products/listProduct", {
-                    title:"Lista de productos",
-                    error: "no se encontraron productos con descuentos"
-                  })  
-            }
+            console.log("entro");
+            return res.render("./products/listProduct",{
+                title:"Lista de productos",
+                product: produc,
+                session: req.session.user
+            })
 
         }
+        
     }
 }
 

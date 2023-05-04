@@ -7,7 +7,8 @@ const multer = require('multer');
 
 //llama al middleware
 const validator = require("../middleware/validation");
-const midSession = require("../middleware/midSession")
+const midSession = require("../middleware/midSession");
+const midCokie = require("../middleware/midcookies");
 
 const directorioImg = path.join(__dirname, "../../public/img/product")
 
@@ -27,21 +28,21 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({storage});
 
-router.get("/", indexController.index);
+router.get("/", midCokie, indexController.index);
 
-router.get("/productCart", midSession.hasSession, productController.productCart);
+router.get("/productCart", midCokie, midSession.hasSession, productController.productCart);
 
-router.get("/productDetail/:idProduct", productController.getProduct);
+router.get("/productDetail/:idProduct", midCokie, productController.getProduct);
 
-router.get("/createProduct", midSession.hasSession, productController.createProduct);
+router.get("/createProduct", midCokie, midSession.hasSession, productController.createProduct);
 router.post("/createProduct", uploadFile.single('imagenProducto'), productController.create);
 
-router.get("/editProduct/:idProduct", midSession.hasSession, productController.editProduct);
+router.get("/editProduct/:idProduct", midCokie, midSession.hasSession, productController.editProduct);
 router.put("/editProduct/:idProduct",uploadFile.single('imagenProducto'), productController.modifyProduct);
 
-router.get("/deleteProduct/:idProduct", midSession.hasSession, productController.deleteProduct);
+router.get("/deleteProduct/:idProduct", midCokie, midSession.hasSession, productController.deleteProduct);
 router.delete("/deleteProduct/:idProduct", productController.delete);
 
-router.get("/listProduct", midSession.hasSession, productController.listProduct);
+router.get("/listProducts", midCokie, midSession.hasSession, productController.listProduct);
 
 module.exports = router;

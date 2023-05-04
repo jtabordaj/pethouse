@@ -12,13 +12,11 @@
                 </article>
                 <article>
                     <% for(let n in box){%>
-                        <% if(n != "categoria" && n != "tipo_mascota" && n != "id_categoria" && n != "img" && n != "marca" && n != "id" && n != "id_marca") {%>
+                        <% if(n != "tipo_mascota" && n != "id_categoria" && n != "img" && n != "id_marca" && n != "id") {%>
                             <div>
                                 <!-- modificar para que se vea en lista desplegable el nombre de -->
                                 <label for="<%=n%>"><%=n%> del producto</label>
                                 <input type="text" name="<%=n%>" id="<%=n%>" value="<%if(type == "editar"){%> <%= box[n] %> <%}%>">
-
-                               
                             </div>    
                         <% } %>  
                     <% } %>
@@ -39,7 +37,26 @@
                                 <% }); %>
                               </select>
                             <%}%>
-                    </div> 
+                    </div>
+                    
+                    <div>
+                        <% if (type == "crear" ) { %>
+                            <label for=""> seleccione el tipo de mascota</label>
+                            <select name="tipo_mascota">
+                                <% tipo_mascota.forEach(cat => {%>
+                                    <option value="<%= cat.id %>"><%= cat.tipo_mascota %></option>
+                                    <%}); %>
+                            </select>
+                        <% } else { %>
+                            <label for=""> selesccione el tipo de mascota </label>
+                            <select name="tipo_mascota">
+                                <% tipo_mascota.forEach(function(tipo) { %>
+                                  <option value="<%= tipo.id %>" <%= (tipo.id == box.id_marca) ? 'selected' : '' %>><%= tipo.tipo_mascota %></option>
+                                <% }); %>
+                              </select>
+                            <%}%>
+                    </div>
+
                 </article>
                 <article class="uploadImg">
                     <label for="imagenProducto">Seleccione una imagen del producto:</label>

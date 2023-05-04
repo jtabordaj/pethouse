@@ -30,7 +30,7 @@ router.post("/saveProfile",uploadFile.single('img'), midSession.hasSession, vali
 
 router.get("/logOut", userController.logOut)
 
-router.get("/login", userController.login);
+router.get("/login", midSession.active, userController.login);
 router.post("/login", validator.validatorLogin, userController.loginForm);
 
 router.get("/register", userController.register);

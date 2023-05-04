@@ -26,7 +26,11 @@
                     <p class="msgError"><%=error['passwordLogin'].msg %> </p>
                    <% } %>
                 <input class="registerInput" type="password" id="passwordLogin" name="passwordLogin" placeholder="Ingresa tu contraseña">
-
+                <article>
+                    <input type="checkbox" name="recordarme" id="recordarme">
+                    <label for="recordarme">matener session activa</label>
+                    
+                </article>
              <button class="send" type="submit" id="buttonLogin" name="buttonLogin">Ingresar</button>
             </form>    
         </div>

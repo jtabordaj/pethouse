@@ -1,6 +1,10 @@
 window.addEventListener("load", ()=>{
-    let botonActivate = false
-    let burgerMenu = document.querySelector("#burgerMenu") 
+
+    let botonActivate = false;
+    let burgerMenu = document.querySelector("#burgerMenu");
+    
+    let contenidoBuscador = document.querySelector(".inBuscador");
+    let botonBuscador = document.querySelector(".botonBuscador");
 
     burgerMenu.addEventListener("click", ()=>{
         if (!botonActivate) {
@@ -22,5 +26,15 @@ window.addEventListener("load", ()=>{
             menu.classList.remove("show");
         }
         
+    })
+
+    botonBuscador.addEventListener("click", async(a)=>{
+        let contenido = contenidoBuscador.value; 
+        a.defaultPrevented;
+        console.log("entro------------");
+        let produc = await fetch(`http://localhost:3000/apis/buscador/${contenido}`).then(res =>{
+            return res.json();
+        })
+        console.log(produc);
     })
 })

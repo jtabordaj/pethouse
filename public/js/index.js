@@ -10,15 +10,14 @@ window.addEventListener("load", async (e)=>{
     const tiempo_intervalo = 2900;
     //varriable en la cual se pone en que posicion empieza
     let posicion_actual = 0;
-    let boton_avanzar = document.querySelector("#avanzar");
-    let boton_retroceder = document.querySelector("#retroceder");
+    
     let carts = document.querySelector("#carts");
     let intervalo;
     let cantidadCart = tamanioPantalla / 300
     cantidadCart = Math.trunc(cantidadCart)
 
     if (cantidadCart > 1) {
-        document.querySelector("#carts").style.width = "45%"
+        document.querySelector("#carts").style.width = "80%"
     }
     
     function pasarCart() {

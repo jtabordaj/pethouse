@@ -18,7 +18,7 @@ window.addEventListener("load", async (e)=>{
     cantidadCart = Math.trunc(cantidadCart)
 
     if (cantidadCart > 1) {
-        document.querySelector("#carts").style.width = "45%"
+        document.querySelector("#carts").style.width = "80%"
     }
     
     function pasarCart() {

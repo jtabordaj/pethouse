@@ -222,3 +222,30 @@ WHERE id= 1;
 
 UPDATE usuario SET password = "$2a$10$oHXrad51jYQ9L/AtDH3dSOZ.nhUHGbIFkg15TxSvJNEAS8q3cQIAK" 
 WHERE id= 2;
+
+INSERT INTO marca (id,nombre)
+VALUES( DEFAULT, 'Holliday');
+
+INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
+VALUES (DEFAULT, 10, 'TOTAL FULL LC GATOS', 170000, 0, 'totalfull.png', ' Antiparasitario interno oral de liberación controlada en comprimidos birranurados palatables.', 3, 2);
+
+INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
+VALUES (DEFAULT, 10, 'Cardial B 10 mg x 20 Tabs', 82000, 0, 'cardial.png', ' Indicado para insuficiencia cardíaca en perros, debido a insuficiencia valvular o cardiomiopatía dilatada', 3, 1);
+
+INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
+VALUES (DEFAULT, 2, 'Galletas sabor a pollo', 24460, 0, 'galleta Sabor Pollo.png', ' Galletas sabor a pollo para adultos medianos y grandes', 2 , 1);
+
+INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
+VALUES (DEFAULT, 2, 'Dentalife', 30000, 10, 'dentaLife.png', ' Daily oral care treats ', 2 , 2);
+
+INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
+VALUES (DEFAULT, 2, 'Pelota de goma', 11000, 0, 'pelotaDeGoma.png', ' Pelota de goma antisarro ', 4 , 1);
+
+INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
+VALUES (DEFAULT, 1, 'gymCat', 30000, 10, 'gimansio.jpg', ' gimnasio para gatos,proporciona diversion y descanso a tu gatito ', 2 , 2);
+
+INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
+VALUES (DEFAULT, 3, 'Lazo para perro', 12000, 0, 'lazoPerro.jpg', ' Lazo Knot para perro ', 4 , 1);
+
+INSERT INTO producto (id, id_marca, nombre, precio, cantidad_descuento, img, descripcion, id_categoria, id_tipo_mascota)
+VALUES (DEFAULT, 5, 'Ratón para gatos', 6000, 0, 'ratonParaGato.jpg', ' Ratón para gato ', 4 , 2);
