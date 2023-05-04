@@ -32,6 +32,7 @@ window.addEventListener("load", ()=>{
     botonBuscador.addEventListener("click", async(a)=>{
         let contenido = contenidoBuscador.value; 
         a.defaultPrevented;
+        resultado.innerHTML = ""
         let produc = await fetch(`http://localhost:3000/apis/buscador/${contenido}`).then(res =>{
             return res.json();
         })
