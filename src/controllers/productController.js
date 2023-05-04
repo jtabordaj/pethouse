@@ -169,11 +169,14 @@ const productController = {
         res.redirect("/");
     },
     listProduct: async (req,res)=>{ 
+      
         let data = req.query;
+        
+        
         let produc = {}
-        console.log(data);
-        if(data != undefined)
+        if(Object.values(data).length > 0 )
         {
+            console.log("entro-+-+-+");
             if(data.animal){
                 //pone la primera letra en mayuscula
                 data.animal = data.animal[0].toUpperCase() + data.animal.substring(1)
