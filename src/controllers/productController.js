@@ -172,7 +172,7 @@ const productController = {
         let data = req.query;
         let produc = {}
         console.log(data);
-        if(data.length > 0)
+        if(data != undefined)
         {
             if(data.animal){
                 //pone la primera letra en mayuscula
