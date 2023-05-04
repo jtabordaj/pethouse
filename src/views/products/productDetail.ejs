@@ -70,6 +70,18 @@
                 <p>Ver opciones disponibles</p>
                 
             </div>
+            <% if (locals.session) { %>
+                <% if (session.typeUser == 1) { %>
+                    <form action="/deleteProduct/<%= result.id %>">
+                        <button class="logOut">Borrar producto</button>
+                    </form>
+                    <form action="/editProduct/<%= result.id %>">
+                        <button class="profileCreate">Editar producto</button>
+                    </form>
+                <% } %>
+            <% } %>
+            
+
         </section>
         <script src=""></script>
 
