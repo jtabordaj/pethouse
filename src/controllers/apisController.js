@@ -2,8 +2,6 @@ const bd = require("../database/models");
 const { Op } = require('sequelize');
 
 module.exports = {
-
-
     buscador: async(req, res)=>{
       let nombre = req.params.nombre;
       let products = await bd.Producto.findAll({where: {nombre: {[Op.like]: `%${nombre}%`}}})

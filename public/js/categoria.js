@@ -44,7 +44,7 @@ window.addEventListener("load", async (e)=>{
 
     function renderizarcart(){
         carts.innerHTML += `<article class="cart1">
-                                <a href="">
+                                <a href="categoryProduct?categoria=${categoria[posicion_actual].categoria}">
                                     <picture class="imgcart">
                                         <img src="/img/${categoria[posicion_actual].img}">
                                     </picture> 
@@ -52,8 +52,7 @@ window.addEventListener("load", async (e)=>{
                                         <p>${categoria[posicion_actual].categoria}</p>  
                                     </article>
                                 </a>
-                            </article>`;
-        
+                            </article>`;  
     }
     function empezarIntervalo() {
         intervalo = setInterval(pasarCart, tiempo_intervalo)

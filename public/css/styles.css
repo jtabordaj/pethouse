@@ -16,7 +16,6 @@ header section #menu{
     opacity: 0;
     position: absolute;
     transition: opacity 0.3s ease-in-out;
-
 }
 
 header section #menu.show {
@@ -76,10 +75,13 @@ header section .buscador button{
 
 header section .resultado{
     position: absolute;
+    border: none;
     background-color: white;
-    width: 41%;
-    right: 367px;
-    top: 39%;
+    width: 41vw;
+    right: 25.4vw;
+    top: 12vh;
+    border-radius: 8px;
+    
 }
 
 header section .resultado .contBuscador{
@@ -88,7 +90,7 @@ header section .resultado .contBuscador{
 }
 
 header section .resultado img{
-    width: 22%;
+    width: 12%;
 }
 
 header nav{

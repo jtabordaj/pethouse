@@ -33,6 +33,7 @@ router.get("/", midCokie, indexController.index);
 router.get("/productCart", midCokie, midSession.hasSession, productController.productCart);
 
 router.get("/productDetail/:idProduct", midCokie, productController.getProduct);
+router.get("/categoryProduct", midCokie, productController.productosCategoria);
 
 router.get("/createProduct", midCokie, midSession.hasSession, productController.createProduct);
 router.post("/createProduct", uploadFile.single('imagenProducto'), productController.create);

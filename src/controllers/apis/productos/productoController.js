@@ -49,8 +49,4 @@ module.exports = {
           return res.json(data)
         }
     },
-
-    obtenerCategoria: async(req,res)=>{
-        return res.status(200).json(await bd.Categoria.findAll())
-    }
 }

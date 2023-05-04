@@ -29,6 +29,32 @@ window.addEventListener("load", ()=>{
         
     })
 
+    
+    contenidoBuscador.addEventListener("keyup", async (e)=>{
+        if (e.key == "Backspace" && contenidoBuscador.value == "") {
+            resultado.innerHTML = ""
+        }else if(e.key == "Enter" && contenidoBuscador.value != ""){
+            let contenido = contenidoBuscador.value; 
+        
+            resultado.innerHTML = ""
+            let produc = await fetch(`http://localhost:3000/apis/buscador/${contenido}`).then(res =>{
+                return res.json();
+            })
+            if (produc.length > 0) {
+                produc.forEach(p => {
+                    resultado.innerHTML += `<a href="productDetail/${p.id}">
+                                                <div class="contBuscador">
+                                                    <img src="/img/product/${p.img}" alt="">
+                                                    <p>${p.nombre}</p>
+                                                </div>
+                                            </a>`    
+                });
+                    
+            }
+        }
+    })
+    
+    
     botonBuscador.addEventListener("click", async(a)=>{
         let contenido = contenidoBuscador.value; 
         a.defaultPrevented;

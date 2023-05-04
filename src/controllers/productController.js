@@ -177,7 +177,6 @@ const productController = {
         let produc = {}
         if(Object.values(data).length > 0 )
         {
-            console.log("entro-+-+-+");
             if(data.animal){
                 //pone la primera letra en mayuscula
                 data.animal = data.animal[0].toUpperCase() + data.animal.substring(1)
@@ -267,7 +266,40 @@ const productController = {
 
         }
         
-    }
+    },
+
+    //muestra los productos segun la categoria
+    productosCategoria: async(req, res)=>{
+        let data = req.query;
+        let produc = {}
+  
+        if (Object.values(data).length > 0) {
+          data.categoria = data.categoria[0].toUpperCase() + data.categoria.substring(1);
+          produc = await bd.Producto.findAll({
+            include:[{
+                model: bd.Tipo_mascota,
+                as: "tipo_mascotas",
+            },{
+                model: bd.Marca,
+                as: "marcas",
+            },{
+                model: bd.Categoria,
+                as: "categorias",
+                where: {categoria: data.categoria}
+            }
+        ]
+        });
+        return res.render("./products/listProduct",{
+          title:"Lista de productos",
+          product: produc,
+          session: req.session.user
+      })
+  
+  
+  
+        }
+  
+      }
 }
 
 module.exports = productController;
