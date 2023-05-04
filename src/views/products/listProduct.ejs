@@ -9,7 +9,7 @@
         <section class="tarjetas">
             <% if (locals.product) { %>
                 <% product.forEach(p => { %>
-                    <a href="apis/product/<%= p.id %>"><article>
+                    <a href="productDetail/<%= p.id %>"><article>
                         <picture>
                             <img src="<%= "/img/product/" + p.img %> ">
                         </picture>
