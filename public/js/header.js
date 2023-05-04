@@ -5,6 +5,7 @@ window.addEventListener("load", ()=>{
     
     let contenidoBuscador = document.querySelector(".inBuscador");
     let botonBuscador = document.querySelector(".botonBuscador");
+    let resultado = document.querySelector(".resultado")
 
     burgerMenu.addEventListener("click", ()=>{
         if (!botonActivate) {
@@ -31,10 +32,20 @@ window.addEventListener("load", ()=>{
     botonBuscador.addEventListener("click", async(a)=>{
         let contenido = contenidoBuscador.value; 
         a.defaultPrevented;
-        console.log("entro------------");
         let produc = await fetch(`http://localhost:3000/apis/buscador/${contenido}`).then(res =>{
             return res.json();
         })
-        console.log(produc);
+        if (produc.length > 0) {
+            produc.forEach(p => {
+                resultado.innerHTML += `<a href="productDetail/${p.id}">
+                                            <div class="contBuscador">
+                                                <img src="/img/product/${p.img}" alt="">
+                                                <p>${p.nombre}</p>
+                                            </div>
+                                        </a>`    
+            });
+                
+        }
+        
     })
 })

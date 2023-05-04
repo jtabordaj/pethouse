@@ -26,9 +26,14 @@
             <button class="profileEdit">Editar Perfil</button>
         </form>
 
-        <form action="/createProduct">
-            <button class="profileCreate">Crear producto</button>
-        </form>
+        <% if (session.typeUser == 1) { %>
+            <form action="/createProduct">
+                <button class="profileCreate">Crear producto</button>
+            </form>
+            <form action="/register">
+                <button class="profileCreate">registrar admin</button>
+            </form>
+        <% } %>
 
         <form action="/logOut" onclick="showLogoutMessage()">
             <script>

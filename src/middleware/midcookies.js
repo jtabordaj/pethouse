@@ -15,7 +15,8 @@ async function middlewareCookies(req, res, next) {
                 user: consultaBD.user,
                 email: consultaBD.email,
                 direccion: consultaBD.direccion,
-                img: "./img/users/" + consultaBD.img
+                img: "./img/users/" + consultaBD.img,
+                typeUser: consultaBD.id_rol
             };
         }
     }

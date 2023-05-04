@@ -73,6 +73,24 @@ header section .buscador button{
     border: none;
     background:none;
 }
+
+header section .resultado{
+    position: absolute;
+    background-color: white;
+    width: 41%;
+    right: 367px;
+    top: 39%;
+}
+
+header section .resultado .contBuscador{
+    display: flex;
+    align-items: center;
+}
+
+header section .resultado img{
+    width: 22%;
+}
+
 header nav{
     display: none;
 }

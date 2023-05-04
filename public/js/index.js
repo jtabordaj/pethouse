@@ -43,7 +43,7 @@ window.addEventListener("load", async (e)=>{
 
     function renderizarcart(){
         carts.innerHTML += `<article class="cart1">
-                                <a href="apis/product/${product[posicion_actual].id}">
+                                <a href="productDetail/${product[posicion_actual].id}">
                                     <picture class="imgcart">
                                         <img src="/img/product/${product[posicion_actual].img}">
                                     </picture> 

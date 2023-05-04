@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const { Op } = require('sequelize');
 
 //rutas para acceder a los archivos de la base de datos
 
@@ -212,7 +213,7 @@ const productController = {
             }else if(data.oferta){
                 produc = await bd.Producto.findAll(
                     {
-                        where:{cantidad_descuento: this.cantidad_descuento > 0},
+                        where:{cantidad_descuento: { [Op.gt]: 0 }},
                         include:[{
                             model: bd.Tipo_mascota,
                             as: "tipo_mascotas"

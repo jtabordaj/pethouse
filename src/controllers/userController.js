@@ -47,7 +47,8 @@ const userController = {
                 user: theUser.user,
                 email: theUser.email,
                 direccion: theUser.direccion,
-                img: "./img/users/" + theUser.img
+                img: "./img/users/" + theUser.img,
+                typeUser: theUser.id_rol
             }
             if (req.body.recordarme) {
                 res.cookie('tmp', theUser.email, {maxAge: 60000 * 24})
@@ -66,7 +67,7 @@ const userController = {
         if(result.errors.length > 0){
             return res.render("./users/register", {title:"Registro", error: result.mapped(), datosUsuario: req.body})  
         }
-        if (req.session.user != undefined && req.session.user.type == 1) {
+        if (req.session.user != undefined && req.session.user.typeUser == 1) {
             type_usuario = 1
         }else{
             type_usuario = 2
@@ -118,8 +119,10 @@ const userController = {
         }
     },
 
-    saveProfile:(req, res) => {
+    saveProfile: async (req, res) => {
         let results = validationResult(req);
+        let email = req.session.user.email;
+        let tipoUsuario = req.session.user.typeUser
         if(results.errors.length > 0){
             return res.render("./users/editProfile", {
                 title:"Editar Perfil", 
@@ -129,17 +132,34 @@ const userController = {
                 session: req.session.user
             })
         }
-        bd.Usuario.update({
-            nombre_y_apellido: req.body.name,
-            user: req.body.user,
-            email: req.body.email,
-            direccion: req.body.address,
-            img: req.file.filename,
-        }, 
-        {
-        where: {email: req.body.email}
-        })
-    res.redirect('/login')
+        try {
+            await bd.Usuario.update({
+                nombre_y_apellido: req.body.name,
+                user: req.body.user,
+                email: req.body.email,
+                direccion: req.body.address,
+                img: req.file.filename,
+            }, 
+            {
+            where: {email: email}
+            });
+
+        } catch (error) {
+            console.log(error);
+        }
+        req.session.user = { 
+                name: req.body.name,
+                user: req.body.user,
+                email: req.body.email,
+                direccion: req.body.address,
+                img: "./img/users/" + req.file.filename,
+                typeUser: tipoUsuario
+            }; 
+            if (req.cookies.tmp) {
+                res.cookie('tmp', req.body.email, {maxAge: 60000 * 24})
+            }
+        
+    res.redirect('/profile')
     }
 };
 
