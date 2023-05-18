@@ -8,7 +8,7 @@ body{
 
 /*header*/
 header{
-    background: #FFA500;
+    background: #DAC4FF;
     image-orientation: from-image;
     position: relative;
 }
@@ -330,7 +330,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #BA55D3;
+    background: #B5FFDB;
 }
 footer .logo{
     margin-top: 10px;
